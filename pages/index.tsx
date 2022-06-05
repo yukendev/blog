@@ -1,13 +1,23 @@
 import { NextPage } from 'next';
 import { client } from "../libs/client";
+import { IBlog } from '../types'
 
-type HomePageProps = {
-  blog
+type HomeProps = {
+  blogs: IBlog[]
 }
 
-const Home: NextPage = () => {
+const Home: NextPage<HomeProps> = ({ blogs }) => {
   return (
-    <h1>ブログタイトル</h1>
+    <>
+      <h1>ブログタイトル</h1>
+      <ul>
+        {
+          blogs.map((blog) => {
+            return <li>{blog.title}</li>
+          })
+        }
+      </ul>
+    </>
   );
 }
 
@@ -16,7 +26,7 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      blog: data.contents,
+      blogs: data.contents,
     },
   };
 };
