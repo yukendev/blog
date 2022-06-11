@@ -2,7 +2,6 @@ import TechImg from '../images/CategoryTech.svg'
 import BookImg from '../images/CategoryBook.svg'
 import NoteImg from '../images/CategoryNote.svg'
 
-
 export const CategoryList = (): JSX.Element => {
   return (
     <div className='flex'>
