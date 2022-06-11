@@ -5,22 +5,35 @@ type BlogListProps = {
   blog: IBlog
 }
 
+const formatDate = (dateStr: string): string => {
+  const date = new Date(dateStr);
+  var y = date.getFullYear();
+  var m = ('00' + (date.getMonth()+1)).slice(-2);
+  var d = ('00' + date.getDate()).slice(-2);
+  return (y + '-' + m + '-' + d);
+}
+
 export const BlogList = (props: BlogListProps): JSX.Element => {
   const { blog } = props;
   const { createdAt, title, tags} = blog;
+  const formattedCreatedAt = formatDate(createdAt);
   return(
-    <div>
+    <div className="rounded-lg bg-white p-3 my-2">
       {/* 日付 */}
-      <div>{createdAt}</div>
+      <div className="text-sm">
+        {formattedCreatedAt}
+      </div>
 
       {/* ブログタイトル */}
-      <div>{title}</div>
+      <div className="font-bold my-1 text-lg">
+        {title}
+      </div>
 
       {/* タグ */}
-      <div>
+      <div className="flex my-2">
         {
           tags.map((tag) => {
-            return <Tag tagName={tag.name}/>
+            return <Tag tag={tag}/>
           })
         }
       </div>
