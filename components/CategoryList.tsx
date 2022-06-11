@@ -1,27 +1,27 @@
-import TechnologyImg from '../images/CategoryTechnology.svg'
+import TechImg from '../images/CategoryTech.svg'
 import BookImg from '../images/CategoryBook.svg'
 import NoteImg from '../images/CategoryNote.svg'
 
 
 export const CategoryList = (): JSX.Element => {
   return (
-    <div className='flex justify-between'>
+    <div className='flex'>
       {/* Technology */}
-      <div className='ml-1'>
-        <TechnologyImg widht={50} height={50} />
-        <div>Technology</div>
+      <div>
+        <TechImg widht={50} height={50} />
+        <div className='text-center'>Tech</div>
       </div>
 
       {/* Book */}
-      <div className='flex-col content-center'>
+      <div className='ml-10'>
         <BookImg widht={50} height={50} />
-        <div>Book</div>
+        <div className='text-center'>Book</div>
       </div>
 
       {/* Note */}
-      <div>
+      <div className='ml-10'>
         <NoteImg widht={50} height={50} />
-        <div>Note</div>
+        <div className='text-center'>Note</div>
       </div>
     </div>
   )
