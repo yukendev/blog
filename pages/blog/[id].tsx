@@ -26,17 +26,8 @@ export const getStaticProps = async (context) => {
   const data = await client.get({ endpoint: "blog", contentId: id });
   const convertedBody = await converMarkdownToHtml(data.body)
 
-  console.log('変換前のデータ');
-  console.log(data.body);
-
-  console.log('変換後のデータ');
-  console.log(convertedBody);
-
   // Markdown形式の中身をHTML形式に変換されたものに入れ替える
   data.body = convertedBody;
-
-  console.log('blogに入れた後のデータ');
-  console.log(data.body)
 
   return {
     props: {

@@ -22,7 +22,9 @@ export const BlogContentWrapper = (props: BlogContentWrapperProps): JSX.Element 
         </div>
 
         {/* 本文 */}
-        <div dangerouslySetInnerHTML={{ __html: body }} />
+        <div className="prose">
+          <div dangerouslySetInnerHTML={{ __html: body }} />
+        </div>
       </div>
     </div>
   )
