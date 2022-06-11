@@ -2,6 +2,7 @@ import { NextPage } from 'next';
 import { client } from "../libs/client";
 import { IBlog } from '../types';
 import { BlogListWrapper } from '../components/BlogListWrapper';
+import { CategoryList } from '../components/CategoryList';
 
 type HomeProps = {
   blogs: IBlog[]
@@ -10,6 +11,7 @@ type HomeProps = {
 const Home: NextPage<HomeProps> = ({ blogs }) => {
   return (
     <>
+      <CategoryList/>
       <BlogListWrapper blogs={blogs}/>
     </>
   );
