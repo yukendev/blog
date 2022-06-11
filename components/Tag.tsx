@@ -7,7 +7,7 @@ type TagProps = {
 export const Tag = (props: TagProps): JSX.Element => {
   const { tag } = props;
   return (
-    <div className="px-2 bg-tagBgColor text-white rounded-lg mr-1">
+    <div className="px-3 bg-myTagColor text-white rounded-lg mr-1 text-sm">
       {tag.name}
     </div>
   )

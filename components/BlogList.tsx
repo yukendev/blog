@@ -18,7 +18,7 @@ export const BlogList = (props: BlogListProps): JSX.Element => {
   const { createdAt, title, tags} = blog;
   const formattedCreatedAt = formatDate(createdAt);
   return(
-    <div className="rounded-lg bg-white p-3 my-2">
+    <div className="rounded-lg bg-myBlogListBgColor p-3 my-2">
       {/* 日付 */}
       <div className="text-sm">
         {formattedCreatedAt}

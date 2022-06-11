@@ -3,8 +3,8 @@ import { NavbarContetts } from "./NavbarContents";
 
 export const Navbar = (): JSX.Element => {
   return (
-    <nav className="w-full bg-myTheme">
-      <div className="w-full flex p-6">
+    <nav className="w-full bg-myBgColor">
+      <div className="w-full flex p-10">
         {/* ブログタイトル */}
         <NavbarTitle/>
         

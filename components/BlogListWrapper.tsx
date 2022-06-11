@@ -10,7 +10,7 @@ export const BlogListWrapper = (props: BlogListWrapperProps): JSX.Element => {
   const { blogs } = props;
 
   return (
-    <div>
+    <div className='mt-5'>
       {
         blogs.map(blog => {
           return <BlogList blog={blog} />

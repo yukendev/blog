@@ -5,8 +5,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        myTheme: '#E5CB9F',
-        tagBgColor: '#FFA500',
+        myBgColor: '#E5CB9F',
+        myTextColor: '#06283D',
+        myTagColor: '#06283D',
+        myBlogListBgColor: '#F5F5F5'
       },
     },
   },

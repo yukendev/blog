@@ -1,4 +1,4 @@
 
 export const NavbarTitle = (): JSX.Element => {
-  return <div>ブログタイトル</div>
+  return <div className="font-bold text-myTextColor">ブログタイトル</div>
 };
