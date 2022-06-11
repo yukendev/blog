@@ -1,5 +1,5 @@
 import '../styles/globals.css'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import 'tailwindcss/tailwind.css';
 
 import { Layout } from '../components/Layout'
 
