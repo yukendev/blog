@@ -8,7 +8,7 @@ type CategoryProps = {
   blogs: IBlog[]
 }
 
-const Category: NextPage<CategoryProps> = ({ category, blogs }) => {
+const CategoryPage: NextPage<CategoryProps> = ({ category, blogs }) => {
   return <CategoryContentWrapper category={category} blogs={blogs}/>;
 }
 
@@ -35,4 +35,4 @@ export const getStaticProps = async (context) => {
   };
 };
 
-export default Category
+export default CategoryPage;
