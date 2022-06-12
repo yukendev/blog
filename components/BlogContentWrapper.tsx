@@ -34,7 +34,7 @@ export const BlogContentWrapper = (props: BlogContentWrapperProps): JSX.Element 
 
         {/* footer */}
         <div className="mb-10">
-          <BlogFooter tags={tags}/>
+          <BlogFooter tags={tags} blog={blog}/>
         </div>
 
       </div>
