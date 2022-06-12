@@ -8,9 +8,12 @@ module.exports = {
         myBgColor: '#E5CB9F',
         myTextColor: '#06283D',
         myTagColor: '#06283D',
-        myBlogListBgColor: '#F5F5F5'
+        myBlogListBgColor: '#F5F5F5',
+        myBlogContentBgColor: '#F5F5F5'
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography')
+  ],
 }
