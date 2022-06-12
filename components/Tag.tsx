@@ -1,4 +1,5 @@
 import { ITag } from "../types"
+import Link from 'next/link'
 
 type TagProps = {
   tag: ITag
@@ -7,8 +8,10 @@ type TagProps = {
 export const Tag = (props: TagProps): JSX.Element => {
   const { tag } = props;
   return (
-    <div className="px-3 bg-myTagColor text-white rounded-lg mr-1 text-sm">
-      {tag.name}
-    </div>
+    <Link href='/tags'>
+      <div className="px-3 bg-myTagColor text-white rounded-lg mr-1 text-sm">
+        {tag.name}
+      </div>
+    </Link>
   )
 }
