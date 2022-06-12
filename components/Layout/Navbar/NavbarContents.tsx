@@ -16,6 +16,17 @@ const NavBarContentWrapper = (props: NavBarContentWrapperProps): JSX.Element => 
   )
 }
 
+const NavBarContentWrapperForExternal = (props: NavBarContentWrapperProps): JSX.Element => {
+  const { title, href } = props;
+  return (
+    <div className="rounded px-2 py-1 mx-3 text-myTextColor cursor-pointer hover:bg-myBgColorHover">
+      <a href={href} target="_blank" rel="noopener noreferrer">
+        {title}
+      </a>
+    </div>
+  )
+}
+
 
 export const NavbarContetts = (): JSX.Element => {
   return (
@@ -27,10 +38,11 @@ export const NavbarContetts = (): JSX.Element => {
       <NavBarContentWrapper title='About' href='/'/>
 
       {/* Twitter */}
-      <NavBarContentWrapper title='Twitter' href='/'/>
+      <NavBarContentWrapperForExternal title='Twitter' href='https://twitter.com/tezuka_0906_wtf'/>
+      <a href=""></a>
 
       {/* Github */}
-      <NavBarContentWrapper title='Github' href='/'/>
+      <NavBarContentWrapperForExternal title='Github' href='https://github.com/yukendev'/>
 
     </div>
   )
