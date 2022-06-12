@@ -1,27 +1,42 @@
+import Link from 'next/link'
 import TechImg from '../images/CategoryTech.svg'
 import BookImg from '../images/CategoryBook.svg'
 import NoteImg from '../images/CategoryNote.svg'
+
+type CategoryListWrapperProps = {
+  image: JSX.Element,
+  title: string,
+  href: string
+}
+
+const CategoryListWrapper = (props: CategoryListWrapperProps): JSX.Element => {
+  const { image, title, href } = props;
+  return (
+    <Link href={href}>
+      <div className='cursor-pointer mx-5 group'>
+        <div className='rounded-full group-hover:bg-myBgColorHover'>
+          {image}
+        </div>
+        <div className='text-center text-myTextColor'>
+          {title}
+        </div>
+      </div>
+    </Link>
+  )
+}
 
 export const CategoryList = (): JSX.Element => {
   return (
     <div className='flex'>
       {/* Technology */}
-      <div>
-        <TechImg widht={50} height={50} />
-        <div className='text-center text-myTextColor'>Tech</div>
-      </div>
+      <CategoryListWrapper image={<TechImg widht={50} height={50} />} title='Tech' href='/categories/tech'/>
 
       {/* Book */}
-      <div className='ml-10'>
-        <BookImg widht={50} height={50} />
-        <div className='text-center text-myTextColor'>Book</div>
-      </div>
+      <CategoryListWrapper image={<BookImg widht={50} height={50} />} title='Book' href='/categories/book'/>
 
       {/* Note */}
-      <div className='ml-10'>
-        <NoteImg widht={50} height={50} />
-        <div className='text-center text-myTextColor'>Note</div>
-      </div>
+      <CategoryListWrapper image={<NoteImg widht={50} height={50} />} title='Note' href='/categories/note'/>
+
     </div>
   )
 }

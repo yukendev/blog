@@ -6,10 +6,12 @@ module.exports = {
     extend: {
       colors: {
         myBgColor: '#E5CB9F',
+        myBgColorHover: '#D3BA8E',
         myTextColor: '#06283D',
         myTagColor: '#06283D',
         myBlogListBgColor: '#F5F5F5',
-        myBlogContentBgColor: '#F5F5F5'
+        myBlogContentBgColor: '#F5F5F5',
+        myBlogContentBgColorHover: '#EFEFEF'
       },
     },
   },
