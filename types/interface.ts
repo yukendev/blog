@@ -3,7 +3,7 @@ import { MicroCMSListContent } from "microcms-js-sdk";
 export interface IBlog extends MicroCMSListContent {
   title: string,
   category?: ICategory,
-  tag?: ITag
+  tags?: ITag[],
   body: string,
   description: string,
 }
