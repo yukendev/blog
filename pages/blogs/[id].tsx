@@ -9,21 +9,19 @@ type BlogProps = {
 }
 
 const Blog: NextPage<BlogProps> = ({ blog }) => {
-  return (
-    <BlogContentWrapper blog={blog}/>
-  );
+  return <BlogContentWrapper blog={blog}/>;
 }
 
 export const getStaticPaths = async () => {
-  const data = await client.get({ endpoint: "blog" });
+  const data = await client.get({ endpoint: "blogs" });
 
-  const paths = data.contents.map((content) => `/blog/${content.id}`);
+  const paths = data.contents.map((content) => `/blogs/${content.id}`);
   return { paths, fallback: false };
 };
 
 export const getStaticProps = async (context) => {
   const id = context.params.id;
-  const data = await client.get({ endpoint: "blog", contentId: id });
+  const data = await client.get({ endpoint: "blogs", contentId: id });
   const convertedBody = await converMarkdownToHtml(data.body)
 
   // Markdown形式の中身をHTML形式に変換されたものに入れ替える

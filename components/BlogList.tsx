@@ -12,7 +12,7 @@ export const BlogList = (props: BlogListProps): JSX.Element => {
   const { id, createdAt, title, tags} = blog;
   const formattedCreatedAt = formatDate(createdAt);
   return(
-    <Link href={`/blog/${id}`}>
+    <Link href={`/blogs/${id}`}>
       <div className="rounded-lg bg-myBlogListBgColor p-3 my-2 cursor-pointer hover:bg-myBlogContentBgColorHover">
         {/* 日付 */}
         <div className="text-sm">
