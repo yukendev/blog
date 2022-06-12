@@ -15,9 +15,12 @@ export const CategoryContentWrapper = (props: CategoryContentWrapperProps): JSX.
       <CategoryList/>
 
       {/* カテゴリータイトル */}
-      <div>
+      <div className='mt-10 text-2xl font-bold text-myTextColor'>
         {category.name}
       </div>
+
+      {/* divider */}
+      <div className="border-t-2 border-myBgColorHover my-5"></div>
 
       {/* ブログリスト */}
       <BlogListWrapper blogs={blogs}/>
