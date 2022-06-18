@@ -1,5 +1,6 @@
 import { NavbarTitle } from "./NavbarTitle";
-import { NavbarContetts } from "./NavbarContents";
+import { NavbarContents } from "./NavbarContents";
+import { NavbarContentsForMobile } from "./NavbarContentsForMobile";
 import { NavExpandButton } from "./NavExpandButton";
 import { useState } from "react";
 
@@ -20,12 +21,12 @@ export const Navbar = (): JSX.Element => {
 
         {/* 各種リンク 画面が大きい時(レスポンシブ) */}
         <div className="hidden md:block">
-          <NavbarContetts/>
+          <NavbarContents/>
         </div>
         
         {/* 各種リンク 画面が小さい時(レスポンシブ) */}
         <div className="md:hidden">
-          {!isLinkButtonsHidden && <NavbarContetts/>}
+          {!isLinkButtonsHidden && <NavbarContentsForMobile/>}
         </div>
       </div>
 

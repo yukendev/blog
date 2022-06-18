@@ -9,7 +9,7 @@ const NavBarContentWrapper = (props: NavBarContentWrapperProps): JSX.Element => 
   const { title, href } = props;
   return (
     <Link href={href}>
-      <div className="rounded px-2 py-1 mx-3 text-myTextColor cursor-pointer hover:bg-myBgColorHover">
+      <div className="rounded px-2 py-3 mx-3 text-myTextColor cursor-pointer hover:bg-myBgColorHover">
         {title}
       </div>
     </Link>
@@ -19,7 +19,7 @@ const NavBarContentWrapper = (props: NavBarContentWrapperProps): JSX.Element => 
 const NavBarContentWrapperForExternal = (props: NavBarContentWrapperProps): JSX.Element => {
   const { title, href } = props;
   return (
-    <div className="rounded px-2 py-1 mx-3 text-myTextColor cursor-pointer hover:bg-myBgColorHover">
+    <div className="rounded px-2 py-3 mx-3 text-myTextColor cursor-pointer hover:bg-myBgColorHover">
       <a href={href} target="_blank" rel="noopener noreferrer">
         {title}
       </a>
@@ -28,9 +28,9 @@ const NavBarContentWrapperForExternal = (props: NavBarContentWrapperProps): JSX.
 }
 
 
-export const NavbarContents = (): JSX.Element => {
+export const NavbarContentsForMobile = (): JSX.Element => {
   return (
-    <div className="flex mx-10">
+    <div className="bg-myBgColorHover mt-3 rounded-xl p-3">
       {/* Home */}
       <NavBarContentWrapper title='Home' href='/'/>
 
