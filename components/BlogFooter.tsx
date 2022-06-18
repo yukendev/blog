@@ -13,7 +13,7 @@ export const BlogFooter = (props: BlogFooterProps): JSX.Element => {
   const { tags, blog } = props;
 
   const getURL = (blogId: string): string => {
-    return `https://www.yukendev.com/blog/${blogId}`
+    return `https://www.yukendev.com/blog/${blogId}aaa`
   }
 
   const copyButtonHandler = () => {
@@ -42,9 +42,6 @@ export const BlogFooter = (props: BlogFooterProps): JSX.Element => {
 
       <div className="flex justify-center">
         {/* twitter */}
-        {/* <div className="mr-3">
-          <Twitter widht={40} height={40} />
-        </div> */}
         <a className="mr-3" href='//twitter.com/share' data-text={blog.title} data-url={getURL(blog.id)} data-lang='ja'>
           <Twitter widht={40} height={40} />
         </a>
