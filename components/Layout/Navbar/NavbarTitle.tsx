@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-const blogTitle = 'ブログタイトル'
+const blogTitle = 'てずかのブログ'
 
 export const NavbarTitle = (): JSX.Element => {
   return(
