@@ -9,7 +9,7 @@ type TagContentWrapperProps = {
 export const TagContentWrapper = (props: TagContentWrapperProps): JSX.Element => {
   const { tag, blogs } = props;
   return (
-    <div>
+    <div className='mx-auto w-11/12 md:w-9/12'>
       {/* タグタイトル */}
       <div className='mt-10 text-2xl font-bold text-myTextColor'>
         {tag.name}
