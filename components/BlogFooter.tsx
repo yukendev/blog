@@ -29,7 +29,7 @@ export const BlogFooter = (props: BlogFooterProps): JSX.Element => {
     <div>
 
       {/* タグ */}
-      <div className="flex my-5">
+      <div className="flex flex-wrap my-5">
         {
           tags.map((tag) => {
             return <Tag tag={tag}/>

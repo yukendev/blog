@@ -12,8 +12,8 @@ export const BlogContentWrapper = (props: BlogContentWrapperProps): JSX.Element 
   const formatedCreatedAt = formatDate(createdAt);
 
   return (
-    <div className="bg-myBlogContentBgColor rounded-lg">
-      <div className="py-10 px-32">
+    <div className="bg-myBlogContentBgColor rounded-lg mx-auto w-11/12 md:w-9/12">
+      <div className="p-3 md:p-10">
         {/* タイトル */}
         <div className="text-center">
           <h1 className="text-3xl font-bold p-5 mx-auto">{title}</h1>
@@ -21,7 +21,7 @@ export const BlogContentWrapper = (props: BlogContentWrapperProps): JSX.Element 
 
         {/* 公開日 */}
         <div className="flex justify-end my-5">
-          <p className="mr-10">{`公開日: ${formatedCreatedAt}`}</p>
+          <p className="mr-1 md:mr-10">{`公開日: ${formatedCreatedAt}`}</p>
         </div>
 
         {/* 本文 */}
