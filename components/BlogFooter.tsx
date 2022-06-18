@@ -4,6 +4,10 @@ import { Tag } from './Tag';
 import Twitter from '../images/Twitter.svg'
 import Clip from '../images/Clip.svg'
 
+import {
+  TwitterShareButton,
+} from 'react-share';
+
 type BlogFooterProps = {
   tags: ITag[]
   blog: IBlog
@@ -42,9 +46,9 @@ export const BlogFooter = (props: BlogFooterProps): JSX.Element => {
 
       <div className="flex justify-center">
         {/* twitter */}
-        <a className="mr-3" href='//twitter.com/share' data-text={blog.title} data-url={getURL(blog.id)} data-lang='ja'>
+        <TwitterShareButton className="mr-3" url={getURL(blog.id)} title={blog.title}>
           <Twitter widht={40} height={40} />
-        </a>
+        </TwitterShareButton>
 
         {/* コピー */}
         <button className="ml-3" onClick={copyButtonHandler}>
