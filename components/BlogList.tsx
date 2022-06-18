@@ -25,7 +25,7 @@ export const BlogList = (props: BlogListProps): JSX.Element => {
         </div>
 
         {/* タグ */}
-        <div className="flex my-2">
+        <div className="flex flex-wrap my-2">
           {
             tags.map((tag) => {
               return <Tag tag={tag}/>

@@ -30,7 +30,7 @@ const NavBarContentWrapperForExternal = (props: NavBarContentWrapperProps): JSX.
 
 export const NavbarContetts = (): JSX.Element => {
   return (
-    <div className="flex mx-10">
+    <div className="md:flex md:mx-10">
       {/* Home */}
       <NavBarContentWrapper title='Home' href='/'/>
 

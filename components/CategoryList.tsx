@@ -27,7 +27,7 @@ const CategoryListWrapper = (props: CategoryListWrapperProps): JSX.Element => {
 
 export const CategoryList = (): JSX.Element => {
   return (
-    <div className='flex'>
+    <div className='flex flex-wrap'>
       {/* Technology */}
       <CategoryListWrapper image={<TechImg widht={50} height={50} />} title='Tech' href='/categories/tech'/>
 

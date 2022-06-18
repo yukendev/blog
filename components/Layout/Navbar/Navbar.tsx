@@ -1,16 +1,36 @@
 import { NavbarTitle } from "./NavbarTitle";
 import { NavbarContetts } from "./NavbarContents";
+import { NavExpandButton } from "./NavExpandButton";
+import { useState } from "react";
 
 export const Navbar = (): JSX.Element => {
+
+  const [isLinkButtonsHidden, setIsLinkButtonsHidden] = useState(true);
+
+  const hideLinkButtons = (isHidden: boolean) => {
+    setIsLinkButtonsHidden(!isHidden);
+  }
+
   return (
-    <nav className="w-full bg-myBgColor">
-      <div className="w-full flex p-10">
+    <nav className="w-full flex bg-myBgColor p-5 md:p-10">
+      <div className="w-full md:flex">
         {/* ブログタイトル */}
         <NavbarTitle/>
+
+
+        {/* 各種リンク 画面が大きい時(レスポンシブ) */}
+        <div className="hidden md:block">
+          <NavbarContetts/>
+        </div>
         
-        {/* ボタンたち　 */}
-        <NavbarContetts/>
+        {/* 各種リンク 画面が小さい時(レスポンシブ) */}
+        <div className="md:hidden">
+          {!isLinkButtonsHidden && <NavbarContetts/>}
+        </div>
       </div>
+
+      {/* レスポンシブ対応ボタン */}
+      <NavExpandButton hideLinkButtons={hideLinkButtons}/>
     </nav>
   )
 };
