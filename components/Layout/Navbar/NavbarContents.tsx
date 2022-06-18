@@ -35,11 +35,10 @@ export const NavbarContetts = (): JSX.Element => {
       <NavBarContentWrapper title='Home' href='/'/>
 
       {/* About */}
-      <NavBarContentWrapper title='About' href='/'/>
+      <NavBarContentWrapper title='About' href='/me'/>
 
       {/* Twitter */}
       <NavBarContentWrapperForExternal title='Twitter' href='https://twitter.com/tezuka_0906_wtf'/>
-      <a href=""></a>
 
       {/* Github */}
       <NavBarContentWrapperForExternal title='Github' href='https://github.com/yukendev'/>
