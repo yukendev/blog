@@ -74,7 +74,7 @@
   /* ::: info
   🤓 some text
   ::: */
-  .markdown-body .attention {
+  .markdown-body .info {
     display: flex;
     overflow-wrap: anywhere;
     margin: 1.5rem 0;
@@ -86,7 +86,7 @@
     line-height: 1.6;
   }
 
-  .markdown-body .attention::before {
+  .markdown-body .info::before {
     content: "\1F913";
     font-size: 200%;
     display: flex;
