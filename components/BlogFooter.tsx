@@ -4,7 +4,6 @@ import { Tag } from './Tag';
 import Twitter from '../images/Twitter.svg'
 import Clip from '../images/Clip.svg'
 
-import { TwitterShareButton } from 'react-share';
 import { useState } from "react";
 
 type BlogFooterProps = {
@@ -66,9 +65,9 @@ export const BlogFooter = (props: BlogFooterProps): JSX.Element => {
 
       <div className="flex justify-center">
         {/* twitter */}
-        <TwitterShareButton className="mr-3" url={getURL(blog.id)} title={blog.title}>
+        <div className="mr-3">
           <Twitter widht={40} height={40} />
-        </TwitterShareButton>
+        </div>
 
         {/* コピー */}
         <div className="relative flex justify-center ml-3">
