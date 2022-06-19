@@ -12,6 +12,7 @@ export const converMarkdownToHtml = async(markdown: string) => {
   .use(mdContainer, 'question', containerQuestionOptions)
   .use(mdContainer, 'attention', containerAttentionOptions)
   .use(mdContainer, 'alert', containerAlertOptions)
+  .use(mdContainer, 'info', containerInfoOptions)
   .use(markdownItPrism, {})
 
   return markdownIt.render(markdown)
@@ -69,6 +70,26 @@ const containerAlertOptions = {
     if (tokens[idx].nesting === 1) {
       // opening tag
       return '<div class="alert">';
+    }
+    else {
+      // closing tag
+      return '</div>\n';
+    }
+  },
+};
+
+// ::: info
+// 🤓 text
+// :::
+var infoClassRegex = /^info$/;
+const containerInfoOptions = {
+  validate: function (params:any) {
+      return infoClassRegex.test(params.trim());
+  },
+  render: function (tokens:any, idx:number) {
+    if (tokens[idx].nesting === 1) {
+      // opening tag
+      return '<div class="info">';
     }
     else {
       // closing tag
