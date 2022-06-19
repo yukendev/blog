@@ -2,6 +2,7 @@ import { IBlog } from "../types"
 import { formatDate } from '../util/date-formatter';
 import { BlogFooter } from './BlogFooter';
 
+
 type BlogContentWrapperProps = {
   blog: IBlog
 }
@@ -12,7 +13,7 @@ export const BlogContentWrapper = (props: BlogContentWrapperProps): JSX.Element 
   const formatedCreatedAt = formatDate(createdAt);
 
   return (
-    <div className="bg-myBlogContentBgColor rounded-lg mx-auto w-11/12 md:w-9/12">
+    <div className="markdown-body bg-myBlogContentBgColor rounded-lg mx-auto w-11/12 md:w-9/12">
       <div className="p-3 md:p-10">
         {/* タイトル */}
         <div className="text-center">
