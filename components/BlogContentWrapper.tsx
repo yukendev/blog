@@ -1,6 +1,7 @@
 import { IBlog } from "../types"
 import { formatDate } from '../util/date-formatter';
 import { BlogFooter } from './BlogFooter';
+import Head from 'next/head'
 
 
 type BlogContentWrapperProps = {
@@ -14,6 +15,11 @@ export const BlogContentWrapper = (props: BlogContentWrapperProps): JSX.Element 
 
   return (
     <div className="markdown-body bg-myBlogContentBgColor rounded-lg mx-auto w-11/12 md:w-8/12">
+
+      <Head>
+        <title>{blog.title}</title>
+      </Head>
+
       <div className="p-3 md:p-10">
         {/* タイトル */}
         <div className="text-center">
