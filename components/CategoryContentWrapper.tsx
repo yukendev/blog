@@ -10,7 +10,7 @@ type CategoryContentWrapperProps = {
 export const CategoryContentWrapper = (props: CategoryContentWrapperProps): JSX.Element => {
   const { category, blogs } = props;
   return (
-    <div className='mx-auto w-11/12 md:w-9/12'>
+    <div className='mx-auto w-11/12 md:w-8/12'>
       {/* カテゴリーリスト */}
       <CategoryList/>
 
