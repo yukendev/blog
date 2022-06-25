@@ -1,1 +1,1 @@
-export type Category = 'Tech'|'Book'|'Note';
+export type Category = 'tech'|'book'|'note';

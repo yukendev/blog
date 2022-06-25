@@ -2,7 +2,7 @@
 title: "タイトル"
 date: "2021-07-08"
 slug: "hoge"
-category: "Tech"
+category: "tech"
 tags:
   - "Swift"
 description: "description"
