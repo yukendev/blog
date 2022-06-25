@@ -1,5 +1,6 @@
-import { IBlog, ITag } from "../types"
-import { Tag } from './Tag';
+import { Blog } from "../types"
+import { TagCard } from './TagCard';
+import { Tag } from '../data/tags/type'
 
 import Twitter from '../images/Twitter.svg'
 import Clip from '../images/Clip.svg'
@@ -7,8 +8,8 @@ import Clip from '../images/Clip.svg'
 import { useState } from "react";
 
 type BlogFooterProps = {
-  tags: ITag[]
-  blog: IBlog
+  tags: Tag[]
+  blog: Blog
 }
 
 type CopiedTooltipPropsType = {
@@ -55,7 +56,7 @@ export const BlogFooter = (props: BlogFooterProps): JSX.Element => {
       <div className="flex flex-wrap my-5">
         {
           tags.map((tag) => {
-            return <Tag tag={tag}/>
+            return <TagCard tag={tag}/>
           })
         }
       </div>

@@ -1,22 +1,20 @@
-import { IBlog } from "../types"
-import { Tag } from './Tag';
+import { Blog } from "../types"
+import { TagCard } from './TagCard';
 import Link from 'next/link'
-import { formatDate } from '../util/date-formatter';
 
 type BlogListProps = {
-  blog: IBlog
+  blog: Blog
 }
 
 export const BlogList = (props: BlogListProps): JSX.Element => {
   const { blog } = props;
-  const { id, createdAt, title, tags} = blog;
-  const formattedCreatedAt = formatDate(createdAt);
+  const { slug, date, title, tags} = blog;
   return(
-    <Link href={`/blogs/${id}`}>
+    <Link href={`/blogs/${slug}`}>
       <div className="rounded-lg bg-myBlogListBgColor p-3 my-2 cursor-pointer hover:bg-myBlogContentBgColorHover">
         {/* 日付 */}
         <div className="text-sm">
-          {formattedCreatedAt}
+          {date}
         </div>
 
         {/* ブログタイトル */}
@@ -28,7 +26,7 @@ export const BlogList = (props: BlogListProps): JSX.Element => {
         <div className="flex flex-wrap my-2">
           {
             tags.map((tag) => {
-              return <Tag tag={tag}/>
+              return <TagCard tag={tag}/>
             })
           }
         </div>
