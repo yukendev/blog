@@ -1,17 +1,17 @@
-import { IBlog } from "../types"
+import { Blog } from "../types"
 import { formatDate } from '../util/date-formatter';
 import { BlogFooter } from './BlogFooter';
 import Head from 'next/head'
 
 
 type BlogContentWrapperProps = {
-  blog: IBlog
+  blog: Blog
 }
 
 export const BlogContentWrapper = (props: BlogContentWrapperProps): JSX.Element => {
   const { blog } = props;
-  const { title, createdAt, body, tags } = blog;
-  const formatedCreatedAt = formatDate(createdAt);
+  const { title, date, body, tags } = blog;
+  const formatedCreatedAt = formatDate(date);
 
   return (
     <div className="markdown-body bg-myBlogContentBgColor rounded-lg mx-auto w-11/12 md:w-8/12">

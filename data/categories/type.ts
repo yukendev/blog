@@ -1,0 +1,1 @@
+export type Category = 'Tech'|'Book'|'Note';

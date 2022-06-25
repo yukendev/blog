@@ -1,8 +1,8 @@
-import { IBlog } from '../types'
+import { Blog } from '../types'
 import { BlogList } from './BlogList'
 
 type BlogListWrapperProps = {
-  blogs: IBlog[]
+  blogs: Blog[]
 }
 
 export const BlogListWrapper = (props: BlogListWrapperProps): JSX.Element => {

@@ -1,17 +1,12 @@
-import { MicroCMSListContent } from "microcms-js-sdk";
+import { Tag } from "../data/tags/type"
+import { Category } from "../data/categories/type"
 
-export interface IBlog extends MicroCMSListContent {
+export type Blog = {
   title: string,
-  category?: ICategory,
-  tags?: ITag[],
+  date: string,
+  slug: string,
+  category?: Category,
+  tags?: Tag[],
   body: string,
   description: string,
-}
-
-export interface ICategory extends MicroCMSListContent {
-  name: string
-}
-
-export interface ITag extends MicroCMSListContent {
-  name: string
 }
