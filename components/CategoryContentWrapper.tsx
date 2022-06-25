@@ -1,10 +1,11 @@
-import { IBlog, ICategory } from '../types';
+import { Blog } from '../types';
 import { CategoryList } from './CategoryList';
 import { BlogListWrapper } from './BlogListWrapper';
+import { Category } from '../data/categories/type'
 
 type CategoryContentWrapperProps = {
-  category: ICategory
-  blogs: IBlog[]
+  category: Category
+  blogs: Blog[]
 }
 
 export const CategoryContentWrapper = (props: CategoryContentWrapperProps): JSX.Element => {
@@ -16,7 +17,7 @@ export const CategoryContentWrapper = (props: CategoryContentWrapperProps): JSX.
 
       {/* カテゴリータイトル */}
       <div className='mt-10 text-2xl font-bold text-myTextColor'>
-        {category.name}
+        {category}
       </div>
 
       {/* divider */}

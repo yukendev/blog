@@ -1,12 +1,12 @@
 import { NextPage } from 'next';
-import { client } from "../libs/client";
-import { IBlog } from '../types';
+import { Blog } from '../types';
 import { BlogListWrapper } from '../components/BlogListWrapper';
 import { CategoryList } from '../components/CategoryList';
 import Head from 'next/head'
+import { getSortedPostsData } from '../libs/posts';
 
 type HomeProps = {
-  blogs: IBlog[]
+  blogs: Blog[]
 }
 
 const Home: NextPage<HomeProps> = ({ blogs }) => {
@@ -22,11 +22,13 @@ const Home: NextPage<HomeProps> = ({ blogs }) => {
 }
 
 export const getStaticProps = async () => {
-  const data = await client.get({ endpoint: "blogs" });
+  // 全ての記事を日付順で取得
+
+  const data = await getSortedPostsData()
 
   return {
     props: {
-      blogs: data.contents,
+      blogs: data,
     },
   };
 };
