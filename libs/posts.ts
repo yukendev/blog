@@ -76,8 +76,17 @@ export const getSortedPostsData = async(): Promise<Blog[]> => {
     })
   )
 
-  // TODO: sort posts
-  return allPostsData;
+  const sortedPost = allPostsData.sort((a, b) => {
+    const aDate = new Date(a.date)
+    const bDate = new Date(b.date)
+    if (aDate > bDate) {
+      return -1
+    }
+    else {
+      return 1
+    }
+  })
+  return sortedPost;
 }
 
 // slugが一致する投稿を取得する
