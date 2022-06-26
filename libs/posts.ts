@@ -8,6 +8,8 @@ import { Tag } from '../data/tags/type';
 import { Blog } from '../types';
 
 const postsDirectory = path.join(process.cwd(), 'posts');
+const regExpForDir = new RegExp('[0-9]{4}-[0-9]{2}-[0-9]{2}');
+const regExpForMd = new RegExp('[0-9]{4}-[0-9]{2}-[0-9]{2}.md');
 
 // 取得したデータからBlogを作成
 const generateBlogFromData = async(data: any, content: string): Promise<Blog> => {
@@ -29,7 +31,7 @@ const generateBlogFromData = async(data: any, content: string): Promise<Blog> =>
   }
 
   try {
-    const convertedBody = await converMarkdownToHtml(content)
+    const convertedBody = await converMarkdownToHtml(content, date)
 
     const blog: Blog = {
       title,
@@ -50,16 +52,18 @@ const generateBlogFromData = async(data: any, content: string): Promise<Blog> =>
 
 // 全ての投稿を日付順で取得する（まだ日付順ではない）
 export const getSortedPostsData = async(): Promise<Blog[]> => {
-  const regExp = new RegExp('[0-9]{4}-[0-9]{2}-[0-9]{2}.md');
-  const fileNames = fs.readdirSync(postsDirectory);
-  const filteredFileName = fileNames.filter((fileName) => regExp.test(fileName) )
+  const dirNames = fs.readdirSync(postsDirectory);
+  const filteredDirName = dirNames.filter((fileName) => regExpForDir.test(fileName) )
 
   const allPostsData = await Promise.all(
-    filteredFileName.map(async(fileName) => {
+    filteredDirName.map(async(dirName) => {
 
       // Read markdown file as string
-      const fullPath = path.join(postsDirectory, fileName);
-      const fileContents = fs.readFileSync(fullPath, 'utf8');
+      const fullPathForDir = path.join(postsDirectory, dirName);
+      const fileNames = fs.readdirSync(fullPathForDir);
+      const mdFile = fileNames.find((file) => regExpForMd.test(file))
+      const fullPathForMd = path.join(fullPathForDir, mdFile);
+      const fileContents = fs.readFileSync(fullPathForMd, 'utf8');
   
       // Use gray-matter to parse the post metadata section
       const matterResult = matter(fileContents);
