@@ -23,7 +23,7 @@ export const BlogContentWrapper = (props: BlogContentWrapperProps): JSX.Element 
       <div className="p-3 md:p-10">
         {/* タイトル */}
         <div className="text-center">
-          <h1 className="text-3xl font-bold p-5 mx-auto">{title}</h1>
+          <h1 className="text-3xl font-bold p-2 mx-auto">{title}</h1>
         </div>
 
         {/* 公開日 */}
