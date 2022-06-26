@@ -2,7 +2,7 @@ import MarkdownIt from 'markdown-it'
 import mdContainer from 'markdown-it-container'
 import markdownItPrism from 'markdown-it-prism'
 
-export const converMarkdownToHtml = async(markdown: string) => {
+export const converMarkdownToHtml = async(markdown: string, date: string) => {
   const markdownIt = new MarkdownIt({
     html: true,
     linkify: true,
@@ -15,7 +15,8 @@ export const converMarkdownToHtml = async(markdown: string) => {
   .use(mdContainer, 'info', containerInfoOptions)
   .use(markdownItPrism, {})
 
-  return markdownIt.render(markdown)
+  // return markdownIt.render(markdown)
+  return markdownIt.render(markdown).replace(/@image/g, `/assets/images/posts/${date}`);
 }
 
 // ::: question
