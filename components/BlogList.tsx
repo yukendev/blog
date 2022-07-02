@@ -11,12 +11,12 @@ export const BlogList = (props: BlogListProps): JSX.Element => {
   const { slug, date, title, tags } = blog;
   return (
     <Link href={`/blogs/${slug}`}>
-      <div className="rounded-lg bg-myBlogListBgColor p-3 my-2 cursor-pointer hover:bg-myBlogContentBgColorHover">
+      <div className="rounded-lg bg-myBlogListBgColor p-8 my-2 cursor-pointer hover:bg-myBlogContentBgColorHover">
         {/* 日付 */}
         <div className="text-sm">{date}</div>
 
         {/* ブログタイトル */}
-        <div className="font-bold my-1 text-lg">{title}</div>
+        <div className="font-bold my-1 text-xl">{title}</div>
 
         {/* タグ */}
         <div className="flex flex-wrap my-2">
