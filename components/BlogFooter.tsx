@@ -48,6 +48,8 @@ export const BlogFooter = (props: BlogFooterProps): JSX.Element => {
     }
   };
 
+  const url = `https://twitter.com/share?url=https://www.yukendev.com/blogs/${blog.slug}&text=${blog.title}`;
+
   return (
     <div>
       {/* タグ */}
@@ -63,7 +65,9 @@ export const BlogFooter = (props: BlogFooterProps): JSX.Element => {
       <div className="flex justify-center">
         {/* twitter */}
         <div className="mr-3">
-          <Twitter widht={40} height={40} />
+          <a href={url}>
+            <Twitter widht={40} height={40} />
+          </a>
         </div>
 
         {/* コピー */}
