@@ -14,7 +14,7 @@ export const BlogContentWrapper = (props: BlogContentWrapperProps): JSX.Element 
   const formatedCreatedAt = formatDate(date);
 
   return (
-    <div className="markdown-body bg-myBlogContentBgColor rounded-lg mx-auto w-11/12 md:w-8/12">
+    <div className="markdown-body bg-myBlogContentBgColor rounded-lg mx-auto w-11/12 md:w-8/12 max-w-5xl">
 
       <Head>
         <title>{blog.title}</title>

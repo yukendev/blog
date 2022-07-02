@@ -11,7 +11,7 @@ type HomeProps = {
 
 const Home: NextPage<HomeProps> = ({ blogs }) => {
   return (
-    <div className='mx-auto w-11/12 md:w-8/12'>
+    <div className='mx-auto w-11/12 max-w-5xl'>
       <Head>
         <title>てずかのブログ</title>
       </Head>

@@ -31,13 +31,15 @@ const AboutPage = (): JSX.Element => {
         </div>
 
         {/* 一言 */}
-        <div className='bg-myBlogContentBgColor rounded-3xl m-10 md:mx-32 p-4 md:p-8'>
-          <p className='font-medium'>
-            現在は大阪大学を休学して、東京の会社でエンジニアインターンをしています。
-            少し前までSwiftでiOSの開発をしていましたが、現在はNextjs, React, TypeScriptを勉強しながら「GROWI」というOSSのwikiシステムの開発に携わっています。
-            このブログはNext.jsの勉強がてら、vercel+microCMSでデプロイした自作ブログ。
-            体を構成している物質はVtuberと銭湯とテニスです。
-          </p>
+        <div className='p-3'>
+          <div className='bg-myBlogContentBgColor rounded-3xl p-4 md:p-8 mx-auto max-w-xl'>
+            <p className='font-medium'>
+              現在は大阪大学を休学して、東京の会社でエンジニアインターンをしています。
+              少し前までSwiftでiOSの開発をしていましたが、現在はNextjs, React, TypeScriptを勉強しながら「GROWI」というOSSのwikiシステムの開発に携わっています。
+              このブログはNext.jsの勉強がてら、vercel+microCMSでデプロイした自作ブログ。
+              体を構成している物質はVtuberと銭湯とテニスです。
+            </p>
+          </div>
         </div>
       </div>
     </div>
