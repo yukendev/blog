@@ -1,9 +1,9 @@
-import { Tag } from '../data/tags/type'
-import Link from 'next/link'
+import { Tag } from "../data/tags/type";
+import Link from "next/link";
 
 type TagProps = {
-  tag: Tag
-}
+  tag: Tag;
+};
 
 export const TagCard = (props: TagProps): JSX.Element => {
   const { tag } = props;
@@ -13,5 +13,5 @@ export const TagCard = (props: TagProps): JSX.Element => {
         {tag}
       </div>
     </Link>
-  )
-}
+  );
+};

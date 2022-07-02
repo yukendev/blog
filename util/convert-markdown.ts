@@ -1,40 +1,41 @@
-import MarkdownIt from 'markdown-it'
-import mdContainer from 'markdown-it-container'
-import markdownItPrism from 'markdown-it-prism'
+import MarkdownIt from "markdown-it";
+import mdContainer from "markdown-it-container";
+import markdownItPrism from "markdown-it-prism";
 
-export const converMarkdownToHtml = async(markdown: string, date: string) => {
+export const converMarkdownToHtml = async (markdown: string, date: string) => {
   const markdownIt = new MarkdownIt({
     html: true,
     linkify: true,
     typographer: true,
-    langPrefix: 'language-',
+    langPrefix: "language-",
   })
-  .use(mdContainer, 'question', containerQuestionOptions)
-  .use(mdContainer, 'attention', containerAttentionOptions)
-  .use(mdContainer, 'alert', containerAlertOptions)
-  .use(mdContainer, 'info', containerInfoOptions)
-  .use(markdownItPrism, {})
+    .use(mdContainer, "question", containerQuestionOptions)
+    .use(mdContainer, "attention", containerAttentionOptions)
+    .use(mdContainer, "alert", containerAlertOptions)
+    .use(mdContainer, "info", containerInfoOptions)
+    .use(markdownItPrism, {});
 
   // return markdownIt.render(markdown)
-  return markdownIt.render(markdown).replace(/@image/g, `/assets/images/posts/${date}`);
-}
+  return markdownIt
+    .render(markdown)
+    .replace(/@image/g, `/assets/images/posts/${date}`);
+};
 
 // ::: question
 // 🤔 text
 // :::
 var queClassRegex = /^question$/;
 const containerQuestionOptions = {
-  validate: function (params:any) {
-      return queClassRegex.test(params.trim());
+  validate: function (params: any) {
+    return queClassRegex.test(params.trim());
   },
-  render: function (tokens:any, idx:number) {
+  render: function (tokens: any, idx: number) {
     if (tokens[idx].nesting === 1) {
       // opening tag
       return '<div class="question">';
-    }
-    else {
+    } else {
       // closing tag
-      return '</div>\n';
+      return "</div>\n";
     }
   },
 };
@@ -44,17 +45,16 @@ const containerQuestionOptions = {
 // :::
 var attClassRegex = /^attention$/;
 const containerAttentionOptions = {
-  validate: function (params:any) {
-      return attClassRegex.test(params.trim());
+  validate: function (params: any) {
+    return attClassRegex.test(params.trim());
   },
-  render: function (tokens:any, idx:number) {
+  render: function (tokens: any, idx: number) {
     if (tokens[idx].nesting === 1) {
       // opening tag
       return '<div class="attention">';
-    }
-    else {
+    } else {
       // closing tag
-      return '</div>\n';
+      return "</div>\n";
     }
   },
 };
@@ -64,17 +64,16 @@ const containerAttentionOptions = {
 // :::
 var aleClassRegex = /^alert$/;
 const containerAlertOptions = {
-  validate: function (params:any) {
-      return aleClassRegex.test(params.trim());
+  validate: function (params: any) {
+    return aleClassRegex.test(params.trim());
   },
-  render: function (tokens:any, idx:number) {
+  render: function (tokens: any, idx: number) {
     if (tokens[idx].nesting === 1) {
       // opening tag
       return '<div class="alert">';
-    }
-    else {
+    } else {
       // closing tag
-      return '</div>\n';
+      return "</div>\n";
     }
   },
 };
@@ -84,17 +83,16 @@ const containerAlertOptions = {
 // :::
 var infoClassRegex = /^info$/;
 const containerInfoOptions = {
-  validate: function (params:any) {
-      return infoClassRegex.test(params.trim());
+  validate: function (params: any) {
+    return infoClassRegex.test(params.trim());
   },
-  render: function (tokens:any, idx:number) {
+  render: function (tokens: any, idx: number) {
     if (tokens[idx].nesting === 1) {
       // opening tag
       return '<div class="info">';
-    }
-    else {
+    } else {
       // closing tag
-      return '</div>\n';
+      return "</div>\n";
     }
   },
 };
