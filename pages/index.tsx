@@ -24,6 +24,8 @@ const Home: NextPage<HomeProps> = ({ blogs }) => {
         <meta property="og:description" content={blogDescription} />
         <meta property="og:site_name" content="てずかのブログ" />
         <meta property="og:image" content="https://www.yukendev.com/ogp.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@tezuka_0906_wtf" />
       </Head>
       <CategoryList />
       <BlogListWrapper blogs={blogs} />
