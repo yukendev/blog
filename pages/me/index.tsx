@@ -19,7 +19,7 @@ const AboutPage = (): JSX.Element => {
 
         {/* 名前 */}
         <div className="flex flex-col content-center my-2">
-          <div className="text-lg font-medium text-center">てずか</div>
+          <div className="text-xl font-medium text-center">てずか</div>
           <div className="text-center">@tezuka_0906_wtf</div>
         </div>
 
@@ -36,15 +36,34 @@ const AboutPage = (): JSX.Element => {
           </a>
         </div>
 
-        {/* 一言 */}
+        {/* About Me */}
+        <p className="mx-auto text-xl mt-10">About Me</p>
         <div className="p-3">
           <div className="bg-myBlogContentBgColor rounded-3xl p-4 md:p-8 mx-auto max-w-xl">
             <p className="font-medium">
-              現在は大阪大学を休学して、東京の会社でエンジニアインターンをしています。
-              少し前までSwiftでiOSの開発をしていましたが、現在はNextjs, React,
-              TypeScriptを勉強しながら「GROWI」というOSSのwikiシステムの開発に携わっています。
-              このブログはNext.jsの勉強がてら、vercel+microCMSでデプロイした自作ブログ。
-              体を構成している物質はVtuberと銭湯とテニスです。
+              現在、大阪大学を休学して、東京の会社でインターンをしながら勉強しています。
+              『休学中にプログラミング飽きたらどうしよう🥺』とか思ってた時期もあったけど、余裕でまだおもろいです。
+              少し前までSwiftでiOSアプリの開発をしていましたが、現在はNext.js,
+              React,TypeScriptを勉強しながら
+              『GROWI』というOSSのwikiシステムの開発に携わっています。みなさん、『GROWI』を使いましょう。
+              勉強時間的にはフロントの方が多いですが、バックエンド、インフラにも興味あります。
+              体を構成している全要素は『Vtuber』『銭湯』『テニス』です。それ以外の要素は体にありません。
+            </p>
+          </div>
+        </div>
+
+        {/* About Blog */}
+        <p className="mx-auto text-xl mt-10">About Blog</p>
+        <div className="p-3">
+          <div className="bg-myBlogContentBgColor rounded-3xl p-4 md:p-8 mx-auto max-w-xl">
+            <p className="font-medium">
+              以前まで、wordpress製の
+              <a className="underline" href="https://www.bouzuyahonpo.com/">
+                ぼうず屋本舗
+              </a>
+              というブログを運営してましたが、Next.jsを勉強したくなったので新しく、
+              『てずかのブログ』というなんとも微妙な名前のブログをNext.jsとVercelで立ち上げました。
+              これからブラッシュアップしていきます。
             </p>
           </div>
         </div>
