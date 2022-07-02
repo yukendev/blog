@@ -9,11 +9,15 @@ type HomeProps = {
   blogs: Blog[];
 };
 
+const blogDescription =
+  "てずかが学んだことを個人的にアウトプットするだけのブログです。よろしくお願いします。";
+
 const Home: NextPage<HomeProps> = ({ blogs }) => {
   return (
     <div className="mx-auto w-11/12 max-w-5xl">
       <Head>
         <title>てずかのブログ</title>
+        <meta name="description" content={blogDescription} />
       </Head>
       <CategoryList />
       <BlogListWrapper blogs={blogs} />
