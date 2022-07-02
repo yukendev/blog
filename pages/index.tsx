@@ -18,6 +18,12 @@ const Home: NextPage<HomeProps> = ({ blogs }) => {
       <Head>
         <title>てずかのブログ</title>
         <meta name="description" content={blogDescription} />
+        <meta property="og:url" content="https://www.yukendev.com/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="てずかのブログ" />
+        <meta property="og:description" content={blogDescription} />
+        <meta property="og:site_name" content="てずかのブログ" />
+        <meta property="og:image" content="https://www.yukendev.com/ogp.png" />
       </Head>
       <CategoryList />
       <BlogListWrapper blogs={blogs} />
