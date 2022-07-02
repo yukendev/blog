@@ -1,13 +1,13 @@
-import Link from 'next/link'
+import Link from "next/link";
 
-const blogTitle = 'てずかのブログ'
+const blogTitle = "てずかのブログ";
 
 export const NavbarTitle = (): JSX.Element => {
-  return(
+  return (
     <Link href="/">
       <div className="w-32 font-bold text-center text-myTextColor cursor-pointer">
         {blogTitle}
       </div>
     </Link>
-  )
+  );
 };

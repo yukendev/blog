@@ -1,11 +1,13 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 type NavBarContentWrapperProps = {
-  title: string,
-  href: string
-}
+  title: string;
+  href: string;
+};
 
-const NavBarContentWrapper = (props: NavBarContentWrapperProps): JSX.Element => {
+const NavBarContentWrapper = (
+  props: NavBarContentWrapperProps
+): JSX.Element => {
   const { title, href } = props;
   return (
     <Link href={href}>
@@ -13,10 +15,12 @@ const NavBarContentWrapper = (props: NavBarContentWrapperProps): JSX.Element => 
         {title}
       </div>
     </Link>
-  )
-}
+  );
+};
 
-const NavBarContentWrapperForExternal = (props: NavBarContentWrapperProps): JSX.Element => {
+const NavBarContentWrapperForExternal = (
+  props: NavBarContentWrapperProps
+): JSX.Element => {
   const { title, href } = props;
   return (
     <div className="rounded px-2 py-1 mx-3 text-myTextColor cursor-pointer hover:bg-myBgColorHover font-semibold">
@@ -24,25 +28,29 @@ const NavBarContentWrapperForExternal = (props: NavBarContentWrapperProps): JSX.
         {title}
       </a>
     </div>
-  )
-}
-
+  );
+};
 
 export const NavbarContents = (): JSX.Element => {
   return (
     <div className="flex mx-10">
       {/* Home */}
-      <NavBarContentWrapper title='Home' href='/'/>
+      <NavBarContentWrapper title="Home" href="/" />
 
       {/* About */}
-      <NavBarContentWrapper title='About' href='/me'/>
+      <NavBarContentWrapper title="About" href="/me" />
 
       {/* Twitter */}
-      <NavBarContentWrapperForExternal title='Twitter' href='https://twitter.com/tezuka_0906_wtf'/>
+      <NavBarContentWrapperForExternal
+        title="Twitter"
+        href="https://twitter.com/tezuka_0906_wtf"
+      />
 
       {/* Github */}
-      <NavBarContentWrapperForExternal title='Github' href='https://github.com/yukendev'/>
-
+      <NavBarContentWrapperForExternal
+        title="Github"
+        href="https://github.com/yukendev"
+      />
     </div>
-  )
-}
+  );
+};
