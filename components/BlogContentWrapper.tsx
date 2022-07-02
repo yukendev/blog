@@ -11,13 +11,14 @@ export const BlogContentWrapper = (
   props: BlogContentWrapperProps
 ): JSX.Element => {
   const { blog } = props;
-  const { title, date, body, tags } = blog;
+  const { title, date, body, tags, description } = blog;
   const formatedCreatedAt = formatDate(date);
 
   return (
     <div className="markdown-body bg-myBlogContentBgColor rounded-lg mx-auto w-11/12 md:w-8/12 max-w-5xl">
       <Head>
         <title>{blog.title}</title>
+        <meta name="description" content={description} />
       </Head>
 
       <div className="p-3 md:p-10">
