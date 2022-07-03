@@ -1,17 +1,23 @@
-import { NextPage } from "next";
+import type { ReactElement } from "react";
 import { Blog } from "../../types";
 import { Tag } from "../../data/tags/type";
 import { tags } from "../../data/tags/tags";
 import { TagContentWrapper } from "../../components/TagContentWrapper";
 import { getPostsByTags } from "../../libs/posts";
+import type { NextPageWithLayout } from "../_app";
+import { Layout } from "../../components/Layout/Layout";
 
 type TagPageProps = {
   tag: Tag;
   blogs: Blog[];
 };
 
-const TagPage: NextPage<TagPageProps> = ({ tag, blogs }) => {
+const TagPage: NextPageWithLayout<TagPageProps> = ({ tag, blogs }) => {
   return <TagContentWrapper tag={tag} blogs={blogs} />;
+};
+
+TagPage.getLayout = function getLayout(page: ReactElement) {
+  return <Layout>{page}</Layout>;
 };
 
 export const getStaticPaths = async () => {

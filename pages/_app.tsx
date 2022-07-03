@@ -1,29 +1,24 @@
 import "../styles/globals.css";
 import "../styles/markdown.css";
 import "tailwindcss/tailwind.css";
-import Head from "next/head";
-import { Layout } from "../components/Layout/Layout";
-import GoogleAnalytics from "../components/GoogleAnalytics";
 import usePageView from "../hooks/usePageView";
+import type { ReactElement, ReactNode } from "react";
+import type { NextPage } from "next";
+import type { AppProps } from "next/app";
 
-function MyApp({ Component, pageProps }) {
+export type NextPageWithLayout<T = {}> = NextPage<T> & {
+  getLayout?: (page: ReactElement) => ReactNode;
+};
+
+type AppPropsWithLayout = AppProps & {
+  Component: NextPageWithLayout;
+};
+
+function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   usePageView();
-  return (
-    <>
-      <Head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <link
-          href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.9.0/themes/prism-tomorrow.min.css"
-          rel="stylesheet"
-        />
-      </Head>
-      <GoogleAnalytics />
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </>
-  );
+  const getLayout = Component.getLayout ?? ((page) => page);
+
+  return getLayout(<Component {...pageProps} />);
 }
 
 export default MyApp;
