@@ -15,13 +15,13 @@ export const BlogContentWrapper = (
   const formatedCreatedAt = formatDate(date);
 
   return (
-    <div className="markdown-body bg-myBlogContentBgColor rounded-lg mx-auto w-11/12 md:w-8/12 max-w-5xl">
+    <div className="markdown-body bg-myBlogContentBgColor rounded-lg mx-auto p-2 w-11/12 md:w-8/12 max-w-3xl">
       <Head>
         <title>{blog.title}</title>
         <meta name="description" content={description} />
       </Head>
 
-      <div className="p-3 md:p-10">
+      <div className="p-1 md:p-5">
         {/* タイトル */}
         <div className="text-center">
           <h1 className="text-3xl font-bold p-2 mx-auto">{title}</h1>
