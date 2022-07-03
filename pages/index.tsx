@@ -1,35 +1,30 @@
-import { NextPage } from "next";
 import { Blog } from "../types";
 import { BlogListWrapper } from "../components/BlogListWrapper";
 import { CategoryList } from "../components/CategoryList";
-import Head from "next/head";
 import { getSortedPostsData } from "../libs/posts";
+import type { NextPageWithLayout } from "./_app";
+import type { ReactElement } from "react";
+import { Layout } from "../components/Layout/Layout";
+import { TopPageLayout } from "../components/Layout/TopPageLayout";
 
 type HomeProps = {
   blogs: Blog[];
 };
 
-const blogDescription =
-  "てずかが学んだことを個人的にアウトプットするだけのブログです。よろしくお願いします。";
-
-const Home: NextPage<HomeProps> = ({ blogs }) => {
+const Home: NextPageWithLayout<HomeProps> = ({ blogs }) => {
   return (
     <div className="mx-auto w-11/12 max-w-5xl">
-      <Head>
-        <title>てずかのブログ</title>
-        <meta name="description" content={blogDescription} />
-        <meta property="og:url" content="https://www.yukendev.com/" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="てずかのブログ" />
-        <meta property="og:description" content={blogDescription} />
-        <meta property="og:site_name" content="てずかのブログ" />
-        <meta property="og:image" content="https://www.yukendev.com/ogp.png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@tezuka_0906_wtf" />
-      </Head>
       <CategoryList />
       <BlogListWrapper blogs={blogs} />
     </div>
+  );
+};
+
+Home.getLayout = function getLayout(page: ReactElement) {
+  return (
+    <Layout>
+      <TopPageLayout>{page}</TopPageLayout>
+    </Layout>
   );
 };
 
