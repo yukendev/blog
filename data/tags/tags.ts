@@ -4,6 +4,6 @@ export const tags: Tag[] = [
   "Swift",
   "Next.js",
   "React",
-  "Typescript",
+  "TypeScript",
   "インターン",
 ];
