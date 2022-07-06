@@ -45,8 +45,8 @@ const AboutPage = (): JSX.Element => {
           <div className="bg-myBlogContentBgColor rounded-3xl p-4 md:p-8 mx-auto max-w-xl">
             <p className="font-medium">
               現在、大阪大学を休学して、東京の会社でインターンをしながら勉強しています。
-              『休学中にプログラミング飽きたらどうしよう🥺』とか思ってた時期もあったけど、余裕でまだおもろいです。
-              少し前までSwiftでiOSアプリの開発をしていましたが、現在はNext.js,
+              『休学中にプログラミング飽きたらどうしよう🥺』とか思ってた時期もありましたが、余裕でまだおもろいです。
+              少し前までSwiftでiOSアプリの開発をしていて、現在はNext.js,
               React,TypeScriptを勉強しながら
               『GROWI』というOSSのwikiシステムの開発に携わっています。みなさん、『GROWI』を使いましょう。
               勉強時間的にはフロントの方が多いですが、バックエンド、インフラにも興味あります。
@@ -64,9 +64,9 @@ const AboutPage = (): JSX.Element => {
               <a className="underline" href="https://www.bouzuyahonpo.com/">
                 ぼうず屋本舗
               </a>
-              というブログを運営してましたが、Next.jsを勉強したくなったので新しく、
-              『てずかのブログ』というなんとも微妙な名前のブログをNext.jsとVercelで立ち上げました。
-              これからブラッシュアップしていきます。
+              というブログを運営してましたが、Next.jsを勉強したくなったので新しく
+              Next.jsとVercelで立ち上げました。ブログ名の由来は知りません。
+              これからブラッシュアップしていきたい所存であります。
             </p>
           </div>
         </div>
