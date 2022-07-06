@@ -13,10 +13,10 @@ export const Layout = ({ children }): JSX.Element => {
         <meta property="og:type" content="website" />
         {/* common settings for OGP */}
         <meta property="og:site_name" content="てずかのブログ" />
-        <meta property="og:image" content="https://www.yukendev.com/ogp.png" />
+        <meta property="og:image" content="https://www.yukendev.com/ogp2.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@tezuka_0906_wtf" />
-        <meta name="twitter:image" content="https://www.yukendev.com/ogp.png" />
+        <meta name="twitter:image" content="https://www.yukendev.com/ogp2.png" />
         <link
           href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.9.0/themes/prism-tomorrow.min.css"
           rel="stylesheet"
