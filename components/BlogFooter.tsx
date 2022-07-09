@@ -7,6 +7,8 @@ import Clip from "../images/Clip.svg";
 
 import { useState } from "react";
 
+import BouzuyaImg from "../images/Bouzuya.svg";
+
 type BlogFooterProps = {
   tags: Tag[];
   blog: Blog;
@@ -60,7 +62,10 @@ export const BlogFooter = (props: BlogFooterProps): JSX.Element => {
       </div>
 
       {/* シェアボタン */}
-      <div className="my-10">シェアをしていただけると僕が大変喜びます。</div>
+      <div className="flex items-center my-10">
+        <BouzuyaImg widht={30} height={30} />
+        <div className="ml-2">シェアをしていただけると僕が大変喜びます。</div>
+      </div>
 
       <div className="flex justify-center">
         {/* twitter */}
