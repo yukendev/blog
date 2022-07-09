@@ -1,1 +1,8 @@
-export type Tag = "Swift" | "JavaScript" | "TypeScript" | "Next.js" | "React" | "インターン" | "Node.js";
+export type Tag =
+  | "Swift"
+  | "JavaScript"
+  | "TypeScript"
+  | "Next.js"
+  | "React"
+  | "インターン"
+  | "Node.js";
