@@ -60,11 +60,11 @@ const AboutPage = (): JSX.Element => {
         <div className="p-3">
           <div className="bg-myBlogContentBgColor rounded-3xl p-4 md:p-8 mx-auto max-w-xl">
             <p className="font-medium">
-              以前まで、wordpress製の
+              以前まで、
               <a className="underline" href="https://www.bouzuyahonpo.com/">
-                ぼうず屋本舗
+                wordpress製のブログ
               </a>
-              というブログを運営してましたが、Next.jsを勉強したくなったので新しく
+              を運営してましたが、Next.jsを勉強したくなったので新しく
               Next.jsとVercelで立ち上げました。ブログ名の由来は知りません。
               これからブラッシュアップしていきたい所存であります。
             </p>
