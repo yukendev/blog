@@ -44,7 +44,7 @@ const AboutPage = (): JSX.Element => {
         <div className="p-3">
           <div className="bg-myBlogContentBgColor rounded-3xl p-4 md:p-8 mx-auto max-w-xl">
             <p className="font-medium">
-              現在、大阪大学を休学して、東京の会社でインターンをしながら勉強しています。
+              現在、大阪大学を休学して東京の会社でインターンをしながら勉強しています。
               『休学中にプログラミング飽きたらどうしよう🥺』とか思ってた時期もありましたが、余裕でまだおもろいです。
               少し前までSwiftでiOSアプリの開発をしていて、現在はNext.js,
               React,TypeScriptを勉強しながら
