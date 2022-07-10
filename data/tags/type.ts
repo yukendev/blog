@@ -5,4 +5,5 @@ export type Tag =
   | "Next.js"
   | "React"
   | "インターン"
-  | "Node.js";
+  | "Node.js"
+  | "ブログ";
