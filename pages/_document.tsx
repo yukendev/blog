@@ -13,7 +13,6 @@ const Document = () => {
           content="https://www.yukendev.com/ogp2.png"
         />
         <meta property="og:type" content="website" />
-        {/* common settings for OGP */}
         <meta property="og:site_name" content="ぼうず屋本舗" />
         <meta property="og:image" content="https://www.yukendev.com/ogp2.png" />
         <link
