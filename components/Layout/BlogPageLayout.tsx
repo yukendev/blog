@@ -10,7 +10,7 @@ export const BlogPageLayout = (props): JSX.Element => {
         <title>{blog.title}</title>
         <meta name="description" content={blog.description} />
         <meta property="og:url" content={url} />
-        <meta property="og:title" content={blog.description} />
+        <meta property="og:title" content={blog.title} />
         <meta property="og:description" content={blog.description} />
       </Head>
       {children}
