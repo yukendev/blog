@@ -6,4 +6,5 @@ export type Tag =
   | "React"
   | "インターン"
   | "Node.js"
+  | "技術書"
   | "ブログ";

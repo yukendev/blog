@@ -8,5 +8,6 @@ export const tags: Tag[] = [
   "TypeScript",
   "インターン",
   "Node.js",
+  "技術書",
   "ブログ",
 ];
