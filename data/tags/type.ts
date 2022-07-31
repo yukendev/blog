@@ -7,4 +7,5 @@ export type Tag =
   | "インターン"
   | "Node.js"
   | "技術書"
+  | "Tailwind CSS"
   | "ブログ";
