@@ -20,8 +20,8 @@ export const BlogList = (props: BlogListProps): JSX.Element => {
 
         {/* タグ */}
         <div className="flex flex-wrap my-2">
-          {tags.map((tag) => {
-            return <TagCard tag={tag} />;
+          {tags.map((tag, index) => {
+            return <TagCard key={index} tag={tag} />;
           })}
         </div>
       </div>

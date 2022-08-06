@@ -56,8 +56,8 @@ export const BlogFooter = (props: BlogFooterProps): JSX.Element => {
     <div>
       {/* タグ */}
       <div className="flex flex-wrap my-5">
-        {tags.map((tag) => {
-          return <TagCard tag={tag} />;
+        {tags.map((tag, index) => {
+          return <TagCard key={index} tag={tag} />;
         })}
       </div>
 
