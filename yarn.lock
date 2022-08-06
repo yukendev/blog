@@ -3052,6 +3052,11 @@
   dependencies:
     "yallist" "^4.0.0"
 
+"markdown-it-anchor@^8.6.4":
+  "integrity" "sha512-Ul4YVYZNxMJYALpKtu+ZRdrryYt/GlQ5CK+4l1bp/gWXOG2QWElt6AqF3Mih/wfUKdZbNAZVXGR73/n6U/8img=="
+  "resolved" "https://registry.npmjs.org/markdown-it-anchor/-/markdown-it-anchor-8.6.4.tgz"
+  "version" "8.6.4"
+
 "markdown-it-container@^3.0.0":
   "integrity" "sha512-y6oKTq4BB9OQuY/KLfk/O3ysFhB3IMYoIWhGJEidXt1NQFocFK2sA2t0NYZAMyMShAGL6x5OPIbrmXPIqaN9rw=="
   "resolved" "https://registry.npmjs.org/markdown-it-container/-/markdown-it-container-3.0.0.tgz"
@@ -3074,7 +3079,7 @@
   "resolved" "https://registry.npmjs.org/markdown-it-table-of-contents/-/markdown-it-table-of-contents-0.6.0.tgz"
   "version" "0.6.0"
 
-"markdown-it@^13.0.1":
+"markdown-it@*", "markdown-it@^13.0.1":
   "integrity" "sha512-lTlxriVoy2criHP0JKRhO2VDG9c2ypWCsT237eDiLqi09rmbKoUetyGHq2uOIRoRS//kfoJckS0eUzzkDR+k2Q=="
   "resolved" "https://registry.npmjs.org/markdown-it/-/markdown-it-13.0.1.tgz"
   "version" "13.0.1"
