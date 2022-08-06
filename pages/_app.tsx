@@ -1,4 +1,4 @@
-import "../styles/globals.css";
+import "../styles/globals.scss";
 import "../styles/markdown.css";
 import "../styles/component/index.scss";
 import "tailwindcss/tailwind.css";

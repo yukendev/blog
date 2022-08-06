@@ -93,4 +93,10 @@
     align-items: center;
     margin-right: 16px;
   }
+
+  .markdown-body h1 {
+    font-size: 1.8em;
+    padding-bottom: 10px;
+    border-bottom: 1px solid lightgray;
+  }
 }
