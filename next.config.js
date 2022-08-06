@@ -21,7 +21,7 @@ module.exports = {
         patterns: [
           {
             context: "posts",
-            from: "**/*.{jpg,png}",
+            from: "**/*.{jpg,png,gif}",
             to: resolve(__dirname, "public/assets/images/posts"),
           },
         ],
