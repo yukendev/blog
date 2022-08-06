@@ -2,6 +2,7 @@ import MarkdownIt from "markdown-it";
 import mdContainer from "markdown-it-container";
 import markdownItPrism from "markdown-it-prism";
 import markdownItEmoji from "markdown-it-emoji";
+import markdownItToc from "markdown-it-table-of-contents";
 
 export const converMarkdownToHtml = async (markdown: string, date: string) => {
   const markdownIt = new MarkdownIt({
@@ -15,6 +16,7 @@ export const converMarkdownToHtml = async (markdown: string, date: string) => {
     .use(mdContainer, "alert", containerAlertOptions)
     .use(mdContainer, "info", containerInfoOptions)
     .use(markdownItPrism, {})
+    .use(markdownItToc)
     .use(markdownItEmoji);
 
   // return markdownIt.render(markdown)
