@@ -1,5 +1,6 @@
 import "../styles/globals.css";
 import "../styles/markdown.css";
+import "../styles/component/index.scss";
 import "tailwindcss/tailwind.css";
 import usePageView from "../hooks/usePageView";
 import type { ReactElement, ReactNode } from "react";

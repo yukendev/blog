@@ -21,7 +21,6 @@ export const converMarkdownToHtml = async (markdown: string, date: string) => {
     .use(markdownItAnchor)
     .use(markdownItEmoji);
 
-  // return markdownIt.render(markdown)
   return markdownIt
     .render(markdown)
     .replace(/@image/g, `/assets/images/posts/${date}`);
