@@ -1,6 +1,9 @@
 import MarkdownIt from "markdown-it";
 import mdContainer from "markdown-it-container";
 import markdownItPrism from "markdown-it-prism";
+import markdownItEmoji from "markdown-it-emoji";
+import markdownItToc from "markdown-it-table-of-contents";
+import markdownItAnchor from "markdown-it-anchor";
 
 export const converMarkdownToHtml = async (markdown: string, date: string) => {
   const markdownIt = new MarkdownIt({
@@ -13,9 +16,11 @@ export const converMarkdownToHtml = async (markdown: string, date: string) => {
     .use(mdContainer, "attention", containerAttentionOptions)
     .use(mdContainer, "alert", containerAlertOptions)
     .use(mdContainer, "info", containerInfoOptions)
-    .use(markdownItPrism, {});
+    .use(markdownItPrism, {})
+    .use(markdownItToc)
+    .use(markdownItAnchor)
+    .use(markdownItEmoji);
 
-  // return markdownIt.render(markdown)
   return markdownIt
     .render(markdown)
     .replace(/@image/g, `/assets/images/posts/${date}`);

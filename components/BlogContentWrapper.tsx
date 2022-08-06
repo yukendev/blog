@@ -24,7 +24,7 @@ export const BlogContentWrapper = (
       <div className="p-1 md:p-5">
         {/* タイトル */}
         <div className="text-center">
-          <h1 className="text-3xl font-bold p-2 mx-auto">{title}</h1>
+          <div className="text-3xl font-bold p-2 mx-auto">{title}</div>
         </div>
 
         {/* 公開日 */}
