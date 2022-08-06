@@ -11,7 +11,7 @@ export const BlogListWrapper = (props: BlogListWrapperProps): JSX.Element => {
   return (
     <div className="mt-5 grid md:grid-cols-2 gap-4">
       {blogs.map((blog) => {
-        return <BlogList blog={blog} />;
+        return <BlogList key={blog.slug} blog={blog} />;
       })}
     </div>
   );
