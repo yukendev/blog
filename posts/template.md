@@ -8,6 +8,8 @@ tags:
 description: "description"
 ---
 
+[[toc]]
+
 <img src="@image/4.png">
 
 ## slug 命名規則
@@ -17,3 +19,7 @@ description: "description"
 - Swift 関係: 『swift-hoge』
 - 雑記的な記事: 『note-hoge』
 - 本関係: 『book-hoge』
+
+## markdown-it-emoji のリスト
+
+https://github.com/markdown-it/markdown-it-emoji/blob/master/lib/data/light.json
