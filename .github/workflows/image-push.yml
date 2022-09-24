@@ -22,7 +22,9 @@ jobs:
       - name: Login to ecr
         uses: docker/login-action@v2
         with:
-          registry: ${{ env.ECR_ENDPOINT }}
+          registry: ${{ secrets.ECR_ENDPOINT }}
+          # username: ${{ secrets.ACCESS_KEY_ID }}
+          # password: ${{ secrets.SECRET_ACCESS_KEY }}
 
       # - name: Build, tag, and push docker image to Amazon ECR
       #   env:
