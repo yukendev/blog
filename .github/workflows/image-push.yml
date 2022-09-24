@@ -26,9 +26,5 @@ jobs:
           REPOSITORY: blog
           IMAGE_TAG: ${{ github.sha }}
         run: |
-          docker build -t blog .
-          docker tag blog:latest ${{ secrets.ECR_REPOSITORY_URI }}:latest
-          docker push ${{ secrets.ECR_REPOSITORY_URI }}:latest
-        # run: |
-        #   docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
-        #   docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
+          docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
+          docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
