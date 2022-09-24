@@ -39,6 +39,5 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: ${{ env.ECR_ENDPOINT }}/${{ env.ECR_REPOSITORY }}:latest
-          file: ./Dockerfile
-          cache-from: ${{ env.ECR_ENDPOINT }}/${{ env.ECR_REPOSITORY }}
+          tags: ${{ secrets.ECR_ENDPOINT }}/${{ secrets.ECR_REPOSITORY }}:latest
+          cache-from: ${{ secrets.ECR_ENDPOINT }}/${{ secrets.ECR_REPOSITORY }}
