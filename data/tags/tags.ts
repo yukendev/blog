@@ -11,5 +11,6 @@ export const tags: Tag[] = [
   "技術書",
   "Tailwind CSS",
   "Express",
+  "AWS",
   "ブログ",
 ];
