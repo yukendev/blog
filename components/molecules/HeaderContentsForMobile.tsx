@@ -12,7 +12,7 @@ const HeaderContentWrapper = (
   const { title, href } = props;
   return (
     <Link href={href}>
-      <div className='px-2 py-3 mx-3 text-myTextColor cursor-pointer deco-underline'>
+      <div className='px-2 py-3 mx-3 text-myTextColor cursor-pointer deco-underline-text'>
         {title}
       </div>
     </Link>
@@ -25,7 +25,7 @@ const HeaderContentWrapperForExternal = (
 ): JSX.Element => {
   const { title, href } = props;
   return (
-    <div className='px-2 py-3 mx-3 text-myTextColor cursor-pointer deco-underline'>
+    <div className='px-2 py-3 mx-3 text-myTextColor cursor-pointer deco-underline-text'>
       <a href={href} target='_blank' rel='noopener noreferrer'>
         {title}
       </a>

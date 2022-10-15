@@ -1,5 +1,5 @@
 import { Blog } from '../types';
-import { CategoryList } from './CategoryList';
+import { CategoryList } from './organisms/CategoryList';
 import { BlogListWrapper } from './BlogListWrapper';
 import { Category } from '../data/categories/type';
 import { CategoryDescription } from './CategoryDescription';
