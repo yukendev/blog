@@ -12,7 +12,7 @@ const HeaderContentWrapper = (
   const { title, href } = props;
   return (
     <Link href={href}>
-      <div className='rounded px-2 py-3 mx-3 text-myTextColor cursor-pointer hover:bg-myBgColorHover'>
+      <div className='px-2 py-3 mx-3 text-myTextColor cursor-pointer deco-underline'>
         {title}
       </div>
     </Link>
@@ -25,7 +25,7 @@ const HeaderContentWrapperForExternal = (
 ): JSX.Element => {
   const { title, href } = props;
   return (
-    <div className='rounded px-2 py-3 mx-3 text-myTextColor cursor-pointer hover:bg-myBgColorHover'>
+    <div className='px-2 py-3 mx-3 text-myTextColor cursor-pointer deco-underline'>
       <a href={href} target='_blank' rel='noopener noreferrer'>
         {title}
       </a>
@@ -35,7 +35,7 @@ const HeaderContentWrapperForExternal = (
 
 export const HeaderContentsForMobile = (): JSX.Element => {
   return (
-    <div className='bg-myBgColorHover mt-3 rounded-xl p-3'>
+    <div className='bg-myBgColorDark mt-3 rounded-xl p-3'>
       {/* Home */}
       <HeaderContentWrapper title='Home' href='/' />
 
