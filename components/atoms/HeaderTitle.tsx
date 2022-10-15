@@ -4,7 +4,7 @@ import BouzuyaImg from '../../images/Bouzuya.svg';
 
 const { title } = metaDataForBlog;
 
-export const NavbarTitle = (): JSX.Element => {
+export const HeaderTitle = (): JSX.Element => {
   return (
     <Link href='/'>
       <div className='flex items-center w-32 font-bold text-center text-myTextColor cursor-pointer'>

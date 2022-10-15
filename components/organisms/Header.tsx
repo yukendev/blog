@@ -1,10 +1,10 @@
-import { NavbarTitle } from '../atoms/NavbarTitle';
-import { NavbarContents } from '../molecules/NavbarContents';
-import { NavbarContentsForMobile } from '../molecules/NavbarContentsForMobile';
-import { NavExpandButton } from '../atoms/NavExpandButton';
+import { HeaderTitle } from '../atoms/HeaderTitle';
+import { HeaderContents } from '../molecules/HeaderContents';
+import { HeaderContentsForMobile } from '../molecules/HeaderContentsForMobile';
+import { HeaderExpandButton } from '../atoms/HeaderExpandButton';
 import { useState } from 'react';
 
-export const Navbar = (): JSX.Element => {
+export const Header = (): JSX.Element => {
   const [isLinkButtonsHidden, setIsLinkButtonsHidden] = useState(true);
 
   const hideLinkButtons = (isHidden: boolean) => {
@@ -15,21 +15,21 @@ export const Navbar = (): JSX.Element => {
     <nav className='w-full flex bg-myBgColor p-5 md:p-10'>
       <div className='w-full md:flex'>
         {/* ブログタイトル */}
-        <NavbarTitle />
+        <HeaderTitle />
 
         {/* 各種リンク 画面が大きい時(レスポンシブ) */}
         <div className='hidden md:block'>
-          <NavbarContents />
+          <HeaderContents />
         </div>
 
         {/* 各種リンク 画面が小さい時(レスポンシブ) */}
         <div className='md:hidden'>
-          {!isLinkButtonsHidden && <NavbarContentsForMobile />}
+          {!isLinkButtonsHidden && <HeaderContentsForMobile />}
         </div>
       </div>
 
       {/* レスポンシブ対応ボタン */}
-      <NavExpandButton hideLinkButtons={hideLinkButtons} />
+      <HeaderExpandButton hideLinkButtons={hideLinkButtons} />
     </nav>
   );
 };

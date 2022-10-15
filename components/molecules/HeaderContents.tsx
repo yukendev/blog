@@ -1,12 +1,12 @@
 import Link from 'next/link';
 
-type NavBarContentWrapperProps = {
+type HeaderContentWrapperProps = {
   title: string;
   href: string;
 };
 
-const NavBarContentWrapper = (
-  props: NavBarContentWrapperProps,
+const HeaderContentWrapper = (
+  props: HeaderContentWrapperProps,
 ): JSX.Element => {
   const { title, href } = props;
   return (
@@ -18,8 +18,8 @@ const NavBarContentWrapper = (
   );
 };
 
-const NavBarContentWrapperForExternal = (
-  props: NavBarContentWrapperProps,
+const HeaderContentWrapperForExternal = (
+  props: HeaderContentWrapperProps,
 ): JSX.Element => {
   const { title, href } = props;
   return (
@@ -31,23 +31,23 @@ const NavBarContentWrapperForExternal = (
   );
 };
 
-export const NavbarContents = (): JSX.Element => {
+export const HeaderContents = (): JSX.Element => {
   return (
     <div className='flex mx-10'>
       {/* Home */}
-      <NavBarContentWrapper title='Home' href='/' />
+      <HeaderContentWrapper title='Home' href='/' />
 
       {/* About */}
-      <NavBarContentWrapper title='About' href='/me' />
+      <HeaderContentWrapper title='About' href='/me' />
 
       {/* Twitter */}
-      <NavBarContentWrapperForExternal
+      <HeaderContentWrapperForExternal
         title='Twitter'
         href='https://twitter.com/tezuka_0906_wtf'
       />
 
       {/* Github */}
-      <NavBarContentWrapperForExternal
+      <HeaderContentWrapperForExternal
         title='Github'
         href='https://github.com/yukendev'
       />

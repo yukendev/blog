@@ -6,7 +6,7 @@ type PropsType = {
   hideLinkButtons: (isHidden: boolean) => void;
 };
 
-export const NavExpandButton = (props: PropsType): JSX.Element => {
+export const HeaderExpandButton = (props: PropsType): JSX.Element => {
   const { hideLinkButtons } = props;
 
   const [isLinkButtonsHidden, setIsLinkButtonsHidden] = useState(true);
