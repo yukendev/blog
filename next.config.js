@@ -11,7 +11,6 @@ const CopyFilePlugin = require("copy-webpack-plugin");
 const WriteFilePlugin = require("write-file-webpack-plugin");
 
 module.exports = {
-
   ...nextConfig,
 
   webpack(config) {

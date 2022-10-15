@@ -27,7 +27,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
       </Head>
       {getLayout(<Component {...pageProps} />)}
     </>
-  )
+  );
 }
 
 export default MyApp;
