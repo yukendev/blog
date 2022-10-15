@@ -5,6 +5,7 @@ type HeaderContentWrapperProps = {
   href: string;
 };
 
+// サイト内で画面遷移するボタン
 const HeaderContentWrapper = (
   props: HeaderContentWrapperProps,
 ): JSX.Element => {
@@ -18,6 +19,7 @@ const HeaderContentWrapper = (
   );
 };
 
+// 外部サイトを開くボタン
 const HeaderContentWrapperForExternal = (
   props: HeaderContentWrapperProps,
 ): JSX.Element => {

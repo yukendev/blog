@@ -12,8 +12,8 @@ export const Header = (): JSX.Element => {
   };
 
   return (
-    <nav className='w-full flex bg-myBgColor p-5 md:p-10'>
-      <div className='w-full md:flex'>
+    <nav className='w-full bg-myBgColor p-5 md:p-10'>
+      <div className='w-full flex justify-between'>
         {/* ブログタイトル */}
         <HeaderTitle />
 
@@ -22,14 +22,16 @@ export const Header = (): JSX.Element => {
           <HeaderContents />
         </div>
 
-        {/* 各種リンク 画面が小さい時(レスポンシブ) */}
+        {/* レスポンシブ対応ボタン */}
         <div className='md:hidden'>
-          {!isLinkButtonsHidden && <HeaderContentsForMobile />}
+          <HeaderExpandButton hideLinkButtons={hideLinkButtons} />
         </div>
       </div>
 
-      {/* レスポンシブ対応ボタン */}
-      <HeaderExpandButton hideLinkButtons={hideLinkButtons} />
+      {/* 各種リンク 画面が小さい時(レスポンシブ) */}
+      <div className='md:hidden'>
+          {!isLinkButtonsHidden && <HeaderContentsForMobile />}
+        </div>
     </nav>
   );
 };

@@ -17,10 +17,8 @@ export const HeaderExpandButton = (props: PropsType): JSX.Element => {
   };
 
   return (
-    <div className='ml-auto md:hidden'>
-      <button onClick={onClickHandler}>
-        {isLinkButtonsHidden ? <Hamburger /> : <HamburgerClosed />}
-      </button>
-    </div>
+    <button onClick={onClickHandler}>
+      {isLinkButtonsHidden ? <Hamburger /> : <HamburgerClosed />}
+    </button>
   );
 };
