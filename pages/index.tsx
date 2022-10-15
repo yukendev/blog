@@ -1,5 +1,5 @@
 import { Blog } from '../types';
-import { BlogListWrapper } from '../components/BlogListWrapper';
+import { BlogListWrapper } from '../components/organisms/BlogListWrapper';
 import { CategoryList } from '../components/organisms/CategoryList';
 import { getSortedPostsData } from '../libs/posts';
 import type { NextPageWithLayout } from './_app';

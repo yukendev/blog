@@ -1,5 +1,5 @@
-import { Blog } from '../types';
-import { TagCard } from './TagCard';
+import { Blog } from '../../types';
+import { TagCard } from '../atoms/TagCard';
 import Link from 'next/link';
 
 type BlogListProps = {
