@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { metaDataForBlog } from '../../../data/meta';
+import { metaDataForBlog } from '../../data/meta';
 import BouzuyaImg from '../../../images/Bouzuya.svg';
 
 const { title } = metaDataForBlog;

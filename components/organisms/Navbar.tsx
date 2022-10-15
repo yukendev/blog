@@ -1,7 +1,7 @@
-import { NavbarTitle } from './NavbarTitle';
-import { NavbarContents } from './NavbarContents';
-import { NavbarContentsForMobile } from './NavbarContentsForMobile';
-import { NavExpandButton } from './NavExpandButton';
+import { NavbarTitle } from '../atoms/NavbarTitle';
+import { NavbarContents } from '../molecules/NavbarContents';
+import { NavbarContentsForMobile } from '../molecules/NavbarContentsForMobile';
+import { NavExpandButton } from '../atoms/NavExpandButton';
 import { useState } from 'react';
 
 export const Navbar = (): JSX.Element => {

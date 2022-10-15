@@ -1,4 +1,4 @@
-import { Navbar } from './Navbar/Navbar';
+import { Navbar } from '../organisms/Navbar';
 import { Footer } from './Footer';
 import Head from 'next/head';
 import GoogleAnalytics from '../GoogleAnalytics';
