@@ -9,7 +9,7 @@ module.exports = {
     extend: {
       colors: {
         myBgColor: '#FFFFFF', // 全体の背景色
-        myBgColorDark: '#F2F2F2', // 背景色より少し濃い色
+        myBgColorDark: '#EBEBEB', // 背景色より少し濃い色
         myBgColorHover: '#D3BA8E',
         myTextColor: '#06283D',
         myTagColor: '#06283D',

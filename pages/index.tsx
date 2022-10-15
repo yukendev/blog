@@ -1,6 +1,6 @@
 import { Blog } from '../types';
 import { BlogListWrapper } from '../components/BlogListWrapper';
-import { CategoryList } from '../components/CategoryList';
+import { CategoryList } from '../components/organisms/CategoryList';
 import { getSortedPostsData } from '../libs/posts';
 import type { NextPageWithLayout } from './_app';
 import type { ReactElement } from 'react';
