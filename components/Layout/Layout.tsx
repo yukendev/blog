@@ -1,4 +1,4 @@
-import { Navbar } from './Navbar/Navbar';
+import { Header } from '../organisms/Header';
 import { Footer } from './Footer';
 import Head from 'next/head';
 import GoogleAnalytics from '../GoogleAnalytics';
@@ -9,7 +9,7 @@ export const Layout = ({ children }): JSX.Element => {
     <>
       <GoogleAnalytics />
       <div className='flex flex-col min-h-screen'>
-        <Navbar />
+        <Header />
         <div className='flex-grow bg-myBgColor justify-center'>{children}</div>
         <Footer />
       </div>
