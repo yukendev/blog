@@ -1,12 +1,12 @@
-import "../styles/globals.scss";
-import "../styles/markdown.css";
-import "../styles/component/index.scss";
-import "tailwindcss/tailwind.css";
-import usePageView from "../hooks/usePageView";
-import type { ReactElement, ReactNode } from "react";
-import type { NextPage } from "next";
-import type { AppProps } from "next/app";
-import Head from "next/head";
+import '../styles/globals.scss';
+import '../styles/markdown.css';
+import '../styles/component/index.scss';
+import 'tailwindcss/tailwind.css';
+import usePageView from '../hooks/usePageView';
+import type { ReactElement, ReactNode } from 'react';
+import type { NextPage } from 'next';
+import type { AppProps } from 'next/app';
+import Head from 'next/head';
 
 export type NextPageWithLayout<T = {}> = NextPage<T> & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   return (
     <>
       <Head>
-        <meta name="viewport" content="width=device-width" />
+        <meta name='viewport' content='width=device-width' />
       </Head>
       {getLayout(<Component {...pageProps} />)}
     </>

@@ -18,7 +18,7 @@
   }
 
   .markdown-body .question::before {
-    content: "\1F914";
+    content: '\1F914';
     font-size: 200%;
     display: flex;
     align-items: center;
@@ -41,7 +41,7 @@
   }
 
   .markdown-body .alert::before {
-    content: "\1F62D";
+    content: '\1F62D';
     font-size: 200%;
     display: flex;
     align-items: center;
@@ -64,7 +64,7 @@
   }
 
   .markdown-body .attention::before {
-    content: "\1F62C";
+    content: '\1F62C';
     font-size: 200%;
     display: flex;
     align-items: center;
@@ -87,7 +87,7 @@
   }
 
   .markdown-body .info::before {
-    content: "\1F913";
+    content: '\1F913';
     font-size: 200%;
     display: flex;
     align-items: center;
