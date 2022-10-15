@@ -1,12 +1,12 @@
-import type { ReactElement } from "react";
-import { NextPage } from "next";
-import { Blog } from "../../types";
-import { CategoryContentWrapper } from "../../components/CategoryContentWrapper";
-import { Category } from "../../data/categories/type";
-import { categories } from "../../data/categories/categories";
-import { getPostsByCategory } from "../../libs/posts";
-import type { NextPageWithLayout } from "../_app";
-import { Layout } from "../../components/Layout/Layout";
+import type { ReactElement } from 'react';
+import { NextPage } from 'next';
+import { Blog } from '../../types';
+import { CategoryContentWrapper } from '../../components/CategoryContentWrapper';
+import { Category } from '../../data/categories/type';
+import { categories } from '../../data/categories/categories';
+import { getPostsByCategory } from '../../libs/posts';
+import type { NextPageWithLayout } from '../_app';
+import { Layout } from '../../components/Layout/Layout';
 
 type CategoryProps = {
   category: Category;
