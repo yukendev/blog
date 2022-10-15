@@ -1,5 +1,5 @@
-import Hamburger from '../../../images/Hamburger.svg';
-import HamburgerClosed from '../../../images/Hamburger-close.svg';
+import Hamburger from '../../images/Hamburger.svg';
+import HamburgerClosed from '../../images/Hamburger-close.svg';
 import { useState } from 'react';
 
 type PropsType = {
