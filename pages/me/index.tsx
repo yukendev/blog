@@ -61,10 +61,7 @@ const AboutPage = (): JSX.Element => {
         <div className='p-3'>
           <div className='mx-auto max-w-xl'>
             <p className='font-medium'>
-              以前まで、
-              <a className='underline' href='https://www.bouzuyahonpo.com/'>
-                wordpress製のブログ
-              </a>
+              以前まで別のブログ
               を運営してましたが、Next.jsを勉強したくなったので新しく
               Next.jsとVercelで立ち上げました。ブログ名の由来は知りません。
               これからブラッシュアップしていきたい所存であります。
