@@ -17,7 +17,10 @@ export const converMarkdownToHtml = async (markdown: string, date: string) => {
     .use(mdContainer, 'alert', containerAlertOptions)
     .use(mdContainer, 'info', containerInfoOptions)
     .use(markdownItPrism, {})
-    .use(markdownItToc)
+    .use(markdownItToc, {
+      includeLevel: [1],
+      listType: 'ol'
+    })
     .use(markdownItAnchor)
     .use(markdownItEmoji);
 

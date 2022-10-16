@@ -1,5 +1,5 @@
-import { Blog } from '../types';
-import { formatDate } from '../util/date-formatter';
+import { Blog } from '../../types';
+import { formatDate } from '../../util/date-formatter';
 import { BlogFooter } from './BlogFooter';
 import Head from 'next/head';
 
@@ -15,7 +15,7 @@ export const BlogContentWrapper = (
   const formatedCreatedAt = formatDate(date);
 
   return (
-    <div className='markdown-body bg-myBlogContentBgColor rounded-lg mx-auto p-2 w-11/12 md:w-8/12 max-w-3xl'>
+    <div className='markdown-body rounded-lg mx-auto p-2 w-11/12 md:w-8/12 max-w-3xl'>
       <Head>
         <title>{blog.title}</title>
         <meta name='description' content={description} />
