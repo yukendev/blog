@@ -1,5 +1,5 @@
 import Script from 'next/script';
-import { existsGaId, GA_ID } from '../libs/gtag';
+import { existsGaId, GA_ID } from '../../libs/gtag';
 
 const GoogleAnalytics = () => (
   <>
