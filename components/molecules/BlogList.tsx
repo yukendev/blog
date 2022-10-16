@@ -18,7 +18,7 @@ export const BlogList = (props: BlogListProps): JSX.Element => {
 
   return (
     <Link href={`/blogs/${slug}`}>
-      <div className='shadow-lg deco-underline-element rounded-lg bg-myBlogListBgColor p-8 my-2 cursor-pointer hover:bg-myBlogContentBgColorHover'>
+      <div className='drop-shadow-md deco-underline-element rounded-lg bg-myBlogListBgColor p-8 my-2 cursor-pointer hover:bg-myBlogContentBgColorHover'>
         {/* 日付 */}
         <div className='text-sm'>{formatDate(date)}</div>
 
