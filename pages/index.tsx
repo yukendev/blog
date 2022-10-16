@@ -1,11 +1,11 @@
-import { Blog } from "../types";
-import { BlogListWrapper } from "../components/BlogListWrapper";
-import { CategoryList } from "../components/CategoryList";
-import { getSortedPostsData } from "../libs/posts";
-import type { NextPageWithLayout } from "./_app";
-import type { ReactElement } from "react";
-import { Layout } from "../components/Layout/Layout";
-import { TopPageLayout } from "../components/Layout/TopPageLayout";
+import { Blog } from '../types';
+import { BlogListWrapper } from '../components/organisms/BlogListWrapper';
+import { CategoryList } from '../components/organisms/CategoryList';
+import { getSortedPostsData } from '../libs/posts';
+import type { NextPageWithLayout } from './_app';
+import type { ReactElement } from 'react';
+import { Layout } from '../components/Layout/Layout';
+import { TopPageLayout } from '../components/Layout/TopPageLayout';
 
 type HomeProps = {
   blogs: Blog[];
@@ -13,8 +13,9 @@ type HomeProps = {
 
 const Home: NextPageWithLayout<HomeProps> = ({ blogs }) => {
   return (
-    <div className="mx-auto w-11/12 max-w-5xl">
+    <div className='mx-auto w-11/12 max-w-5xl'>
       <CategoryList />
+      <div className='text-xl text-myTextColor font-bold my-10'>記事一覧</div>
       <BlogListWrapper blogs={blogs} />
     </div>
   );

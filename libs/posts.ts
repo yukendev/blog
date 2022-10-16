@@ -1,20 +1,20 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-import { converMarkdownToHtml } from "../util/convert-markdown";
-import { Category } from "../data/categories/type";
-import { categories } from "../data/categories/categories";
-import { Tag } from "../data/tags/type";
-import { Blog } from "../types";
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
+import { converMarkdownToHtml } from '../util/convert-markdown';
+import { Category } from '../data/categories/type';
+import { categories } from '../data/categories/categories';
+import { Tag } from '../data/tags/type';
+import { Blog } from '../types';
 
-const postsDirectory = path.join(process.cwd(), "posts");
-const regExpForDir = new RegExp("[0-9]{4}-[0-9]{2}-[0-9]{2}");
-const regExpForMd = new RegExp("[0-9]{4}-[0-9]{2}-[0-9]{2}.md");
+const postsDirectory = path.join(process.cwd(), 'posts');
+const regExpForDir = new RegExp('[0-9]{4}-[0-9]{2}-[0-9]{2}');
+const regExpForMd = new RegExp('[0-9]{4}-[0-9]{2}-[0-9]{2}.md');
 
 // 取得したデータからBlogを作成
 const generateBlogFromData = async (
   data: any,
-  content: string
+  content: string,
 ): Promise<Blog> => {
   const { title, date, slug, category, tags, description } = data;
 
@@ -23,14 +23,14 @@ const generateBlogFromData = async (
   };
 
   if (
-    typeof title !== "string" ||
-    typeof date !== "string" ||
-    typeof slug !== "string" ||
+    typeof title !== 'string' ||
+    typeof date !== 'string' ||
+    typeof slug !== 'string' ||
     !categories.includes(category) ||
     !isTagValidated(tags) ||
-    typeof description !== "string"
+    typeof description !== 'string'
   ) {
-    throw Error("some data are not applicable to Blog");
+    throw Error('some data are not applicable to Blog');
   }
 
   try {
@@ -48,7 +48,7 @@ const generateBlogFromData = async (
 
     return blog;
   } catch {
-    throw Error("some error are occured while converting markdown");
+    throw Error('some error are occured while converting markdown');
   }
 };
 
@@ -56,7 +56,7 @@ const generateBlogFromData = async (
 export const getSortedPostsData = async (): Promise<Blog[]> => {
   const dirNames = fs.readdirSync(postsDirectory);
   const filteredDirName = dirNames.filter((fileName) =>
-    regExpForDir.test(fileName)
+    regExpForDir.test(fileName),
   );
 
   const allPostsData = await Promise.all(
@@ -66,7 +66,7 @@ export const getSortedPostsData = async (): Promise<Blog[]> => {
       const fileNames = fs.readdirSync(fullPathForDir);
       const mdFile = fileNames.find((file) => regExpForMd.test(file));
       const fullPathForMd = path.join(fullPathForDir, mdFile);
-      const fileContents = fs.readFileSync(fullPathForMd, "utf8");
+      const fileContents = fs.readFileSync(fullPathForMd, 'utf8');
 
       // Use gray-matter to parse the post metadata section
       const matterResult = matter(fileContents);
@@ -76,7 +76,7 @@ export const getSortedPostsData = async (): Promise<Blog[]> => {
       const blog = await generateBlogFromData(data, content);
 
       return blog;
-    })
+    }),
   );
 
   const sortedPost = allPostsData.sort((a, b) => {

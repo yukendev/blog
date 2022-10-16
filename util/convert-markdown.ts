@@ -1,23 +1,26 @@
-import MarkdownIt from "markdown-it";
-import mdContainer from "markdown-it-container";
-import markdownItPrism from "markdown-it-prism";
-import markdownItEmoji from "markdown-it-emoji";
-import markdownItToc from "markdown-it-table-of-contents";
-import markdownItAnchor from "markdown-it-anchor";
+import MarkdownIt from 'markdown-it';
+import mdContainer from 'markdown-it-container';
+import markdownItPrism from 'markdown-it-prism';
+import markdownItEmoji from 'markdown-it-emoji';
+import markdownItToc from 'markdown-it-table-of-contents';
+import markdownItAnchor from 'markdown-it-anchor';
 
 export const converMarkdownToHtml = async (markdown: string, date: string) => {
   const markdownIt = new MarkdownIt({
     html: true,
     linkify: true,
     typographer: true,
-    langPrefix: "language-",
+    langPrefix: 'language-',
   })
-    .use(mdContainer, "question", containerQuestionOptions)
-    .use(mdContainer, "attention", containerAttentionOptions)
-    .use(mdContainer, "alert", containerAlertOptions)
-    .use(mdContainer, "info", containerInfoOptions)
+    .use(mdContainer, 'question', containerQuestionOptions)
+    .use(mdContainer, 'attention', containerAttentionOptions)
+    .use(mdContainer, 'alert', containerAlertOptions)
+    .use(mdContainer, 'info', containerInfoOptions)
     .use(markdownItPrism, {})
-    .use(markdownItToc)
+    .use(markdownItToc, {
+      includeLevel: [1],
+      listType: 'ol'
+    })
     .use(markdownItAnchor)
     .use(markdownItEmoji);
 
@@ -40,7 +43,7 @@ const containerQuestionOptions = {
       return '<div class="question">';
     } else {
       // closing tag
-      return "</div>\n";
+      return '</div>\n';
     }
   },
 };
@@ -59,7 +62,7 @@ const containerAttentionOptions = {
       return '<div class="attention">';
     } else {
       // closing tag
-      return "</div>\n";
+      return '</div>\n';
     }
   },
 };
@@ -78,7 +81,7 @@ const containerAlertOptions = {
       return '<div class="alert">';
     } else {
       // closing tag
-      return "</div>\n";
+      return '</div>\n';
     }
   },
 };
@@ -97,7 +100,7 @@ const containerInfoOptions = {
       return '<div class="info">';
     } else {
       // closing tag
-      return "</div>\n";
+      return '</div>\n';
     }
   },
 };

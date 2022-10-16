@@ -1,13 +1,13 @@
-import { Blog } from "../types";
-import { TagCard } from "./TagCard";
-import { Tag } from "../data/tags/type";
+import { Blog } from '../../types';
+import { TagCard } from '../atoms/TagCard';
+import { Tag } from '../../data/tags/type';
 
-import Twitter from "../images/Twitter.svg";
-import Clip from "../images/Clip.svg";
+import Twitter from '../../images/Twitter.svg';
+import Clip from '../../images/Clip.svg';
 
-import { useState } from "react";
+import { useState } from 'react';
 
-import BouzuyaImg from "../images/Bouzuya.svg";
+import BouzuyaImg from '../../images/Bouzuya.svg';
 
 type BlogFooterProps = {
   tags: Tag[];
@@ -22,7 +22,7 @@ const CopiedTooltip = (props: CopiedTooltipPropsType) => {
   const { isHidden } = props;
   return (
     <div
-      className="absolute -top-8 p-1 rounded text-slate-400"
+      className='absolute -top-8 p-1 rounded text-slate-400'
       hidden={isHidden}
     >
       copied!
@@ -46,7 +46,7 @@ export const BlogFooter = (props: BlogFooterProps): JSX.Element => {
         setIsHiddenCopied(true);
       }, 2000);
     } catch {
-      console.log("An Error was occured with copy");
+      console.log('An Error was occured with copy');
     }
   };
 
@@ -55,28 +55,27 @@ export const BlogFooter = (props: BlogFooterProps): JSX.Element => {
   return (
     <div>
       {/* タグ */}
-      <div className="flex flex-wrap my-5">
+      <div className='flex flex-wrap my-5'>
         {tags.map((tag, index) => {
           return <TagCard key={index} tag={tag} />;
         })}
       </div>
 
       {/* シェアボタン */}
-      <div className="flex items-center my-10">
-        <BouzuyaImg widht={30} height={30} />
-        <div className="ml-2">シェアをしていただけると僕が大変喜びます。</div>
+      <div className='flex items-center my-10'>
+        <div className='ml-2'>シェアをしていただけると僕が大変喜びます🙇‍♂️</div>
       </div>
 
-      <div className="flex justify-center">
+      <div className='flex justify-center'>
         {/* twitter */}
-        <div className="mr-3">
+        <div className='mr-3'>
           <a href={url}>
             <Twitter widht={40} height={40} />
           </a>
         </div>
 
         {/* コピー */}
-        <div className="relative flex justify-center ml-3">
+        <div className='relative flex justify-center ml-3'>
           <CopiedTooltip isHidden={isHiddenCopied} />
           <button onClick={copyButtonHandler}>
             <Clip widht={40} height={40} />

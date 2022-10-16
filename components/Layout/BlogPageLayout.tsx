@@ -1,4 +1,4 @@
-import Head from "next/head";
+import Head from 'next/head';
 
 // Layout for blogs/[slug].tsx(blog page)
 export const BlogPageLayout = (props): JSX.Element => {
@@ -8,10 +8,10 @@ export const BlogPageLayout = (props): JSX.Element => {
     <>
       <Head>
         <title>{blog.title}</title>
-        <meta name="description" content={blog.description} />
-        <meta property="og:url" content={url} />
-        <meta property="og:title" content={blog.title} />
-        <meta property="og:description" content={blog.description} />
+        <meta name='description' content={blog.description} />
+        <meta property='og:url' content={url} />
+        <meta property='og:title' content={blog.title} />
+        <meta property='og:description' content={blog.description} />
       </Head>
       {children}
     </>
