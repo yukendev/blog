@@ -1,5 +1,5 @@
 import { Blog } from '../types';
-import { BlogListWrapper } from './BlogListWrapper';
+import { BlogListWrapper } from './organisms/BlogListWrapper';
 import { Tag } from '../data/tags/type';
 
 type TagContentWrapperProps = {

@@ -1,5 +1,5 @@
 import { Blog } from '../types';
-import { TagCard } from './TagCard';
+import { TagCard } from './atoms/TagCard';
 import { Tag } from '../data/tags/type';
 
 import Twitter from '../images/Twitter.svg';

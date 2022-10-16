@@ -1,5 +1,5 @@
-import { Blog } from '../types';
-import { BlogList } from './BlogList';
+import { Blog } from '../../types';
+import { BlogList } from '../molecules/BlogList';
 
 type BlogListWrapperProps = {
   blogs: Blog[];

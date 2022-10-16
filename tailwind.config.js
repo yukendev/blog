@@ -12,7 +12,7 @@ module.exports = {
         myBgColorDark: '#EBEBEB', // 背景色より少し濃い色
         myBgColorHover: '#D3BA8E',
         myTextColor: '#06283D',
-        myTagColor: '#06283D',
+        myTagColor: '#B6E388',
         myBlogListBgColor: '#F5F5F5',
         myBlogContentBgColor: '#F5F5F5',
         myBlogContentBgColorHover: '#EFEFEF',
