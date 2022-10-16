@@ -1,5 +1,5 @@
 import { Header } from '../organisms/Header';
-import { Footer } from './Footer';
+import { Footer } from '../organisms/Footer';
 import Head from 'next/head';
 import GoogleAnalytics from '../atoms/GoogleAnalytics';
 
