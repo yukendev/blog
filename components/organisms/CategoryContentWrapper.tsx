@@ -1,8 +1,8 @@
-import { Blog } from '../types';
-import { CategoryList } from './organisms/CategoryList';
-import { BlogListWrapper } from './organisms/BlogListWrapper';
-import { Category } from '../data/categories/type';
-import { CategoryDescription } from './CategoryDescription';
+import { Blog } from '../../types';
+import { CategoryList } from './CategoryList';
+import { BlogListWrapper } from './BlogListWrapper';
+import { Category } from '../../data/categories/type';
+import { CategoryDescription } from '../atoms/CategoryDescription';
 
 type CategoryContentWrapperProps = {
   category: Category;

@@ -1,7 +1,7 @@
 import type { ReactElement } from 'react';
 import { NextPage } from 'next';
 import { Blog } from '../../types';
-import { CategoryContentWrapper } from '../../components/CategoryContentWrapper';
+import { CategoryContentWrapper } from '../../components/organisms/CategoryContentWrapper';
 import { Category } from '../../data/categories/type';
 import { categories } from '../../data/categories/categories';
 import { getPostsByCategory } from '../../libs/posts';
