@@ -1,13 +1,13 @@
-import { Blog } from '../types';
-import { TagCard } from './atoms/TagCard';
-import { Tag } from '../data/tags/type';
+import { Blog } from '../../types';
+import { TagCard } from '../atoms/TagCard';
+import { Tag } from '../../data/tags/type';
 
-import Twitter from '../images/Twitter.svg';
-import Clip from '../images/Clip.svg';
+import Twitter from '../../images/Twitter.svg';
+import Clip from '../../images/Clip.svg';
 
 import { useState } from 'react';
 
-import BouzuyaImg from '../images/Bouzuya.svg';
+import BouzuyaImg from '../../images/Bouzuya.svg';
 
 type BlogFooterProps = {
   tags: Tag[];

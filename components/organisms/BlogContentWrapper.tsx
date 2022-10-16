@@ -1,5 +1,5 @@
-import { Blog } from '../types';
-import { formatDate } from '../util/date-formatter';
+import { Blog } from '../../types';
+import { formatDate } from '../../util/date-formatter';
 import { BlogFooter } from './BlogFooter';
 import Head from 'next/head';
 
