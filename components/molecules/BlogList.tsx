@@ -23,7 +23,7 @@ export const BlogList = (props: BlogListProps): JSX.Element => {
         <div className='text-sm'>{formatDate(date)}</div>
 
         {/* ブログタイトル */}
-        <div className='font-bold my-1 text-xl deco-underline-text'>{title}</div>
+        <div className='font-bold my-1 text-xl text-myTextColor deco-underline-text'>{title}</div>
 
         {/* タグ */}
         <div className='flex flex-wrap my-2'>
