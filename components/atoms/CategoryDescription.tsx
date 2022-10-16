@@ -1,4 +1,4 @@
-import { Category } from '../data/categories/type';
+import { Category } from '../../data/categories/type';
 
 type CategoryDescriptionProps = {
   category: Category;
