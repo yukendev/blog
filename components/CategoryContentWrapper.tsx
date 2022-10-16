@@ -27,7 +27,7 @@ export const CategoryContentWrapper = (
       <CategoryDescription category={category} />
 
       {/* divider */}
-      <div className='border-t-2 border-myBgColorHover my-5'></div>
+      <div className='border-t-2 border-myBgColorDark my-5'></div>
 
       {/* ブログリスト */}
       <BlogListWrapper blogs={blogs} />
