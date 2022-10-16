@@ -1,6 +1,6 @@
-import { Blog } from '../types';
-import { BlogListWrapper } from './organisms/BlogListWrapper';
-import { Tag } from '../data/tags/type';
+import { Blog } from '../../types';
+import { BlogListWrapper } from './BlogListWrapper';
+import { Tag } from '../../data/tags/type';
 
 type TagContentWrapperProps = {
   tag: Tag;
@@ -17,7 +17,7 @@ export const TagContentWrapper = (
       <div className='mt-10 text-2xl font-bold text-myTextColor'>{tag}</div>
 
       {/* divider */}
-      <div className='border-t-2 border-myBgColorHover my-5'></div>
+      <div className='border-t-2 border-myBgColorDark my-5'></div>
 
       {/* ブログリスト */}
       <BlogListWrapper blogs={blogs} />
