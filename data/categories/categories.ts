@@ -1,3 +1,3 @@
-import { Category } from "./type";
+import { Category } from './type';
 
-export const categories: Category[] = ["tech", "book", "note"];
+export const categories: Category[] = ['tech', 'book', 'note'];
