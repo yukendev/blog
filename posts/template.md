@@ -1,11 +1,11 @@
 ---
-title: "タイトル"
-date: "2021-07-08"
-slug: "hoge"
-category: "tech"
+title: 'タイトル'
+date: '2021-07-08'
+slug: 'hoge'
+category: 'tech'
 tags:
-  - "Swift"
-description: "description"
+  - 'Swift'
+description: 'description'
 ---
 
 [[toc]]
@@ -19,6 +19,8 @@ description: "description"
 - Swift 関係: 『swift-hoge』
 - 雑記的な記事: 『note-hoge』
 - 本関係: 『book-hoge』
+- 俺的理解: 『oreteki-hoge』
+- tips: 『tips-』
 
 ## markdown-it-emoji のリスト
 
