@@ -13,5 +13,6 @@ export const tags: Tag[] = [
   'Express',
   'AWS',
   '俺的理解',
+  'Tips',
   'ブログ',
 ];

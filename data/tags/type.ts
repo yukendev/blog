@@ -11,4 +11,5 @@ export type Tag =
   | 'Express'
   | 'AWS'
   | '俺的理解'
+  | 'Tips'
   | 'ブログ';
