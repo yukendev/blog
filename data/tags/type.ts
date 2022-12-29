@@ -10,4 +10,5 @@ export type Tag =
   | 'Tailwind CSS'
   | 'Express'
   | 'AWS'
+  | '俺的理解'
   | 'ブログ';
