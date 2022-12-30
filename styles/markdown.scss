@@ -1,11 +1,9 @@
-@tailwind components;
-
-@tailwind utilities;
-@layer components {
+// markdown style
+.markdown-body {
   /* ::: question
   🤔 some text
   ::: */
-  .markdown-body .question {
+  .question {
     display: flex;
     overflow-wrap: anywhere;
     margin: 1.5rem 0;
@@ -15,20 +13,19 @@
     /* color: rgba(0, 0, 0, 0.65); */
     font-size: 0.94em;
     line-height: 1.6;
-  }
-
-  .markdown-body .question::before {
-    content: '\1F914';
-    font-size: 200%;
-    display: flex;
-    align-items: center;
-    margin-right: 16px;
+    &:before {
+      content: '\1F914';
+      font-size: 200%;
+      display: flex;
+      align-items: center;
+      margin-right: 16px;
+    }
   }
 
   /* ::: alert
   😭 some text
   ::: */
-  .markdown-body .alert {
+  .alert {
     display: flex;
     overflow-wrap: anywhere;
     margin: 1.5rem 0;
@@ -38,20 +35,19 @@
     /* color: rgba(0, 0, 0, 0.65); */
     font-size: 0.94em;
     line-height: 1.6;
-  }
-
-  .markdown-body .alert::before {
-    content: '\1F62D';
-    font-size: 200%;
-    display: flex;
-    align-items: center;
-    margin-right: 16px;
+    &:before {
+      content: '\1F62D';
+      font-size: 200%;
+      display: flex;
+      align-items: center;
+      margin-right: 16px;
+    }
   }
 
   /* ::: attention
   🤔 some text
   ::: */
-  .markdown-body .attention {
+  .attention {
     display: flex;
     overflow-wrap: anywhere;
     margin: 1.5rem 0;
@@ -61,20 +57,19 @@
     /* color: rgba(0, 0, 0, 0.65); */
     font-size: 0.94em;
     line-height: 1.6;
-  }
-
-  .markdown-body .attention::before {
-    content: '\1F62C';
-    font-size: 200%;
-    display: flex;
-    align-items: center;
-    margin-right: 16px;
+    &:before {
+      content: '\1F62C';
+      font-size: 200%;
+      display: flex;
+      align-items: center;
+      margin-right: 16px;
+    }
   }
 
   /* ::: info
   🤓 some text
   ::: */
-  .markdown-body .info {
+  .info {
     display: flex;
     overflow-wrap: anywhere;
     margin: 1.5rem 0;
@@ -84,24 +79,50 @@
     /* color: rgba(0, 0, 0, 0.65); */
     font-size: 0.94em;
     line-height: 1.6;
+    &:before {
+      content: '\1F913';
+      font-size: 200%;
+      display: flex;
+      align-items: center;
+      margin-right: 16px;
+    }
   }
 
-  .markdown-body .info::before {
-    content: '\1F913';
-    font-size: 200%;
-    display: flex;
-    align-items: center;
-    margin-right: 16px;
-  }
-
-  .markdown-body h1 {
+  h1 {
     font-size: 1.8em;
     padding-bottom: 10px;
     margin: 80px 0 20px 0;
     border-bottom: 1px solid lightgray;
   }
 
-  .markdown-body h2 {
+  h2 {
     border-bottom: 0.5px solid lightgray;
+  }
+
+  // inline code
+  code {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 4px;
+    &:before {
+      display: none;
+    }
+    &:after {
+      display: none;
+    }
+  }
+
+  // code block
+  pre {
+    code {
+      padding: 0;
+      font-size: inherit;
+      color: inherit;
+      white-space: pre-wrap;
+      background-color: transparent;
+      border-radius: 0;
+    }
   }
 }
