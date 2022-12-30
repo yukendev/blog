@@ -1,11 +1,20 @@
+記事作成コマンド
+
+```
+npm run create-post -date='2022-12-31'
+```
+
 ---
+
 title: 'タイトル'
 date: '2021-07-08'
 slug: 'hoge'
 category: 'tech'
 tags:
-  - 'Swift'
-description: 'description'
+
+- 'Swift'
+  description: 'description'
+
 ---
 
 [[toc]]
