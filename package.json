@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json,css}'",
-    "create-post": "mkdir ./posts/${npm_config_date} && touch ./posts/${npm_config_date}/${npm_config_date}.md"
+    "create-post": "mkdir ./posts/${npm_config_date} && touch ./posts/${npm_config_date}/${npm_config_date}.md && cp ./posts/template.md ./posts/${npm_config_date}/${npm_config_date}.md"
   },
   "dependencies": {
     "autoprefixer": "^10.4.7",
