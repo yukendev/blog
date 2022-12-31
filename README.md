@@ -1,3 +1,3 @@
 This is my blog ✊.
 
-please visit yukendev.com
+please visit https://yukendev.com
