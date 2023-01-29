@@ -6,7 +6,8 @@ import usePageView from '../hooks/usePageView';
 import type { ReactElement, ReactNode } from 'react';
 import type { NextPage } from 'next';
 import type { AppProps } from 'next/app';
-import Head from 'next/head';
+import { DefaultSeo } from 'next-seo';
+import { metaDataForBlog } from '../data/meta';
 
 export type NextPageWithLayout<T = {}> = NextPage<T> & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -22,9 +23,31 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
 
   return (
     <>
-      <Head>
-        <meta name='viewport' content='width=device-width' />
-      </Head>
+      <DefaultSeo
+        defaultTitle={metaDataForBlog.title}
+        description={metaDataForBlog.description}
+        openGraph={{
+          type: 'website',
+          title: metaDataForBlog.title,
+          description: metaDataForBlog.description,
+          site_name: metaDataForBlog.title,
+          url: 'https://www.yukendev.com/',
+          images: [
+            {
+              url: 'https://www.yukendev.com//ogp.png',
+              width: 800,
+              height: 600,
+              alt: 'Og Image Alt',
+              type: 'image/jpeg',
+            },
+          ],
+        }}
+        twitter={{
+          handle: metaDataForBlog.twitterUserName,
+          site: metaDataForBlog.twitterUserName,
+          cardType: 'summary_large_image',
+        }}
+      />
       {getLayout(<Component {...pageProps} />)}
     </>
   );
