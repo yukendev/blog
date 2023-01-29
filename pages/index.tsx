@@ -5,7 +5,6 @@ import { getSortedPostsData } from '../libs/posts';
 import type { NextPageWithLayout } from './_app';
 import type { ReactElement } from 'react';
 import { Layout } from '../components/Layout/Layout';
-import { TopPageLayout } from '../components/Layout/TopPageLayout';
 
 type HomeProps = {
   blogs: Blog[];
@@ -22,11 +21,7 @@ const Home: NextPageWithLayout<HomeProps> = ({ blogs }) => {
 };
 
 Home.getLayout = function getLayout(page: ReactElement) {
-  return (
-    <Layout>
-      <TopPageLayout>{page}</TopPageLayout>
-    </Layout>
-  );
+  return <Layout>{page}</Layout>;
 };
 
 export const getStaticProps = async () => {
