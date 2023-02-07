@@ -16,7 +16,7 @@ npm run create-post -date='2022-12-31'
 - 雑記的な記事: 『note-hoge』
 - 本関係: 『book-hoge』
 - 俺的理解: 『oreteki-hoge』
-- tips: 『tips-』
+- tips: 『tips-hoge』
 
 # 俺的理解の前口上
 
