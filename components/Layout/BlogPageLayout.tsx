@@ -4,7 +4,6 @@ import { NextSeo } from 'next-seo';
 export const BlogPageLayout = (props): JSX.Element => {
   const { children, blog } = props;
   const url = `https://www.yukendev.com/${blog.slug}`;
-  console.log('ほげ', blog);
   return (
     <>
       <NextSeo
