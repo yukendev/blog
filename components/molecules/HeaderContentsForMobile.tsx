@@ -12,9 +12,11 @@ const HeaderContentWrapper = (
   const { title, href } = props;
   return (
     <Link href={href}>
-      <div className='px-2 py-3 mx-3 text-myTextColor cursor-pointer deco-underline-text'>
-        {title}
-      </div>
+      <a>
+        <div className='px-2 py-3 mx-3 text-myTextColor cursor-pointer deco-underline-text'>
+          {title}
+        </div>
+      </a>
     </Link>
   );
 };
