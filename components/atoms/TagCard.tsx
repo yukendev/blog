@@ -12,10 +12,8 @@ export const TagCard = (props: TagProps): JSX.Element => {
   const { tag } = props;
   return (
     <Link href={`/tags/${tag}`}>
-      <a>
-        <div className={`px-3 bg-myTagColor cursor-pointer font-bold rounded-lg mr-1  my-1 ${textStyle} ${opacityStyle}`}>
-          {tag}
-        </div>
+      <a className={`px-3 bg-myTagColor cursor-pointer font-bold rounded-lg mr-1  my-1 ${textStyle} ${opacityStyle}`}>
+        {tag}
       </a>
     </Link>
   );
