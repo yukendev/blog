@@ -55,11 +55,11 @@ export const BlogFooter = (props: BlogFooterProps): JSX.Element => {
   return (
     <div>
       {/* タグ */}
-      <div className='flex flex-wrap my-5'>
+      <ul className='flex flex-wrap my-5'>
         {tags.map((tag, index) => {
           return <TagCard key={index} tag={tag} />;
         })}
-      </div>
+      </ul>
 
       {/* シェアボタン */}
       <div className='flex items-center my-10'>
