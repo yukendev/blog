@@ -17,23 +17,25 @@ export const BlogList = (props: BlogListProps): JSX.Element => {
   }, [])
 
   return (
-    <Link href={`/blogs/${slug}`}>
-      <a>
-        <div className='drop-shadow-md deco-underline-element rounded-lg bg-myBlogListBgColor p-8 my-2 cursor-pointer hover:bg-myBlogContentBgColorHover'>
-          {/* 日付 */}
-          <div className='text-sm'>{formatDate(date)}</div>
+    <article className='drop-shadow-md rounded-lg bg-myBlogListBgColor p-8 my-2'>
+      {/* 日付 */}
+      <time className='text-sm'>{formatDate(date)}</time>
 
-          {/* ブログタイトル */}
-          <div className='font-bold my-1 text-xl text-myTextColor deco-underline-text'>{title}</div>
+      {/* ブログタイトル */}
+      
+      <div className='font-bold my-1 text-xl text-myTextColor deco-underline-text cursor-pointer'>
+        <Link href={`/blogs/${slug}`}>
+          {title}
+        </Link>
+      </div>
+      
 
-          {/* タグ */}
-          <div className='flex flex-wrap mt-5'>
-            {tags.map((tag, index) => {
-              return <TagCard key={index} tag={tag} />;
-            })}
-          </div>
-        </div>
-      </a>
-    </Link>
+      {/* タグ */}
+      <ul className='flex flex-wrap mt-5'>
+        {tags.map((tag, index) => {
+          return <TagCard key={index} tag={tag} />;
+        })}
+      </ul>
+    </article>
   );
 };
