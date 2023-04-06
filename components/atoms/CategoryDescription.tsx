@@ -23,8 +23,8 @@ export const CategoryDescription = (
   };
 
   return (
-    <div className='p-4 my-3'>
+    <p className='p-4 my-3'>
       <RenderDescription />
-    </div>
+    </p>
   );
 };

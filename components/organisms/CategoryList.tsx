@@ -8,7 +8,7 @@ const imgHeight = 52.5;
 
 export const CategoryList = (): JSX.Element => {
   return (
-    <div>
+    <>
       <h1 className='text-xl text-myTextColor font-bold my-10'>カテゴリー</h1>
       <nav className='flex flex-wrap'>
         {/* Technology */}
@@ -32,6 +32,6 @@ export const CategoryList = (): JSX.Element => {
           href='/categories/note'
         />
       </nav>
-    </div>
+    </>
   );
 };
