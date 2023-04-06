@@ -34,10 +34,6 @@ export const BlogFooter = (props: BlogFooterProps): JSX.Element => {
   const { tags, blog } = props;
   const [isHiddenCopied, setIsHiddenCopied] = useState(true);
 
-  const getURL = (blogId: string): string => {
-    return `https://www.yukendev.com/blog/${blogId}aaa`;
-  };
-
   const copyButtonHandler = () => {
     try {
       navigator.clipboard.writeText(location.href);
@@ -53,7 +49,7 @@ export const BlogFooter = (props: BlogFooterProps): JSX.Element => {
   const url = `https://twitter.com/share?url=https://www.yukendev.com/blogs/${blog.slug}&text=${blog.title}`;
 
   return (
-    <div>
+    <>
       {/* タグ */}
       <ul className='flex flex-wrap my-5'>
         {tags.map((tag, index) => {
@@ -63,10 +59,10 @@ export const BlogFooter = (props: BlogFooterProps): JSX.Element => {
 
       {/* シェアボタン */}
       <div className='flex items-center my-10'>
-        <div className='ml-2'>シェアをしていただけると僕が大変喜びます🙇‍♂️</div>
+        <p className='ml-2'>シェアをしていただけると僕が大変喜びます🙇‍♂️</p>
       </div>
 
-      <div className='flex justify-center'>
+      <nav className='flex justify-center'>
         {/* twitter */}
         <div className='mr-3'>
           <a href={url}>
@@ -81,7 +77,7 @@ export const BlogFooter = (props: BlogFooterProps): JSX.Element => {
             <Clip widht={40} height={40} />
           </button>
         </div>
-      </div>
-    </div>
+      </nav>
+    </>
   );
 };

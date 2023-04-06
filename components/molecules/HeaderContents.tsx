@@ -35,7 +35,7 @@ const HeaderContentWrapperForExternal = (
 
 export const HeaderContents = (): JSX.Element => {
   return (
-    <div className='flex mx-10'>
+    <nav className='flex mx-10'>
       {/* Home */}
       <HeaderContentWrapper title='Home' href='/' />
 
@@ -53,6 +53,6 @@ export const HeaderContents = (): JSX.Element => {
         title='Github'
         href='https://github.com/yukendev'
       />
-    </div>
+    </nav>
   );
 };

@@ -8,7 +8,7 @@ export const BlogPageLayout = (props): JSX.Element => {
     <>
       <NextSeo
         title={blog.title}
-        description={blog.title}
+        description={blog.description}
         openGraph={{
           url,
           title: blog.title,
