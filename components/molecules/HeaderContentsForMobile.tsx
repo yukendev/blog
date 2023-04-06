@@ -35,7 +35,7 @@ const HeaderContentWrapperForExternal = (
 
 export const HeaderContentsForMobile = (): JSX.Element => {
   return (
-    <div className='bg-myBgColorDark mt-3 rounded-xl p-3'>
+    <nav className='bg-myBgColorDark mt-3 rounded-xl p-3'>
       {/* Home */}
       <HeaderContentWrapper title='Home' href='/' />
 
@@ -53,6 +53,6 @@ export const HeaderContentsForMobile = (): JSX.Element => {
         title='Github'
         href='https://github.com/yukendev'
       />
-    </div>
+    </nav>
   );
 };

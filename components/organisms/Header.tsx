@@ -12,7 +12,7 @@ export const Header = (): JSX.Element => {
   };
 
   return (
-    <nav className='w-full bg-myBgColor p-5 md:p-10'>
+    <header className='w-full bg-myBgColor p-5 md:p-10'>
       <div className='w-full flex justify-between'>
         {/* ブログタイトル */}
         <HeaderTitle />
@@ -29,9 +29,9 @@ export const Header = (): JSX.Element => {
       </div>
 
       {/* 各種リンク 画面が小さい時(レスポンシブ) */}
-      <div className='md:hidden'>
+        <div className='md:hidden'>
           {!isLinkButtonsHidden && <HeaderContentsForMobile />}
         </div>
-    </nav>
+    </header>
   );
 };
