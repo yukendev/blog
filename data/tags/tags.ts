@@ -15,5 +15,6 @@ export const tags: Tag[] = [
   'GCP',
   '俺的理解',
   'Tips',
+  'HTML',
   'ブログ',
 ];
