@@ -13,4 +13,5 @@ export type Tag =
   | 'GCP'
   | '俺的理解'
   | 'Tips'
+  | 'HTML'
   | 'ブログ';
