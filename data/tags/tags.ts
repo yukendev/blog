@@ -18,4 +18,5 @@ export const tags: Tag[] = [
   'HTML',
   'ブログ',
   'Sass',
+  'Bootstrap',
 ];

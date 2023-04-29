@@ -15,4 +15,5 @@ export type Tag =
   | 'Tips'
   | 'HTML'
   | 'ブログ'
-  | 'Sass';
+  | 'Sass'
+  | 'Bootstrap';
