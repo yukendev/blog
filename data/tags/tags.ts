@@ -17,4 +17,5 @@ export const tags: Tag[] = [
   'Tips',
   'HTML',
   'ブログ',
+  'Sass',
 ];

@@ -14,4 +14,5 @@ export type Tag =
   | '俺的理解'
   | 'Tips'
   | 'HTML'
-  | 'ブログ';
+  | 'ブログ'
+  | 'Sass';
