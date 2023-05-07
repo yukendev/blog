@@ -1,4 +1,4 @@
-import { Tag } from '../../data/tags/type';
+import { Tag } from '../../constants/tags';
 import Link from 'next/link';
 
 type TagProps = {

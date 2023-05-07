@@ -1,6 +1,6 @@
 import { Blog } from '../../types';
 import { TagCard } from '../atoms/TagCard';
-import { Tag } from '../../data/tags/type';
+import { Tag } from '../../constants/tags';
 
 import Twitter from '../../images/Twitter.svg';
 import Clip from '../../images/Clip.svg';

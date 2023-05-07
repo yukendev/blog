@@ -1,11 +1,11 @@
-import { Category } from '../../data/categories/type';
+import type { Category } from '../../constants/categories';
 
-type CategoryDescriptionProps = {
+type Props = {
   category: Category;
 };
 
 export const CategoryDescription = (
-  props: CategoryDescriptionProps,
+  props: Props,
 ): JSX.Element => {
   const { category } = props;
 

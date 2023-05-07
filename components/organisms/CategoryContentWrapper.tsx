@@ -1,7 +1,7 @@
 import { Blog } from '../../types';
 import { CategoryList } from './CategoryList';
 import { BlogListWrapper } from './BlogListWrapper';
-import { Category } from '../../data/categories/type';
+import { Category } from '../../constants/categories';
 import { CategoryDescription } from '../atoms/CategoryDescription';
 
 type CategoryContentWrapperProps = {
