@@ -1,8 +1,9 @@
 import { Blog } from '../../types';
 import { CategoryList } from './CategoryList';
 import { BlogListWrapper } from './BlogListWrapper';
-import { Category } from '../../constants/categories';
-import { CategoryDescription } from '../atoms/CategoryDescription';
+import { Category } from '@constants/categories';
+import { CategoryDescription } from '@components/atoms/CategoryDescription';
+import { categoryDescription } from '@constants/categoryDescription';
 
 type CategoryContentWrapperProps = {
   category: Category;
@@ -22,7 +23,7 @@ export const CategoryContentWrapper = (
       <h1 className='mt-10 text-2xl font-bold text-myTextColor'>{category}</h1>
 
       {/* カテゴリー概要 */}
-      <CategoryDescription category={category} />
+      <CategoryDescription categoryDescription={categoryDescription[category]} />
 
       {/* divider */}
       <hr className='border-t-2 border-myBgColorDark my-5' />

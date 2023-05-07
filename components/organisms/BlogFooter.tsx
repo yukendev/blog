@@ -1,18 +1,11 @@
 import { Blog } from '../../types';
-import { TagCard } from '../atoms/TagCard';
-import { Tag } from '../../constants/tags';
+import { TagCard } from '@components/atoms/TagCard';
+import { Tag } from '@constants/tags';
 
 import Twitter from '../../images/Twitter.svg';
 import Clip from '../../images/Clip.svg';
 
 import { useState } from 'react';
-
-import BouzuyaImg from '../../images/Bouzuya.svg';
-
-type BlogFooterProps = {
-  tags: Tag[];
-  blog: Blog;
-};
 
 type CopiedTooltipPropsType = {
   isHidden: boolean;
@@ -28,6 +21,11 @@ const CopiedTooltip = (props: CopiedTooltipPropsType) => {
       copied!
     </div>
   );
+};
+
+type BlogFooterProps = {
+  tags: Tag[];
+  blog: Blog;
 };
 
 export const BlogFooter = (props: BlogFooterProps): JSX.Element => {

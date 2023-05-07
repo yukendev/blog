@@ -1,14 +1,14 @@
 import { Blog } from '../../types';
 import { BlogListWrapper } from './BlogListWrapper';
-import { Tag } from '../../constants/tags';
+import { Tag } from '@constants/tags';
 
-type TagContentWrapperProps = {
+type Props = {
   tag: Tag;
   blogs: Blog[];
 };
 
 export const TagContentWrapper = (
-  props: TagContentWrapperProps,
+  props: Props,
 ): JSX.Element => {
   const { tag, blogs } = props;
   return (

@@ -2,12 +2,12 @@ import { Blog } from '../../types';
 import { formatDate } from '../../util/date-formatter';
 import { BlogFooter } from './BlogFooter';
 
-type BlogContentWrapperProps = {
+type Props = {
   blog: Blog;
 };
 
 export const BlogContentWrapper = (
-  props: BlogContentWrapperProps,
+  props: Props,
 ): JSX.Element => {
   const { blog } = props;
   const { title, date, body, tags } = blog;

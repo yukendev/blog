@@ -1,11 +1,11 @@
 import { Blog } from '../../types';
-import { BlogList } from '../molecules/BlogList';
+import { BlogList } from '@components/molecules/BlogList';
 
-type BlogListWrapperProps = {
+type Props = {
   blogs: Blog[];
 };
 
-export const BlogListWrapper = (props: BlogListWrapperProps): JSX.Element => {
+export const BlogListWrapper = (props: Props): JSX.Element => {
   const { blogs } = props;
 
   return (

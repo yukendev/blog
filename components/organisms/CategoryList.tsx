@@ -1,7 +1,7 @@
 import TechImg from '../../images/CategoryTech.svg';
 import BookImg from '../../images/CategoryBook.svg';
 import NoteImg from '../../images/CategoryNote.svg';
-import { Category } from '../atoms/Category';
+import { Category } from '@components/atoms/Category';
 
 const imgWidth = 70;
 const imgHeight = 52.5;

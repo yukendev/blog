@@ -1,8 +1,8 @@
-import { HeaderTitle } from '../atoms/HeaderTitle';
-import { HeaderContents } from '../molecules/HeaderContents';
-import { HeaderContentsForMobile } from '../molecules/HeaderContentsForMobile';
-import { HeaderExpandButton } from '../atoms/HeaderExpandButton';
-import { MouseEvent, useCallback, useState } from 'react';
+import { HeaderTitle } from '@components/atoms/HeaderTitle';
+import { HeaderContents } from '@components/molecules/HeaderContents';
+import { HeaderContentsForMobile } from '@components/molecules/HeaderContentsForMobile';
+import { HeaderExpandButton } from '@components/atoms/HeaderExpandButton';
+import { useCallback, useState } from 'react';
 
 export const Header = (): JSX.Element => {
   const [isHeaderExpand, setIsHeaderExpand] = useState(false);
