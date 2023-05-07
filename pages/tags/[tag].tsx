@@ -1,7 +1,7 @@
 import type { ReactElement } from 'react';
 import { Blog } from '../../types';
-import { Tag } from '../../data/tags/type';
-import { tags } from '../../data/tags/tags';
+import { Tag } from '../../constants/tags';
+import { tags } from '../../constants/tags';
 import { TagContentWrapper } from '../../components/organisms/TagContentWrapper';
 import { getPostsByTags } from '../../libs/posts';
 import type { NextPageWithLayout } from '../_app';

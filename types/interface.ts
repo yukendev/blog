@@ -1,5 +1,5 @@
-import { Tag } from '../data/tags/type';
-import { Category } from '../data/categories/type';
+import { Tag } from '../constants/tags';
+import { Category } from '../constants/categories';
 
 export type Blog = {
   title: string;

@@ -1,22 +1,23 @@
-import { Category } from '../../data/categories/type';
+import type { Category } from '../../constants/categories';
+import { categoryDescription } from '../../constants/categoryDescription';
 
-type CategoryDescriptionProps = {
+type Props = {
   category: Category;
 };
 
 export const CategoryDescription = (
-  props: CategoryDescriptionProps,
+  props: Props,
 ): JSX.Element => {
   const { category } = props;
 
   const RenderDescription = () => {
     const desc = (): string => {
       if (category === 'tech') {
-        return '技術系で学んだことを備忘録的に書きます。';
+        return categoryDescription.tech;
       } else if (category === 'book') {
-        return '読んだ本の感想などを書きます。まだ方針は決まってないですが、技術書のことがメインになりそうです。';
+        return categoryDescription.book;
       } else if (category === 'note') {
-        return '『note』とかいうかっこいい括りにしてますが、『その他』です。技術系のことでも、本系のことでもないものを書きます。';
+        return categoryDescription.note;
       }
     };
     return <p className='text-myTextColor'>{desc()}</p>;

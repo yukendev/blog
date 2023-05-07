@@ -1,9 +1,8 @@
 import type { ReactElement } from 'react';
-import { NextPage } from 'next';
 import { Blog } from '../../types';
 import { CategoryContentWrapper } from '../../components/organisms/CategoryContentWrapper';
-import { Category } from '../../data/categories/type';
-import { categories } from '../../data/categories/categories';
+import { Category } from '../../constants/categories';
+import { categories } from '../../constants/categories';
 import { getPostsByCategory } from '../../libs/posts';
 import type { NextPageWithLayout } from '../_app';
 import { Layout } from '../../components/Layout/Layout';
