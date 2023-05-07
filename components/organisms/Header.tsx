@@ -2,14 +2,14 @@ import { HeaderTitle } from '../atoms/HeaderTitle';
 import { HeaderContents } from '../molecules/HeaderContents';
 import { HeaderContentsForMobile } from '../molecules/HeaderContentsForMobile';
 import { HeaderExpandButton } from '../atoms/HeaderExpandButton';
-import { useState } from 'react';
+import { MouseEvent, useCallback, useState } from 'react';
 
 export const Header = (): JSX.Element => {
-  const [isLinkButtonsHidden, setIsLinkButtonsHidden] = useState(true);
+  const [isHeaderExpand, setIsHeaderExpand] = useState(false);
 
-  const hideLinkButtons = (isHidden: boolean) => {
-    setIsLinkButtonsHidden(!isHidden);
-  };
+  const onClickExpandButtonHandler = useCallback(() => {
+    setIsHeaderExpand(!isHeaderExpand);
+  }, [isHeaderExpand]);
 
   return (
     <header className='w-full bg-myBgColor p-5 md:p-10'>
@@ -24,13 +24,13 @@ export const Header = (): JSX.Element => {
 
         {/* レスポンシブ対応ボタン */}
         <div className='md:hidden'>
-          <HeaderExpandButton hideLinkButtons={hideLinkButtons} />
+          <HeaderExpandButton onClickHandler={onClickExpandButtonHandler} isHeaderExpand={isHeaderExpand} />
         </div>
       </div>
 
       {/* 各種リンク 画面が小さい時(レスポンシブ) */}
         <div className='md:hidden'>
-          {!isLinkButtonsHidden && <HeaderContentsForMobile />}
+          {isHeaderExpand && <HeaderContentsForMobile />}
         </div>
     </header>
   );
