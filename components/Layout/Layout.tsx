@@ -5,7 +5,7 @@ import { existsGaId, GA_ID } from '../../libs/gtag';
 
 const GoogleAnalytics = (): JSX.Element => {
   if (!existsGaId) {
-    return <></>
+    return <></>;
   }
   return (
     <>
@@ -23,8 +23,7 @@ const GoogleAnalytics = (): JSX.Element => {
         `}
       </Script>
     </>
-  )
-      
+  );
 };
 
 // Layout for all page

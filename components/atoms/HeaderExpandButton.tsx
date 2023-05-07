@@ -4,7 +4,7 @@ import { MouseEventHandler } from 'react';
 
 type Props = {
   onClickHandler: MouseEventHandler<HTMLButtonElement>;
-  isHeaderExpand: boolean
+  isHeaderExpand: boolean;
 };
 
 export const HeaderExpandButton = (props: Props): JSX.Element => (

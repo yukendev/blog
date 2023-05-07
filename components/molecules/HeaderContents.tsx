@@ -1,58 +1,24 @@
-import Link from 'next/link';
+import { HeaderContentButton } from '@components/atoms/HeaderContentButton';
+import { HeaderContentButtonForExternal } from '@components/atoms/HeaderContentButtonForExternal';
 
-type HeaderContentWrapperProps = {
-  title: string;
-  href: string;
-};
+export const HeaderContents = (): JSX.Element => (
+  <nav className='flex mx-10'>
+    {/* Home */}
+    <HeaderContentButton title='Home' href='/' />
 
-// サイト内で画面遷移するボタン
-const HeaderContentWrapper = (
-  props: HeaderContentWrapperProps,
-): JSX.Element => {
-  const { title, href } = props;
-  return (
-    <Link href={href}>
-      <a className='px-2 py-1 mx-3 text-myTextColor cursor-pointer deco-underline-text font-semibold'>
-        {title}
-      </a>
-    </Link>
-  );
-};
+    {/* About */}
+    <HeaderContentButton title='About' href='/me' />
 
-// 外部サイトを開くボタン
-const HeaderContentWrapperForExternal = (
-  props: HeaderContentWrapperProps,
-): JSX.Element => {
-  const { title, href } = props;
-  return (
-    <div className='px-2 py-1 mx-3 text-myTextColor cursor-pointer deco-underline-text font-semibold'>
-      <a href={href} target='_blank' rel='noopener noreferrer'>
-        {title}
-      </a>
-    </div>
-  );
-};
+    {/* Twitter */}
+    <HeaderContentButtonForExternal
+      title='Twitter'
+      href='https://twitter.com/tezuka_0906_wtf'
+    />
 
-export const HeaderContents = (): JSX.Element => {
-  return (
-    <nav className='flex mx-10'>
-      {/* Home */}
-      <HeaderContentWrapper title='Home' href='/' />
-
-      {/* About */}
-      <HeaderContentWrapper title='About' href='/me' />
-
-      {/* Twitter */}
-      <HeaderContentWrapperForExternal
-        title='Twitter'
-        href='https://twitter.com/tezuka_0906_wtf'
-      />
-
-      {/* Github */}
-      <HeaderContentWrapperForExternal
-        title='Github'
-        href='https://github.com/yukendev'
-      />
-    </nav>
-  );
-};
+    {/* Github */}
+    <HeaderContentButtonForExternal
+      title='Github'
+      href='https://github.com/yukendev'
+    />
+  </nav>
+);

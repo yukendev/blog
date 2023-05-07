@@ -1,8 +1,8 @@
 // See https://containers.dev/implementors/json_reference/ for configuration reference
 {
-	"name": "blog",
-	"build": {
-		"dockerfile": "Dockerfile"
-	},
+  "name": "blog",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
   "remoteUser": "node"
 }

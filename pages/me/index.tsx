@@ -42,7 +42,9 @@ const AboutPage = (): JSX.Element => {
       <h2 className='mx-auto text-xl mt-10 font-medium'>About Me</h2>
       <div className='p-3 mx-auto max-w-xl'>
         <p className='font-medium leading-relaxed'>
-          <a href='https://growi.org/' style={{ textDecoration: 'underline' }}>『GROWI』</a>
+          <a href='https://growi.org/' style={{ textDecoration: 'underline' }}>
+            『GROWI』
+          </a>
           というOSSのwikiシステムの開発に携わっています。
           勉強時間的にはフロントの方が多いですが、バックエンド、インフラにも興味あります。
           体を構成している全要素は『Vtuber』『銭湯』『テニス』です。それ以外の要素は体にありません。

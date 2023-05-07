@@ -19,15 +19,13 @@ export const CategoryContentWrapper = (
       <CategoryList />
 
       {/* カテゴリータイトル */}
-      <h1 className='mt-10 text-2xl font-bold text-myTextColor'>
-        {category}
-      </h1>
+      <h1 className='mt-10 text-2xl font-bold text-myTextColor'>{category}</h1>
 
       {/* カテゴリー概要 */}
       <CategoryDescription category={category} />
 
       {/* divider */}
-      <hr className='border-t-2 border-myBgColorDark my-5'/>
+      <hr className='border-t-2 border-myBgColorDark my-5' />
 
       {/* ブログリスト */}
       <BlogListWrapper blogs={blogs} />

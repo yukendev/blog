@@ -1,34 +1,27 @@
 import { Blog } from '../../types';
-import { TagCard } from '../atoms/TagCard';
+import { TagCard } from '@components/atoms/TagCard';
 import Link from 'next/link';
-import { useCallback } from 'react';
+import { formatDate } from 'util/date-formatter';
 
-type BlogListProps = {
+type Props = {
   blog: Blog;
 };
 
-export const BlogList = (props: BlogListProps): JSX.Element => {
+export const BlogList = (props: Props): JSX.Element => {
   const { blog } = props;
   const { slug, date, title, tags } = blog;
-
-
-  const formatDate = useCallback((date: string) => {
-    return date.replaceAll('-', '/');
-  }, [])
 
   return (
     <article className='drop-shadow-md rounded-lg bg-myBlogListBgColor p-8 my-2'>
       {/* 日付 */}
-      <time dateTime={date} className='text-sm'>{formatDate(date)}</time>
+      <time dateTime={date} className='text-sm'>
+        {formatDate(date)}
+      </time>
 
       {/* ブログタイトル */}
-      
       <h3 className='font-bold my-1 text-xl text-myTextColor deco-underline-text cursor-pointer'>
-        <Link href={`/blogs/${slug}`}>
-          {title}
-        </Link>
+        <Link href={`/blogs/${slug}`}>{title}</Link>
       </h3>
-      
 
       {/* タグ */}
       <ul className='flex flex-wrap mt-5'>

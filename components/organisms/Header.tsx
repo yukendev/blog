@@ -24,14 +24,17 @@ export const Header = (): JSX.Element => {
 
         {/* レスポンシブ対応ボタン */}
         <div className='md:hidden'>
-          <HeaderExpandButton onClickHandler={onClickExpandButtonHandler} isHeaderExpand={isHeaderExpand} />
+          <HeaderExpandButton
+            onClickHandler={onClickExpandButtonHandler}
+            isHeaderExpand={isHeaderExpand}
+          />
         </div>
       </div>
 
       {/* 各種リンク 画面が小さい時(レスポンシブ) */}
-        <div className='md:hidden'>
-          {isHeaderExpand && <HeaderContentsForMobile />}
-        </div>
+      <div className='md:hidden'>
+        {isHeaderExpand && <HeaderContentsForMobile />}
+      </div>
     </header>
   );
 };
