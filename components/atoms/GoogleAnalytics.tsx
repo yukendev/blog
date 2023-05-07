@@ -1,7 +1,7 @@
 import Script from 'next/script';
 import { existsGaId, GA_ID } from '../../libs/gtag';
 
-const GoogleAnalytics = (): JSX.Element => {
+export const GoogleAnalytics = (): JSX.Element => {
   if (!existsGaId) {
     return <></>
   }
@@ -26,4 +26,3 @@ const GoogleAnalytics = (): JSX.Element => {
       
 };
 
-export default GoogleAnalytics;
