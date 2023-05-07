@@ -2,8 +2,7 @@ import type { ReactElement } from 'react';
 import Image from 'next/image';
 import Twitter from '../../images/Twitter.svg';
 import GitHub from '../../images/GitHub.svg';
-import type { NextPageWithLayout } from '../_app';
-import { Layout } from '../../components/Layout/Layout';
+import { Layout } from '@components/Layout/Layout';
 
 const AboutPage = (): JSX.Element => {
   return (

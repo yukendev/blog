@@ -1,11 +1,11 @@
 import type { ReactElement } from 'react';
 import { Blog } from '../../types';
-import { Tag } from '../../constants/tags';
-import { tags } from '../../constants/tags';
-import { TagContentWrapper } from '../../components/organisms/TagContentWrapper';
+import { Tag } from '@constants/tags';
+import { tags } from '@constants/tags';
+import { TagContentWrapper } from '@components/organisms/TagContentWrapper';
 import { getPostsByTags } from '../../libs/posts';
 import type { NextPageWithLayout } from '../_app';
-import { Layout } from '../../components/Layout/Layout';
+import { Layout } from '@components/Layout/Layout';
 
 type TagPageProps = {
   tag: Tag;
