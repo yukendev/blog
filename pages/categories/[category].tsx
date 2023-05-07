@@ -1,11 +1,11 @@
 import type { ReactElement } from 'react';
 import { Blog } from '../../types';
-import { CategoryContentWrapper } from '../../components/organisms/CategoryContentWrapper';
-import { Category } from '../../constants/categories';
-import { categories } from '../../constants/categories';
+import { CategoryContentWrapper } from '@components/organisms/CategoryContentWrapper';
+import { Category } from '@constants/categories';
+import { categories } from '@constants/categories';
 import { getPostsByCategory } from '../../libs/posts';
 import type { NextPageWithLayout } from '../_app';
-import { Layout } from '../../components/Layout/Layout';
+import { Layout } from '@components/Layout/Layout';
 
 type CategoryProps = {
   category: Category;

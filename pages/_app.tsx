@@ -7,7 +7,7 @@ import type { ReactElement, ReactNode } from 'react';
 import type { NextPage } from 'next';
 import type { AppProps } from 'next/app';
 import { DefaultSeo } from 'next-seo';
-import { metaDataForBlog } from '../constants/meta';
+import { metaDataForBlog } from '@constants/meta';
 
 export type NextPageWithLayout<T = {}> = NextPage<T> & {
   getLayout?: (page: ReactElement) => ReactNode;

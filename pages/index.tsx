@@ -1,10 +1,10 @@
 import { Blog } from '../types';
-import { BlogListWrapper } from '../components/organisms/BlogListWrapper';
-import { CategoryList } from '../components/organisms/CategoryList';
+import { BlogListWrapper } from '@components/organisms/BlogListWrapper';
+import { CategoryList } from '@components/organisms/CategoryList';
 import { getSortedPostsData } from '../libs/posts';
 import type { NextPageWithLayout } from './_app';
 import type { ReactElement } from 'react';
-import { Layout } from '../components/Layout/Layout';
+import { Layout } from '@components/Layout/Layout';
 
 type HomeProps = {
   blogs: Blog[];

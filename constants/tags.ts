@@ -18,7 +18,6 @@ export type Tag =
   | 'Sass'
   | 'Bootstrap';
 
-
 export const tags: Tag[] = [
   'Swift',
   'Next.js',

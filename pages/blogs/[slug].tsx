@@ -1,10 +1,10 @@
 import type { ReactElement } from 'react';
 import { Blog } from '../../types';
-import { BlogContentWrapper } from '../../components/organisms/BlogContentWrapper';
+import { BlogContentWrapper } from '@components/organisms/BlogContentWrapper';
 import { getSortedPostsData, getPostsBySlug } from '../../libs/posts';
 import type { NextPageWithLayout } from '../_app';
-import { Layout } from '../../components/Layout/Layout';
-import { BlogPageLayout } from '../../components/Layout/BlogPageLayout';
+import { Layout } from '@components/Layout/Layout';
+import { BlogPageLayout } from '@components/Layout/BlogPageLayout';
 
 type BlogProps = {
   blog: Blog;
