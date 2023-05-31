@@ -3,6 +3,7 @@ export type Tag =
   | 'JavaScript'
   | 'TypeScript'
   | 'Next.js'
+  | 'Remix'
   | 'React'
   | 'インターン'
   | 'Node.js'
@@ -21,6 +22,7 @@ export type Tag =
 export const tags: Tag[] = [
   'Swift',
   'Next.js',
+  'Remix',
   'React',
   'JavaScript',
   'TypeScript',
