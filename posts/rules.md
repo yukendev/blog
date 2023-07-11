@@ -13,6 +13,7 @@ npm run create-post -date='2022-12-31'
 - Next.js 関係: 『next-hoge』
 - Remix 関係: 『remix-hoge』
 - JavaScript 関係: 『js-hoge』
+- TypeScript 関係: 『ts-hoge』
 - Swift 関係: 『swift-hoge』
 - 雑記的な記事: 『note-hoge』
 - 本関係: 『book-hoge』
