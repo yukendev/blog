@@ -6,9 +6,7 @@ type Props = {
   blog: Blog;
 };
 
-export const BlogContentWrapper = (
-  props: Props,
-): JSX.Element => {
+export const BlogContentWrapper = (props: Props): JSX.Element => {
   const { blog } = props;
   const { title, date, body, tags } = blog;
   const formatedCreatedAt = formatDate(date);
