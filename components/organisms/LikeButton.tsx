@@ -22,7 +22,7 @@ const likeButtonHandler = debounce(async (props: { title: string }) => {
 }, 3000);
 
 // LikeButton compoennt
-const fixedStyle = 'fixed top-1/3 left-40';
+const fixedStyle = 'fixed top-1/3';
 const buttonSize = 'w-24 h-24';
 const buttonLayout = 'flex flex-col justify-center items-center';
 const textStyle = 'text-sm font-semibold';
@@ -48,6 +48,9 @@ export const LikeButton = (props: { title: string }): JSX.Element => {
       ref={scope}
       onClick={toggleLike}
       className={`${fixedStyle} ${buttonLayout} ${buttonSize}`}
+      style={{
+        marginLeft: '-150px',
+      }}
     >
       {isLiked ? (
         <>
