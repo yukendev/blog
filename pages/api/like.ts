@@ -5,8 +5,7 @@ const myId = process.env.LINE_API_MY_ID;
 const accessToken = process.env.LINE_API_ACCESS_TOKEN;
 
 const handler = (req, res) => {
-
-  const title = 'hogehogeの記事'
+  const title = req.body.title;
   const data = JSON.stringify({
     to: myId,
     messages: [
@@ -16,7 +15,6 @@ const handler = (req, res) => {
       },
     ],
   });
-
   const options = {
     method: 'POST',
     headers: {
