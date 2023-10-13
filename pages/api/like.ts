@@ -25,7 +25,6 @@ const handler = (req, res) => {
   const request = https.request(url, options);
   request.write(data);
   request.end();
-  res.status(200).json({ name: 'John Doe' });
 };
 
 export default handler;
