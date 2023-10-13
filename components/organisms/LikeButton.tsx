@@ -16,8 +16,8 @@ const likeButtonHandler = debounce(async (props: { title: string }) => {
       body: JSON.stringify(props),
     });
     return response.json();
-  } catch {
-    console.log('Error');
+  } catch(error) {
+    console.log('Error', error);
   }
 }, 3000);
 
