@@ -7,9 +7,7 @@ type Props = {
   blogs: Blog[];
 };
 
-export const TagContentWrapper = (
-  props: Props,
-): JSX.Element => {
+export const TagContentWrapper = (props: Props): JSX.Element => {
   const { tag, blogs } = props;
   return (
     <div className='mx-auto w-11/12 md:w-8/12 max-w-5xl'>

@@ -13,21 +13,21 @@ export const CategoryList = (): JSX.Element => {
       <nav className='flex flex-wrap'>
         {/* Technology */}
         <Category
-          image={<TechImg widht={imgWidth} height={imgHeight} />}
+          image={<TechImg width={imgWidth} height={imgHeight} />}
           title='Tech'
           href='/categories/tech'
         />
 
         {/* Book */}
         <Category
-          image={<BookImg widht={imgWidth} height={imgHeight} />}
+          image={<BookImg width={imgWidth} height={imgHeight} />}
           title='Book'
           href='/categories/book'
         />
 
         {/* Note */}
         <Category
-          image={<NoteImg widht={imgWidth} height={imgHeight} />}
+          image={<NoteImg width={imgWidth} height={imgHeight} />}
           title='Note'
           href='/categories/note'
         />

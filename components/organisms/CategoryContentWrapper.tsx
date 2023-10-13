@@ -23,7 +23,9 @@ export const CategoryContentWrapper = (
       <h1 className='mt-10 text-2xl font-bold text-myTextColor'>{category}</h1>
 
       {/* カテゴリー概要 */}
-      <CategoryDescription categoryDescription={categoryDescription[category]} />
+      <CategoryDescription
+        categoryDescription={categoryDescription[category]}
+      />
 
       {/* divider */}
       <hr className='border-t-2 border-myBgColorDark my-5' />

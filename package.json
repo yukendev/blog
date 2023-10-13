@@ -13,6 +13,8 @@
   "dependencies": {
     "autoprefixer": "^10.4.7",
     "copy-webpack-plugin": "^11.0.0",
+    "debounce": "^1.2.1",
+    "framer-motion": "^10.16.4",
     "gray-matter": "^4.0.3",
     "markdown-it": "^13.0.1",
     "markdown-it-anchor": "^8.6.4",
@@ -30,6 +32,7 @@
   "devDependencies": {
     "@svgr/webpack": "^6.2.1",
     "@tailwindcss/typography": "^0.5.2",
+    "@types/debounce": "^1.2.2",
     "@types/gtag.js": "^0.0.10",
     "@types/markdown-it": "^12.2.3",
     "@types/markdown-it-container": "^2.0.5",
