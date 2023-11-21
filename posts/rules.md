@@ -19,6 +19,7 @@ npm run create-post -date='2022-12-31'
 - 本関係: 『book-hoge』
 - 俺的理解: 『oreteki-hoge』
 - tips: 『tips-hoge』
+- エラー関連: 『error-』
 
 # 俺的理解の前口上
 
