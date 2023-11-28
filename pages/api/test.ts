@@ -1,10 +1,11 @@
 import * as https from 'https';
+import { NextApiRequest, NextApiResponse } from 'next';
 
 const url = 'https://api.line.me/v2/bot/message/push';
 const myId = process.env.LINE_API_MY_ID;
 const accessToken = process.env.LINE_API_ACCESS_TOKEN;
 
-const handler = (req, res) => {
+const handler = (req: NextApiRequest, res: NextApiResponse) => {
   let reqStr;
   let resStr;
 
@@ -13,7 +14,7 @@ const handler = (req, res) => {
     reqStr = req.toString();
     resStr = res.toString();
 
-    console.log('ログです', req)
+    console.log('ログです', req.body)
 
     const data = JSON.stringify({
       to: myId,
