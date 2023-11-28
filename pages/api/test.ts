@@ -13,6 +13,8 @@ const handler = (req, res) => {
     reqStr = req.toString();
     resStr = res.toString();
 
+    console.log('ログです', req)
+
     const data = JSON.stringify({
       to: myId,
       messages: [
