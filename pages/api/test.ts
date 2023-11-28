@@ -11,21 +11,14 @@ const handler = (req: NextApiRequest, res: NextApiResponse) => {
 
   try {
 
-    reqStr = req.toString();
-    resStr = res.toString();
-
-    console.log('ログです', req.headers)
+    // console.log('ログです', req.headers)
 
     const data = JSON.stringify({
       to: myId,
       messages: [
         {
           type: 'text',
-          text: req.body,
-        },
-        {
-          type: 'text',
-          text: req.headers,
+          text: req.body.destination,
         },
       ],
     });
