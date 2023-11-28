@@ -10,7 +10,7 @@ const handler = (req, res) => {
     messages: [
       {
         type: 'text',
-        text: req.body,
+        text: 'hello',
       },
     ],
   });
