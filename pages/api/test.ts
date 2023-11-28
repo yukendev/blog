@@ -46,7 +46,7 @@ const handler = (req: NextApiRequest, res: NextApiResponse) => {
       messages: [
         {
           type: 'text',
-          text: err.toString(),
+          text: 'エラー',
         },
       ],
     });
