@@ -18,7 +18,7 @@ const handler = (req: NextApiRequest, res: NextApiResponse) => {
       messages: [
         {
           type: 'text',
-          text: req.body.destination,
+          text: req.body.events[0].source.groupId,
         },
       ],
     });
