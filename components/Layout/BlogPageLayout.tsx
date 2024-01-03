@@ -1,8 +1,10 @@
+import { usePageViewLine } from 'hooks/usePageViewLine';
 import { NextSeo } from 'next-seo';
 
 // Layout for blogs/[slug].tsx(blog page)
 export const BlogPageLayout = (props): JSX.Element => {
   const { children, blog } = props;
+  usePageViewLine(blog.title);
   const url = `https://www.yukendev.com/${blog.slug}`;
   return (
     <>
