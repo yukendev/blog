@@ -5,12 +5,14 @@ import { getSortedPostsData } from '../libs/posts';
 import type { NextPageWithLayout } from './_app';
 import type { ReactElement } from 'react';
 import { Layout } from '@components/Layout/Layout';
+import { usePageViewLine } from 'hooks/usePageViewLine';
 
 type HomeProps = {
   blogs: Blog[];
 };
 
 const Home: NextPageWithLayout<HomeProps> = ({ blogs }) => {
+  usePageViewLine('トップページ');
   return (
     <div className='mx-auto w-11/12 max-w-5xl'>
       <CategoryList />
