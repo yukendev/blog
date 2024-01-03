@@ -42,5 +42,5 @@ export const tags: Tag[] = [
   'Sass',
   'Bootstrap',
   'テスト',
-  'CSS'
+  'CSS',
 ];
