@@ -30,4 +30,4 @@ npm run create-post -date='2022-12-31'
 
 # markdown-it-emoji のリスト
 
-https://github.com/markdown-it/markdown-it-emoji/blob/master/lib/data/light.json
+https://github.com/markdown-it/markdown-it-emoji/blob/master/lib/data/light.mjs
