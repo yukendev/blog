@@ -1,18 +1,16 @@
 import { Blog } from '../../types';
-import { CategoryList } from './CategoryList';
-import { BlogListWrapper } from './BlogListWrapper';
+import { CategoryList } from '../organisms/CategoryList';
+import { BlogListWrapper } from '../organisms/BlogListWrapper';
 import { Category } from '@constants/categories';
 import { CategoryDescription } from '@components/atoms/CategoryDescription';
 import { categoryDescription } from '@constants/categoryDescription';
 
-type CategoryContentWrapperProps = {
+type CategoryPageProps = {
   category: Category;
   blogs: Blog[];
 };
 
-export const CategoryContentWrapper = (
-  props: CategoryContentWrapperProps,
-): JSX.Element => {
+export const CategoryPage = (props: CategoryPageProps): JSX.Element => {
   const { category, blogs } = props;
   return (
     <div className='mx-auto w-11/12 max-w-5xl'>
