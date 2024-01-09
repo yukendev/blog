@@ -5,19 +5,14 @@ import { getSortedPostsData } from '../libs/posts';
 import type { NextPageWithLayout } from './_app';
 import type { ReactElement } from 'react';
 import { Layout } from '@components/Layout/Layout';
+import { TopPage } from '@components/pages/Top';
 
 type HomeProps = {
   blogs: Blog[];
 };
 
 const Home: NextPageWithLayout<HomeProps> = ({ blogs }) => {
-  return (
-    <div className='mx-auto w-11/12 max-w-5xl'>
-      <CategoryList />
-      <h1 className='text-xl text-myTextColor font-bold my-10'>記事一覧</h1>
-      <BlogListWrapper blogs={blogs} />
-    </div>
-  );
+  return <TopPage blogs={blogs} />;
 };
 
 Home.getLayout = function getLayout(page: ReactElement) {
