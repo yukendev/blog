@@ -6,7 +6,7 @@ type TopPageProps = {
   blogs: Blog[];
 };
 
-export const TopPage = ({ blogs }) => {
+export const TopPage = ({ blogs }: TopPageProps) => {
   return (
     <div className='mx-auto w-11/12 max-w-5xl'>
       <CategoryList />
