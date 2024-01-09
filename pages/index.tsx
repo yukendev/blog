@@ -5,7 +5,7 @@ import { getSortedPostsData } from '../libs/posts';
 import type { NextPageWithLayout } from './_app';
 import type { ReactElement } from 'react';
 import { Layout } from '@components/Layout/Layout';
-import { TopPage } from '@components/pages/Top';
+import { TopPage } from '@components/pages/TopPage';
 
 type HomeProps = {
   blogs: Blog[];
