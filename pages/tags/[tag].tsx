@@ -2,21 +2,21 @@ import type { ReactElement } from 'react';
 import { Blog } from '../../types';
 import { Tag } from '@constants/tags';
 import { tags } from '@constants/tags';
-import { TagContentWrapper } from '@components/organisms/TagContentWrapper';
+import { TagPage } from '@components/pages/TagPage';
 import { getPostsByTags } from '../../libs/posts';
 import type { NextPageWithLayout } from '../_app';
 import { Layout } from '@components/Layout/Layout';
 
-type TagPageProps = {
+type TagProps = {
   tag: Tag;
   blogs: Blog[];
 };
 
-const TagPage: NextPageWithLayout<TagPageProps> = ({ tag, blogs }) => {
-  return <TagContentWrapper tag={tag} blogs={blogs} />;
+const Tag: NextPageWithLayout<TagProps> = ({ tag, blogs }) => {
+  return <TagPage tag={tag} blogs={blogs} />;
 };
 
-TagPage.getLayout = function getLayout(page: ReactElement) {
+Tag.getLayout = function getLayout(page: ReactElement) {
   return <Layout>{page}</Layout>;
 };
 
@@ -40,4 +40,4 @@ export const getStaticProps = async ({ params }) => {
   };
 };
 
-export default TagPage;
+export default Tag;
