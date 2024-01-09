@@ -1,13 +1,13 @@
 import { Blog } from '../../types';
 import { formatDate } from '../../util/date-formatter';
-import { BlogFooter } from './BlogFooter';
+import { BlogFooter } from '../organisms/BlogFooter';
 import { LikeButton } from '@components/organisms/LikeButton';
 
 type Props = {
   blog: Blog;
 };
 
-export const BlogContentWrapper = (props: Props): JSX.Element => {
+export const BlogPage = (props: Props): JSX.Element => {
   const { blog } = props;
   const { title, date, body, tags } = blog;
   const formatedCreatedAt = formatDate(date);

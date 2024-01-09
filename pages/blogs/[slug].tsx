@@ -1,6 +1,6 @@
 import type { ReactElement } from 'react';
-import { Blog } from '../../types';
-import { BlogContentWrapper } from '@components/organisms/BlogContentWrapper';
+import type { Blog } from '../../types';
+import { BlogPage } from '@components/pages/Blog';
 import { getSortedPostsData, getPostsBySlug } from '../../libs/posts';
 import type { NextPageWithLayout } from '../_app';
 import { Layout } from '@components/Layout/Layout';
@@ -11,7 +11,7 @@ type BlogProps = {
 };
 
 const Blog: NextPageWithLayout<BlogProps> = ({ blog }) => {
-  return <BlogContentWrapper blog={blog} />;
+  return <BlogPage blog={blog} />;
 };
 
 Blog.getLayout = function getLayout(page: ReactElement) {
