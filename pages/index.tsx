@@ -1,21 +1,19 @@
 import { Blog } from '../types';
-import { BlogListWrapper } from '@components/organisms/BlogListWrapper';
-import { CategoryList } from '@components/organisms/CategoryList';
 import { getSortedPostsData } from '../libs/posts';
 import type { NextPageWithLayout } from './_app';
 import type { ReactElement } from 'react';
 import { Layout } from '@components/Layout/Layout';
 import { TopPage } from '@components/pages/TopPage';
 
-type HomeProps = {
+type TopProps = {
   blogs: Blog[];
 };
 
-const Home: NextPageWithLayout<HomeProps> = ({ blogs }) => {
+const Top: NextPageWithLayout<TopProps> = ({ blogs }) => {
   return <TopPage blogs={blogs} />;
 };
 
-Home.getLayout = function getLayout(page: ReactElement) {
+Top.getLayout = function getLayout(page: ReactElement) {
   return <Layout>{page}</Layout>;
 };
 
@@ -31,4 +29,4 @@ export const getStaticProps = async () => {
   };
 };
 
-export default Home;
+export default Top;
