@@ -1,5 +1,4 @@
 import '../styles/globals.scss';
-import '../styles/markdown.scss';
 import '../styles/toc.scss';
 import 'tailwindcss/tailwind.css';
 import usePageView from '../hooks/usePageView';
