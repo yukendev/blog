@@ -3,6 +3,7 @@ import { HeaderContents } from '@components/molecules/HeaderContents';
 import { HeaderContentsForMobile } from '@components/molecules/HeaderContentsForMobile';
 import { HeaderExpandButton } from '@components/atoms/HeaderExpandButton';
 import { useCallback, useState } from 'react';
+import styles from './Header.module.scss';
 
 export const Header = (): JSX.Element => {
   const [isHeaderExpand, setIsHeaderExpand] = useState(false);
@@ -12,18 +13,18 @@ export const Header = (): JSX.Element => {
   }, [isHeaderExpand]);
 
   return (
-    <header className='w-full bg-myBgColor p-5 md:p-10'>
-      <div className='w-full flex justify-between'>
+    <header className={styles['header']}>
+      <div className={styles['header-contents-wrapper']}>
         {/* ブログタイトル */}
         <HeaderTitle />
 
         {/* 各種リンク 画面が大きい時(レスポンシブ) */}
-        <div className='hidden md:block'>
+        <div className={styles['header-contents']}>
           <HeaderContents />
         </div>
 
         {/* レスポンシブ対応ボタン */}
-        <div className='md:hidden'>
+        <div className={styles['header-contents-mobile']}>
           <HeaderExpandButton
             onClickHandler={onClickExpandButtonHandler}
             isHeaderExpand={isHeaderExpand}
@@ -32,7 +33,7 @@ export const Header = (): JSX.Element => {
       </div>
 
       {/* 各種リンク 画面が小さい時(レスポンシブ) */}
-      <div className='md:hidden'>
+      <div className={styles['header-contents-mobile']}>
         {isHeaderExpand && <HeaderContentsForMobile />}
       </div>
     </header>

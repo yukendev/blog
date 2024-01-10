@@ -1,0 +1,28 @@
+@use 'styles/mixins' as mixins;
+
+.header {
+  width: 100%;
+  padding: 1.25rem;
+  @include mixins.mq(md) {
+    padding: 2.5rem;
+  }
+}
+
+.header-contents-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-contents {
+  display: none;
+  @include mixins.mq(md) {
+    display: block;
+  }
+}
+
+.header-contents-mobile {
+  display: block;
+  @include mixins.mq(md) {
+    display: none;
+  }
+}
