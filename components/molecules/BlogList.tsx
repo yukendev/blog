@@ -2,29 +2,28 @@ import { Blog } from '../../types';
 import { TagCard } from '@components/atoms/TagCard';
 import Link from 'next/link';
 import { formatDate } from 'util/date-formatter';
+import style from './BlogList.module.scss';
 
-type Props = {
+type BlogListProps = {
   blog: Blog;
 };
 
-export const BlogList = (props: Props): JSX.Element => {
+export const BlogList = (props: BlogListProps): JSX.Element => {
   const { blog } = props;
   const { slug, date, title, tags } = blog;
 
   return (
-    <article className='drop-shadow-md rounded-lg bg-myBlogListBgColor p-8 my-2'>
+    <article className={style['blog-list-wrapper']}>
       {/* 日付 */}
-      <time dateTime={date} className='text-sm'>
-        {formatDate(date)}
-      </time>
+      <time dateTime={date}>{formatDate(date)}</time>
 
       {/* ブログタイトル */}
-      <h3 className='font-bold my-1 text-xl text-myTextColor deco-underline-text cursor-pointer'>
+      <h3>
         <Link href={`/blogs/${slug}`}>{title}</Link>
       </h3>
 
       {/* タグ */}
-      <ul className='flex flex-wrap mt-5'>
+      <ul>
         {tags.map((tag, index) => {
           return <TagCard key={index} tag={tag} />;
         })}
