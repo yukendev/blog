@@ -1,14 +1,7 @@
 @use 'styles/mixins' as mixins;
 
 .blog-page-wrapper {
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0.5rem;
-  width: 90%;
-  max-width: 48rem;
-  @include mixins.mq(md) {
-    width: 65%;
-  }
+  @include mixins.blog-contents-page-layout();
 }
 
 .blog-page-contents {

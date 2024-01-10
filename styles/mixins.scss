@@ -19,6 +19,17 @@ $breakpoints: (
   }
 }
 
+@mixin blog-contents-page-layout {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5rem;
+  width: 90%;
+  max-width: 48rem;
+  @include mq(md) {
+    width: 65%;
+  }
+}
+
 @mixin blog-list-page-layout {
   margin-left: auto;
   margin-right: auto;
