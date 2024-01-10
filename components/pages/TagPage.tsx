@@ -1,21 +1,22 @@
 import { Blog } from '../../types';
 import { BlogListWrapper } from '../organisms/BlogListWrapper';
 import { Tag } from '@constants/tags';
+import style from './TagPage.module.scss';
 
-type Props = {
+type TagPageProps = {
   tag: Tag;
   blogs: Blog[];
 };
 
-export const TagPage = (props: Props): JSX.Element => {
+export const TagPage = (props: TagPageProps): JSX.Element => {
   const { tag, blogs } = props;
   return (
-    <div className='mx-auto w-11/12 md:w-8/12 max-w-5xl'>
+    <div className={style['tag-page-wrapper']}>
       {/* タグタイトル */}
-      <h1 className='mt-10 text-2xl font-bold text-myTextColor'>{tag}</h1>
+      <h1>{tag}</h1>
 
       {/* divider */}
-      <hr className='border-t-2 border-myBgColorDark my-5'></hr>
+      <hr></hr>
 
       {/* ブログリスト */}
       <BlogListWrapper blogs={blogs} />
