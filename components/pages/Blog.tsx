@@ -1,7 +1,6 @@
 import { Blog } from '../../types';
 import { formatDate } from '../../util/date-formatter';
 import { BlogFooter } from '../organisms/BlogFooter';
-import { LikeButton } from '@components/organisms/LikeButton';
 
 type Props = {
   blog: Blog;
@@ -14,8 +13,6 @@ export const BlogPage = (props: Props): JSX.Element => {
 
   return (
     <main className='markdown-body rounded-lg mx-auto p-2 w-11/12 md:w-8/12 max-w-3xl'>
-      {/* いいねボタン */}
-      <LikeButton title={title} />
 
       <div className='p-1 md:p-5'>
         {/* タイトル */}
