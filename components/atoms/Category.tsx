@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import styles from './Category.module.scss';
 
 type Props = {
   image: JSX.Element;
@@ -9,11 +10,9 @@ type Props = {
 export const Category = (props: Props): JSX.Element => (
   <Link href={props.href}>
     <a>
-      <div className='cursor-pointer w-20 h-20 mx-2 md:mx-5 bg-myBlogListBgColor hover:bg-myBlogContentBgColorHover rounded-lg drop-shadow-md deco-underline-element'>
-        <span className='flex justify-center'>{props.image}</span>
-        <p className='text-center font-bold text-myTextColor deco-underline-text'>
-          {props.title}
-        </p>
+      <div className={styles['category-wrapper']}>
+        <span>{props.image}</span>
+        <p>{props.title}</p>
       </div>
     </a>
   </Link>
