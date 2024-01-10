@@ -1,9 +1,11 @@
-type Props = {
+import styles from './CategoryDescription.module.scss';
+
+type CategoryDescriptionProps = {
   categoryDescription: string;
 };
 
-export const CategoryDescription = (props: Props): JSX.Element => (
-  <p className='p-4 my-3'>
-    <p className='text-myTextColor'>{props.categoryDescription}</p>
-  </p>
+export const CategoryDescription = (
+  props: CategoryDescriptionProps,
+): JSX.Element => (
+  <p className={styles['category-description']}>{props.categoryDescription}</p>
 );

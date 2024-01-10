@@ -1,13 +1,13 @@
 import Link from 'next/link';
 import styles from './Category.module.scss';
 
-type Props = {
+type CategoryProps = {
   image: JSX.Element;
   title: string;
   href: string;
 };
 
-export const Category = (props: Props): JSX.Element => (
+export const Category = (props: CategoryProps): JSX.Element => (
   <Link href={props.href}>
     <a>
       <div className={styles['category-wrapper']}>
