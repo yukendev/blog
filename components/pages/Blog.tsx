@@ -31,9 +31,6 @@ export const BlogPage = (props: Props): JSX.Element => {
           dangerouslySetInnerHTML={{ __html: body }}
         />
 
-        {/* devider */}
-        <hr className={styles['blog-page-contents-devider']}></hr>
-
         {/* footer */}
         <footer className={styles['blog-page-contents-footer']}>
           <BlogFooter tags={tags} blog={blog} />
