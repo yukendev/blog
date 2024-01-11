@@ -27,9 +27,7 @@
     "next-seo": "^5.15.0",
     "react": "18.1.0",
     "react-dom": "18.1.0",
-    "write-file-webpack-plugin": "^4.5.1",
-    "zenn-content-css": "^0.1.150",
-    "zenn-markdown-html": "^0.1.150"
+    "write-file-webpack-plugin": "^4.5.1"
   },
   "devDependencies": {
     "@svgr/webpack": "^6.2.1",
