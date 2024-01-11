@@ -4,32 +4,29 @@ import markdownItPrism from 'markdown-it-prism';
 import markdownItEmoji from 'markdown-it-emoji';
 import markdownItToc from 'markdown-it-table-of-contents';
 import markdownItAnchor from 'markdown-it-anchor';
-import markdownToHtml from 'zenn-markdown-html';
 
 export const converMarkdownToHtml = async (markdown: string, date: string) => {
-  // const markdownIt = new MarkdownIt({
-  //   html: true,
-  //   linkify: true,
-  //   typographer: true,
-  //   langPrefix: 'language-',
-  // })
-  //   .use(mdContainer, 'question', containerQuestionOptions)
-  //   .use(mdContainer, 'attention', containerAttentionOptions)
-  //   .use(mdContainer, 'alert', containerAlertOptions)
-  //   .use(mdContainer, 'info', containerInfoOptions)
-  //   .use(markdownItPrism, {})
-  //   .use(markdownItToc, {
-  //     includeLevel: [1],
-  //     listType: 'ol',
-  //   })
-  //   .use(markdownItAnchor)
-  //   .use(markdownItEmoji);
+  const markdownIt = new MarkdownIt({
+    html: true,
+    linkify: true,
+    typographer: true,
+    langPrefix: 'language-',
+  })
+    .use(mdContainer, 'question', containerQuestionOptions)
+    .use(mdContainer, 'attention', containerAttentionOptions)
+    .use(mdContainer, 'alert', containerAlertOptions)
+    .use(mdContainer, 'info', containerInfoOptions)
+    .use(markdownItPrism, {})
+    .use(markdownItToc, {
+      includeLevel: [1],
+      listType: 'ol',
+    })
+    .use(markdownItAnchor)
+    .use(markdownItEmoji);
 
-  // return markdownIt
-  //   .render(markdown)
-  //   .replace(/@image/g, `/assets/images/posts/${date}`);
-  const html = markdownToHtml(markdown);
-  return html;
+  return markdownIt
+    .render(markdown)
+    .replace(/@image/g, `/assets/images/posts/${date}`);
 };
 
 // ::: question
