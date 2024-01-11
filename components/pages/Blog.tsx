@@ -26,7 +26,10 @@ export const BlogPage = (props: Props): JSX.Element => {
         </div>
 
         {/* 本文 */}
-        <div className='znc' dangerouslySetInnerHTML={{ __html: body }} />
+        <div
+          className={`znc ${styles['body']}`}
+          dangerouslySetInnerHTML={{ __html: body }}
+        />
 
         {/* devider */}
         <hr className={styles['blog-page-contents-devider']}></hr>
