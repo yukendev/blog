@@ -1,5 +1,6 @@
 import '../styles/globals.scss';
 import '../styles/toc.scss';
+import '@styles/markdown/index.scss';
 import usePageView from '../hooks/usePageView';
 import type { ReactElement, ReactNode } from 'react';
 import type { NextPage } from 'next';

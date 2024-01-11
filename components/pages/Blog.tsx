@@ -2,7 +2,6 @@ import { Blog } from '../../types';
 import { formatDate } from '../../util/date-formatter';
 import { BlogFooter } from '../organisms/BlogFooter';
 import styles from './Blog.module.scss';
-import 'zenn-content-css';
 
 type Props = {
   blog: Blog;
@@ -27,7 +26,7 @@ export const BlogPage = (props: Props): JSX.Element => {
 
         {/* 本文 */}
         <div
-          className={`znc ${styles['body']}`}
+          className={`markdown-body-style-from-zenn ${styles['markdown-body-style-custom']}`}
           dangerouslySetInnerHTML={{ __html: body }}
         />
 
