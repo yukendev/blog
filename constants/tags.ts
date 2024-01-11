@@ -19,6 +19,7 @@ export type Tag =
   | 'Sass'
   | 'Bootstrap'
   | 'CSS'
+  | '個人開発'
   | 'テスト';
 
 export const tags: Tag[] = [
@@ -42,5 +43,6 @@ export const tags: Tag[] = [
   'Sass',
   'Bootstrap',
   'テスト',
+  '個人開発',
   'CSS',
 ];
