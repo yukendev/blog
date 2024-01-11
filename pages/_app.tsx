@@ -1,6 +1,5 @@
 import '../styles/globals.scss';
 import '../styles/toc.scss';
-import 'tailwindcss/tailwind.css';
 import usePageView from '../hooks/usePageView';
 import type { ReactElement, ReactNode } from 'react';
 import type { NextPage } from 'next';
