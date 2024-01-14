@@ -93,16 +93,7 @@ export function mdRendererFence(md: MarkdownIt, /* options?: MarkdownOptions */)
   // override fence
   md.renderer.rules.fence = function (...args) {
     const [tokens, idx] = args;
-    // console.log('ホゲホゲ開始')
-    // console.log(tokens[idx])
-    // // console.log(tokens)
-    // console.log('ホゲホゲ終了')
     const { info, content } = tokens[idx];
-    // こんな感じの情報が取れる
-    // {
-    //   content: 内容,
-    //   info: 'yaml'
-    // }
     const { langName, fileName, hasDiff } = parseInfo(info);
 
     // if (langName === 'mermaid') {
