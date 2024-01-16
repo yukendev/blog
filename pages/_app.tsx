@@ -7,6 +7,7 @@ import type { NextPage } from 'next';
 import type { AppProps } from 'next/app';
 import { DefaultSeo } from 'next-seo';
 import { metaDataForBlog } from '@constants/meta';
+import 'destyle.css';
 
 export type NextPageWithLayout<T = {}> = NextPage<T> & {
   getLayout?: (page: ReactElement) => ReactNode;

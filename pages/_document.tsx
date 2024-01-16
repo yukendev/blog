@@ -4,10 +4,10 @@ const Document = () => {
   return (
     <Html lang='ja'>
       <Head>
-        <link
+        {/* <link
           rel='stylesheet'
           href='https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css'
-        />
+        /> */}
       </Head>
       <body>
         <Main />
