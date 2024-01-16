@@ -1,6 +1,6 @@
 import type { ReactElement } from 'react';
 import { Blog } from '../../types';
-import { CategoryContentWrapper } from '@components/organisms/CategoryContentWrapper';
+import { CategoryPage } from '@components/pages/Category';
 import { Category } from '@constants/categories';
 import { categories } from '@constants/categories';
 import { getPostsByCategory } from '../../libs/posts';
@@ -12,14 +12,11 @@ type CategoryProps = {
   blogs: Blog[];
 };
 
-const CategoryPage: NextPageWithLayout<CategoryProps> = ({
-  category,
-  blogs,
-}) => {
-  return <CategoryContentWrapper category={category} blogs={blogs} />;
+const Category: NextPageWithLayout<CategoryProps> = ({ category, blogs }) => {
+  return <CategoryPage category={category} blogs={blogs} />;
 };
 
-CategoryPage.getLayout = function getLayout(page: ReactElement) {
+Category.getLayout = function getLayout(page: ReactElement) {
   return <Layout>{page}</Layout>;
 };
 
@@ -43,4 +40,4 @@ export const getStaticProps = async ({ params }) => {
   };
 };
 
-export default CategoryPage;
+export default Category;

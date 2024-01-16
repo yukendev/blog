@@ -1,8 +1,9 @@
 import { HeaderContentButton } from '@components/atoms/HeaderContentButton';
 import { HeaderContentButtonForExternal } from '@components/atoms/HeaderContentButtonForExternal';
+import styles from './HeaderContentsForMobile.module.scss';
 
 export const HeaderContentsForMobile = (): JSX.Element => (
-  <nav className='bg-myBgColorDark mt-3 rounded-xl p-3'>
+  <nav className={styles['header-contents-for-mobile']}>
     {/* Home */}
     <HeaderContentButton title='Home' href='/' />
 

@@ -1,0 +1,8 @@
+@use 'styles/variables' as var;
+
+.header-contents-for-mobile {
+  margin-top: 0.75rem;
+  background-color: var.$my_bg_color-dark;
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+}

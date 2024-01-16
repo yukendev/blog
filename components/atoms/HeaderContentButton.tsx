@@ -1,15 +1,16 @@
 import Link from 'next/link';
+import styles from './HeaderContentButton.module.scss';
 
-type Props = {
+type HeaderContentButtonProps = {
   title: string;
   href: string;
 };
 
 // サイト内で画面遷移するボタン
-export const HeaderContentButton = (props: Props): JSX.Element => (
+export const HeaderContentButton = (
+  props: HeaderContentButtonProps,
+): JSX.Element => (
   <Link href={props.href}>
-    <a className='px-2 py-1 mx-3 text-myTextColor cursor-pointer deco-underline-text font-semibold'>
-      {props.title}
-    </a>
+    <a className={styles['header-content-button']}>{props.title}</a>
   </Link>
 );

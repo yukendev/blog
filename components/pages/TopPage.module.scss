@@ -1,0 +1,15 @@
+@use 'styles/variables' as var;
+@use 'styles/mixins' as mixins;
+
+.top-page-wrapper {
+  @include mixins.blog-list-page-layout();
+
+  h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    font-weight: bold;
+    color: var.$my_text_color;
+  }
+}

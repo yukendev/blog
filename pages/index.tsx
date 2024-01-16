@@ -1,28 +1,19 @@
 import { Blog } from '../types';
-import { BlogListWrapper } from '@components/organisms/BlogListWrapper';
-import { CategoryList } from '@components/organisms/CategoryList';
 import { getSortedPostsData } from '../libs/posts';
 import type { NextPageWithLayout } from './_app';
 import type { ReactElement } from 'react';
 import { Layout } from '@components/Layout/Layout';
-import { usePageViewLine } from 'hooks/usePageViewLine';
+import { TopPage } from '@components/pages/TopPage';
 
-type HomeProps = {
+type TopProps = {
   blogs: Blog[];
 };
 
-const Home: NextPageWithLayout<HomeProps> = ({ blogs }) => {
-  usePageViewLine('トップページ');
-  return (
-    <div className='mx-auto w-11/12 max-w-5xl'>
-      <CategoryList />
-      <h1 className='text-xl text-myTextColor font-bold my-10'>記事一覧</h1>
-      <BlogListWrapper blogs={blogs} />
-    </div>
-  );
+const Top: NextPageWithLayout<TopProps> = ({ blogs }) => {
+  return <TopPage blogs={blogs} />;
 };
 
-Home.getLayout = function getLayout(page: ReactElement) {
+Top.getLayout = function getLayout(page: ReactElement) {
   return <Layout>{page}</Layout>;
 };
 
@@ -38,4 +29,4 @@ export const getStaticProps = async () => {
   };
 };
 
-export default Home;
+export default Top;

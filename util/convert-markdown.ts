@@ -1,9 +1,9 @@
 import MarkdownIt from 'markdown-it';
 import mdContainer from 'markdown-it-container';
-import markdownItPrism from 'markdown-it-prism';
 import markdownItEmoji from 'markdown-it-emoji';
 import markdownItToc from 'markdown-it-table-of-contents';
 import markdownItAnchor from 'markdown-it-anchor';
+import { mdRendererFence } from './markdownPlugins/md-renderer-fence';
 
 export const converMarkdownToHtml = async (markdown: string, date: string) => {
   const markdownIt = new MarkdownIt({
@@ -16,13 +16,13 @@ export const converMarkdownToHtml = async (markdown: string, date: string) => {
     .use(mdContainer, 'attention', containerAttentionOptions)
     .use(mdContainer, 'alert', containerAlertOptions)
     .use(mdContainer, 'info', containerInfoOptions)
-    .use(markdownItPrism, {})
     .use(markdownItToc, {
       includeLevel: [1],
       listType: 'ol',
     })
     .use(markdownItAnchor)
-    .use(markdownItEmoji);
+    .use(markdownItEmoji)
+    .use(mdRendererFence);
 
   return markdownIt
     .render(markdown)

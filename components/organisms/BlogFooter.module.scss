@@ -1,0 +1,28 @@
+.blog-footer-tag {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1.25rem 0;
+}
+
+.blog-footer-navigation {
+  display: flex;
+  justify-content: center;
+}
+
+.blog-footer-navigation-twitter {
+  margin-right: 0.75rem;
+}
+
+.blog-footer-navigation-copy {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-left: 0.75rem;
+}
+
+.blog-footer-navigation-copy-tooltip {
+  position: absolute;
+  top: -2rem;
+  padding: 0.25rem;
+}

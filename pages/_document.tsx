@@ -5,8 +5,8 @@ const Document = () => {
     <Html lang='ja'>
       <Head>
         <link
-          href='https://cdnjs.cloudflare.com/ajax/libs/prism/1.9.0/themes/prism-tomorrow.min.css'
           rel='stylesheet'
+          href='https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css'
         />
       </Head>
       <body>

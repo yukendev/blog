@@ -7,6 +7,8 @@ import Clip from '../../images/Clip.svg';
 
 import { useState } from 'react';
 
+import style from './BlogFooter.module.scss';
+
 type CopiedTooltipPropsType = {
   isHidden: boolean;
 };
@@ -15,7 +17,7 @@ const CopiedTooltip = (props: CopiedTooltipPropsType) => {
   const { isHidden } = props;
   return (
     <div
-      className='absolute -top-8 p-1 rounded text-slate-400'
+      className={style['blog-footer-navigation-copy-tooltip']}
       hidden={isHidden}
     >
       copied!
@@ -49,27 +51,22 @@ export const BlogFooter = (props: BlogFooterProps): JSX.Element => {
   return (
     <>
       {/* タグ */}
-      <ul className='flex flex-wrap my-5'>
+      <ul className={style['blog-footer-tag']}>
         {tags.map((tag, index) => {
           return <TagCard key={index} tag={tag} />;
         })}
       </ul>
 
-      {/* シェアボタン */}
-      <div className='flex items-center my-10'>
-        <p className='ml-2'>シェアをしていただけると僕が大変喜びます🙇‍♂️</p>
-      </div>
-
-      <nav className='flex justify-center'>
+      <nav className={style['blog-footer-navigation']}>
         {/* twitter */}
-        <div className='mr-3'>
+        <div className={style['blog-footer-navigation-twitter']}>
           <a href={url}>
             <Twitter widht={40} height={40} />
           </a>
         </div>
 
         {/* コピー */}
-        <div className='relative flex justify-center ml-3'>
+        <div className={style['blog-footer-navigation-copy']}>
           <CopiedTooltip isHidden={isHiddenCopied} />
           <button onClick={copyButtonHandler}>
             <Clip widht={40} height={40} />

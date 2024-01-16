@@ -1,0 +1,13 @@
+@use 'styles/variables' as var;
+
+.footer {
+  width: 100%;
+  background-color: var.$my_bg_color;
+  display: flex;
+  justify-content: center;
+  padding: 2.5rem 0;
+
+  p {
+    color: var.$my_text_color;
+  }
+}

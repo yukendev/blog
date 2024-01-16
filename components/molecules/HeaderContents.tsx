@@ -2,7 +2,7 @@ import { HeaderContentButton } from '@components/atoms/HeaderContentButton';
 import { HeaderContentButtonForExternal } from '@components/atoms/HeaderContentButtonForExternal';
 
 export const HeaderContents = (): JSX.Element => (
-  <nav className='flex mx-10'>
+  <nav>
     {/* Home */}
     <HeaderContentButton title='Home' href='/' />
 

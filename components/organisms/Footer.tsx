@@ -1,8 +1,10 @@
+import styles from './Footer.module.scss';
+
 export const Footer = (): JSX.Element => {
   return (
-    <footer className='w-full bg-myBgColor flex justify-center py-10'>
+    <footer className={styles['footer']}>
       {/* コピーライト */}
-      <div className='text-myTextColor'>© 2022 yukendev.</div>
+      <p>© 2022 yukendev.</p>
     </footer>
   );
 };
