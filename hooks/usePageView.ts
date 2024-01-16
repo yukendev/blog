@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 
-import { existsGaId, pageview } from '../libs/gtag';
+import { existsGaId, pageview } from '../src/libs/gtag';
 
 export default function usePageView() {
   const router = useRouter();

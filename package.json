@@ -11,9 +11,11 @@
     "create-post": "mkdir ./posts/${npm_config_date} && touch ./posts/${npm_config_date}/${npm_config_date}.md && cp ./posts/template.md ./posts/${npm_config_date}/${npm_config_date}.md"
   },
   "dependencies": {
+    "@types/react-dom": "^18.2.18",
     "autoprefixer": "^10.4.7",
     "copy-webpack-plugin": "^11.0.0",
     "debounce": "^1.2.1",
+    "destyle.css": "^4.0.0",
     "framer-motion": "^10.16.4",
     "github-markdown-css": "^5.5.0",
     "gray-matter": "^4.0.3",
@@ -22,11 +24,11 @@
     "markdown-it-container": "^3.0.0",
     "markdown-it-emoji": "^2.0.2",
     "markdown-it-table-of-contents": "^0.6.0",
-    "next": "12.1.6",
+    "next": "^14.0.4",
     "next-seo": "^5.15.0",
     "prismjs": "^1.29.0",
-    "react": "18.1.0",
-    "react-dom": "18.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "write-file-webpack-plugin": "^4.5.1"
   },
   "devDependencies": {
@@ -38,12 +40,12 @@
     "@types/markdown-it-emoji": "^2.0.2",
     "@types/node": "^17.0.39",
     "@types/prismjs": "^1.26.3",
-    "@types/react": "^18.0.11",
+    "@types/react": "^18.2.48",
     "eslint": "8.17.0",
-    "eslint-config-next": "12.1.6",
+    "eslint-config-next": "^14.0.4",
     "eslint-config-prettier": "^8.5.0",
     "prettier": "^2.7.1",
     "sass": "^1.54.3",
-    "typescript": "^4.7.3"
+    "typescript": "^5.3.3"
   }
 }
