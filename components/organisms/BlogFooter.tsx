@@ -1,3 +1,4 @@
+'use client';
 import { Blog } from '../../types';
 import { TagCard } from '@components/atoms/TagCard';
 import { Tag } from '@constants/tags';

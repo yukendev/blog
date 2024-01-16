@@ -1,3 +1,4 @@
+'use client';
 import { HeaderTitle } from '@components/atoms/HeaderTitle';
 import { HeaderContents } from '@components/molecules/HeaderContents';
 import { HeaderContentsForMobile } from '@components/molecules/HeaderContentsForMobile';
