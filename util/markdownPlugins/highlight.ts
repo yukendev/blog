@@ -1,8 +1,14 @@
 import Prism, { Grammar } from 'prismjs';
 import { escapeHtml } from 'markdown-it/lib/common/utils';
 /* ハイライトする言語を以下でimport */
+import "prismjs/components/prism-bash";
+import "prismjs/components/prism-scss";
+import "prismjs/components/prism-typescript";
 import "prismjs/components/prism-jsx";
+import "prismjs/components/prism-tsx";
+import "prismjs/components/prism-yaml";
 import "prismjs/components/prism-swift";
+import "prismjs/components/prism-json";
 
 // import { enableDiffHighlight } from '../prism-plugins/prism-diff-highlight';
 
