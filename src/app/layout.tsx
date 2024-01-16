@@ -6,6 +6,8 @@ import '@styles/toc.scss';
 import '@styles/markdown/index.scss';
 import { Header } from '@components/organisms/Header';
 import { Footer } from '@components/organisms/Footer';
+import { GoogleAnalytics } from '@next/third-parties/google';
+import { GA_ID, existsGaId } from '@libs/gtag';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://acme.com'),
@@ -40,6 +42,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang='ja'>
+      <head>
+        {process.env.NODE_ENV === 'production' && existsGaId && (
+          <GoogleAnalytics gaId={GA_ID} />
+        )}
+      </head>
       <body>
         <Header />
         {children}
