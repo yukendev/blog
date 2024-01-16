@@ -9,11 +9,9 @@ type CategoryProps = {
 
 export const Category = (props: CategoryProps): JSX.Element => (
   <Link href={props.href}>
-    <a>
-      <div className={styles['category-wrapper']}>
-        <span>{props.image}</span>
-        <p>{props.title}</p>
-      </div>
-    </a>
+    <div className={styles['category-wrapper']}>
+      <span>{props.image}</span>
+      <p>{props.title}</p>
+    </div>
   </Link>
 );

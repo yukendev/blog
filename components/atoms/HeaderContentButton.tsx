@@ -10,7 +10,7 @@ type HeaderContentButtonProps = {
 export const HeaderContentButton = (
   props: HeaderContentButtonProps,
 ): JSX.Element => (
-  <Link href={props.href}>
-    <a className={styles['header-content-button']}>{props.title}</a>
+  <Link href={props.href} className={styles['header-content-button']}>
+    {props.title}
   </Link>
 );

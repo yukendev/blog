@@ -7,9 +7,7 @@ type TagCardProps = {
 };
 
 export const TagCard = (props: TagCardProps): JSX.Element => (
-  <Link href={`/tags/${props.tag}`}>
-    <li className={styles['tag-card']}>
-      <a>{props.tag}</a>
-    </li>
-  </Link>
+  <li className={styles['tag-card']}>
+    <Link href={`/tags/${props.tag}`}>{props.tag}</Link>
+  </li>
 );
