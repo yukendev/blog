@@ -5,14 +5,14 @@ import { Category } from '@constants/categories';
 import { CategoryDescription } from '@components/atoms/CategoryDescription';
 import { categoryDescription } from '@constants/categoryDescription';
 import styles from './Category.module.scss';
+import { getPostsByCategory } from 'libs/posts';
 
 type CategoryPageProps = {
   category: Category;
-  blogs: Blog[];
 };
 
-export const CategoryPage = (props: CategoryPageProps): JSX.Element => {
-  const { category, blogs } = props;
+export const CategoryPage = async ({ category }: CategoryPageProps) => {
+  const blogs = await getPostsByCategory(category);
   return (
     <div className={styles['category-page-wrapper']}>
       {/* カテゴリーリスト */}

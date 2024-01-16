@@ -24,7 +24,6 @@ export default function Page({ params }: { params: { slug: string } }) {
   return <BlogPage slug={params.slug} />;
 }
 
-// 調べる
 export const generateStaticParams = async () => {
   const data = await getSortedPostsData();
 
