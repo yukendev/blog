@@ -11,6 +11,7 @@
     "create-post": "mkdir ./posts/${npm_config_date} && touch ./posts/${npm_config_date}/${npm_config_date}.md && cp ./posts/template.md ./posts/${npm_config_date}/${npm_config_date}.md"
   },
   "dependencies": {
+    "@next/third-parties": "^14.0.5-canary.59",
     "@types/react-dom": "^18.2.18",
     "autoprefixer": "^10.4.7",
     "copy-webpack-plugin": "^11.0.0",
