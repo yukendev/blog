@@ -4,6 +4,8 @@ import 'destyle.css';
 import '@styles/globals.scss';
 import '@styles/toc.scss';
 import '@styles/markdown/index.scss';
+import { Header } from '@components/organisms/Header';
+import { Footer } from '@components/organisms/Footer';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://acme.com'),
@@ -38,7 +40,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang='ja'>
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
