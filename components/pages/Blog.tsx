@@ -1,14 +1,16 @@
+import { getPostsBySlug } from 'libs/posts';
 import { Blog } from '../../types';
 import { formatDate } from '../../util/date-formatter';
 import { BlogFooter } from '../organisms/BlogFooter';
 import styles from './Blog.module.scss';
 
 type Props = {
-  blog: Blog;
+  slug: string;
 };
 
-export const BlogPage = (props: Props): JSX.Element => {
-  const { blog } = props;
+export const BlogPage = async (props: Props) => {
+  const blog = await getPostsBySlug(props.slug);
+  if (!blog) return <></>;
   const { title, date, body, tags } = blog;
   const formatedCreatedAt = formatDate(date);
 
@@ -32,7 +34,7 @@ export const BlogPage = (props: Props): JSX.Element => {
 
         {/* footer */}
         <footer className={styles['blog-page-contents-footer']}>
-          <BlogFooter tags={tags} blog={blog} />
+          <BlogFooter tags={tags ?? []} blog={blog} />
         </footer>
       </div>
     </main>
