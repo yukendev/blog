@@ -21,13 +21,22 @@
     "baseUrl": "./",
     "paths": {
       "@constants/*": [
-        "./constants/*"
+        "src/constants/*"
       ],
       "@components/*": [
-        "./components/*"
+        "src/components/*"
       ],
       "@styles/*": [
-        "./styles/*"
+        "src/styles/*"
+      ],
+      "@libs/*": [
+        "src/libs/*"
+      ],
+      "@utils/*": [
+        "src/utils/*"
+      ],
+      "@images/*": [
+        "src/images/*"
       ]
     },
     "plugins": [

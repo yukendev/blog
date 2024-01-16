@@ -1,9 +1,0 @@
-@use 'styles/mixins' as mixins;
-
-.blog-list-wrapper {
-  display: grid;
-  gap: 2rem;
-  @include mixins.mq(md) {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}

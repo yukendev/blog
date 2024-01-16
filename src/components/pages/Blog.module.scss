@@ -1,0 +1,45 @@
+@use 'src/styles/mixins' as mixins;
+
+.blog-page-wrapper {
+  @include mixins.blog-contents-page-layout();
+}
+
+.blog-page-contents {
+  padding: 0.25rem;
+  @include mixins.mq(md) {
+    padding: 1.25rem;
+  }
+}
+
+.blog-page-contents-title {
+  text-align: center;
+  font-weight: bold;
+  padding: 0.5rem;
+  font-size: 1.7em;
+}
+
+.blog-page-contents-date {
+  display: flex;
+  justify-content: flex-end;
+  margin: 1.25rem 0;
+
+  time {
+    margin-right: 0.25rem;
+    @include mixins.mq(md) {
+      margin-right: 2.5rem;
+    }
+  }
+}
+
+.blog-page-contents-footer {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+// TODO: マークダウン本文のスタイルは別にまとめる
+.markdown-body-style-custom {
+  h1,
+  h2 {
+    font-weight: 700;
+  }
+}
