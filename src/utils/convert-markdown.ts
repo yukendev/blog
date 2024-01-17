@@ -5,28 +5,80 @@ import markdownItToc from 'markdown-it-table-of-contents';
 import markdownItAnchor from 'markdown-it-anchor';
 import { mdRendererFence } from './markdownPlugins/md-renderer-fence';
 
-export const converMarkdownToHtml = async (markdown: string, date: string) => {
-  const markdownIt = new MarkdownIt({
-    html: true,
-    linkify: true,
-    typographer: true,
-    langPrefix: 'language-',
-  })
-    .use(mdContainer, 'question', containerQuestionOptions)
-    .use(mdContainer, 'attention', containerAttentionOptions)
-    .use(mdContainer, 'alert', containerAlertOptions)
-    .use(mdContainer, 'info', containerInfoOptions)
-    .use(markdownItToc, {
-      includeLevel: [1],
-      listType: 'ol',
-    })
-    .use(markdownItAnchor)
-    .use(markdownItEmoji)
-    .use(mdRendererFence);
+import { unified } from 'unified';
+import remarkParse from 'remark-parse';
+import remarkRehype from 'remark-rehype';
+import rehypeStringify from 'rehype-stringify';
+import rehypeShiki from 'rehype-shiki';
 
-  return markdownIt
-    .render(markdown)
-    .replace(/@image/g, `/assets/images/posts/${date}`);
+// export type TVSCode =
+//   | 'abyss'
+//   | 'dark_plus'
+//   | 'dark_vs'
+//   | 'hc_black'
+//   | 'kimbie_dark'
+//   | 'light_plus'
+//   | 'light_vs'
+//   | 'monokai'
+//   | 'monokai_dimmed'
+//   | 'quietlight'
+//   | 'red'
+//   | 'solarized_dark'
+//   | 'solarized_light'
+
+// export type TMaterial =
+//   | 'Material-Theme-Darker-High-Contrast'
+//   | 'Material-Theme-Darker'
+//   | 'Material-Theme-Default-High-Contrast'
+//   | 'Material-Theme-Default'
+//   | 'Material-Theme-Lighter-High-Contrast'
+//   | 'Material-Theme-Lighter'
+//   | 'Material-Theme-Ocean-High-Contrast'
+//   | 'Material-Theme-Ocean'
+//   | 'Material-Theme-Palenight-High-Contrast'
+//   | 'Material-Theme-Palenight'
+
+// export type TNice =
+//   | 'nord'
+//   | 'min-light'
+//   | 'min-dark'
+//   | 'white'
+//   | 'white-night'
+//   | 'zeit'
+
+// export type TTheme = TVSCode | TMaterial | TNice
+
+export const converMarkdownToHtml = async (markdown: string, date: string) => {
+  const result = await unified()
+    .use(remarkParse) // markdown から mdast(markdown の AST)に変換
+    .use(remarkRehype) // mdast から hast(html の AST)に変換
+    .use(rehypeShiki, { theme: 'solarized_dark' }) // shiki によるコードのハイライト
+    .use(rehypeStringify) // hast から HTML へ変換
+    .process(markdown);
+
+  return result.toString();
+
+  // const markdownIt = new MarkdownIt({
+  //   html: true,
+  //   linkify: true,
+  //   typographer: true,
+  //   langPrefix: 'language-',
+  // })
+  //   .use(mdContainer, 'question', containerQuestionOptions)
+  //   .use(mdContainer, 'attention', containerAttentionOptions)
+  //   .use(mdContainer, 'alert', containerAlertOptions)
+  //   .use(mdContainer, 'info', containerInfoOptions)
+  //   .use(markdownItToc, {
+  //     includeLevel: [1],
+  //     listType: 'ol',
+  //   })
+  //   .use(markdownItAnchor)
+  //   .use(markdownItEmoji)
+  //   .use(mdRendererFence);
+
+  // return markdownIt
+  //   .render(markdown)
+  //   .replace(/@image/g, `/assets/images/posts/${date}`);
 };
 
 // ::: question
