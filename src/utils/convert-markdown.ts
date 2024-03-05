@@ -52,7 +52,7 @@ export const converMarkdownToHtml = async (markdown: string, date: string) => {
   const result = await unified()
     .use(remarkParse) // markdown から mdast(markdown の AST)に変換
     .use(remarkRehype) // mdast から hast(html の AST)に変換
-    .use(rehypeShiki, { theme: 'solarized_dark' }) // shiki によるコードのハイライト
+    .use(rehypeShiki, { theme: 'Material-Theme-Palenight' }) // shiki によるコードのハイライト
     .use(rehypeStringify) // hast から HTML へ変換
     .process(markdown);
 
