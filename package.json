@@ -30,6 +30,7 @@
     "prismjs": "^1.29.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "rehype-code-titles": "^1.2.0",
     "rehype-shiki": "^0.0.9",
     "rehype-stringify": "^10.0.0",
     "remark-parse": "^11.0.0",

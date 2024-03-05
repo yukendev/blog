@@ -10,6 +10,7 @@ import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
 import rehypeStringify from 'rehype-stringify';
 import rehypeShiki from 'rehype-shiki';
+import rehypeCodeTitles from 'rehype-code-titles';
 
 // export type TVSCode =
 //   | 'abyss'
@@ -52,6 +53,7 @@ export const converMarkdownToHtml = async (markdown: string, date: string) => {
   const result = await unified()
     .use(remarkParse) // markdown から mdast(markdown の AST)に変換
     .use(remarkRehype) // mdast から hast(html の AST)に変換
+    .use(rehypeCodeTitles)
     .use(rehypeShiki, { theme: 'Material-Theme-Palenight' }) // shiki によるコードのハイライト
     .use(rehypeStringify) // hast から HTML へ変換
     .process(markdown);
