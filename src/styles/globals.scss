@@ -36,3 +36,53 @@ a {
   border-top-left-radius: 0 !important;
   margin-top: 0 !important;
 }
+
+.rlc-container {
+  display: flex;
+  border-color: lightgray;
+  border-width: 1px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+
+  // override zenn style!
+  &:hover {
+    text-decoration: none !important;
+    background-color: whitesmoke;
+  }
+
+  .rlc-info {
+    margin: auto 16px;
+    flex: 3;
+    overflow: hidden;
+    color: black;
+
+    .rlc-title {
+      font-weight: bold;
+    }
+
+    .rlc-description {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      color: gray;
+      font-size: 0.8rem;
+    }
+
+    .rlc-url-container {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8rem;
+
+      .rlc-favicon {
+        margin: 0;
+        height: 16px;
+        width: 16px;
+      }
+    }
+  }
+
+  .rlc-image-container {
+    flex: 1;
+  }
+}

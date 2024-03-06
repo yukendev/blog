@@ -12,6 +12,7 @@ import rehypeStringify from 'rehype-stringify';
 import rehypeShiki from 'rehype-shiki';
 import rehypeCodeTitles from 'rehype-code-titles';
 import rlc from 'remark-link-card';
+import rehypeExternalLinks from 'rehype-external-links';
 
 // export type TVSCode =
 //   | 'abyss'
@@ -55,6 +56,7 @@ export const converMarkdownToHtml = async (markdown: string, date: string) => {
     .use(remarkParse) // markdown から mdast(markdown の AST)に変換
     .use(rlc)
     .use(remarkRehype, { allowDangerousHtml: true }) // mdast から hast(html の AST)に変換
+    .use(rehypeExternalLinks, { target: '_blank' }) // すべてのリンクを外部リンクに変換
     .use(rehypeCodeTitles)
     .use(rehypeShiki, { theme: 'Material-Theme-Palenight' }) // shiki によるコードのハイライト
     .use(rehypeStringify, { allowDangerousHtml: true }) // hast から HTML へ変換
