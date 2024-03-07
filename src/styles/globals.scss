@@ -61,6 +61,9 @@ a {
 
     .rlc-title {
       font-weight: bold;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
     }
 
     .rlc-description {
@@ -87,6 +90,8 @@ a {
 
   .rlc-image-container {
     flex: 1;
+    display: flex;
+    align-items: center;
 
     .rlc-image {
       margin: 0;
