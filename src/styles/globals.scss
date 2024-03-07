@@ -44,6 +44,7 @@ a {
   border-radius: 8px;
   margin-bottom: 16px;
   margin-top: 16px;
+  max-height: 150px;
 
   // override zenn style!
   &:hover {
@@ -86,5 +87,11 @@ a {
 
   .rlc-image-container {
     flex: 1;
+
+    .rlc-image {
+      margin: 0;
+      max-width: 100%;
+      max-height: 100%;
+    }
   }
 }
