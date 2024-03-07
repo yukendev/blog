@@ -43,6 +43,7 @@ a {
   border-width: 1px;
   border-radius: 8px;
   margin-bottom: 16px;
+  margin-top: 16px;
 
   // override zenn style!
   &:hover {
@@ -52,6 +53,7 @@ a {
 
   .rlc-info {
     margin: auto 16px;
+    padding: 16px 0;
     flex: 3;
     overflow: hidden;
     color: black;
