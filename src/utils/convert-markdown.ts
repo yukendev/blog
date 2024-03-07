@@ -62,7 +62,7 @@ export const converMarkdownToHtml = async (markdown: string, date: string) => {
     .use(rehypeStringify, { allowDangerousHtml: true }) // hast から HTML へ変換
     .process(markdown);
 
-  return result.toString();
+  return result.toString().replace(/@image/g, `/assets/images/posts/${date}`);
 
   // const markdownIt = new MarkdownIt({
   //   html: true,
