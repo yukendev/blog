@@ -7,5 +7,3 @@ tags:
   - 'Swift'
 description: 'description'
 ---
-
-[[toc]]

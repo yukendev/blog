@@ -2,7 +2,6 @@ import { Metadata } from 'next/types';
 import { metaDataForBlog } from '@constants/meta';
 import 'destyle.css';
 import '@styles/globals.scss';
-import '@styles/toc.scss';
 import '@styles/markdown/index.scss';
 import { Header } from '@components/organisms/Header';
 import { Footer } from '@components/organisms/Footer';

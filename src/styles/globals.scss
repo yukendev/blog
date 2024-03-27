@@ -15,23 +15,89 @@ a {
   box-sizing: border-box;
 }
 
-// TODO: 共通化
-.deco-underline-text:hover {
-  text-decoration: underline; /* 下線 */
-  text-decoration-thickness: 0.5em; /* 線の太さ */
-  // text-decoration-color: rgba(255, 228, 0, 0.4); /* 線の色 */
-  text-decoration-color: rgba(182, 227, 136, 0.5);
-  text-underline-offset: -0.2em; /* 線の位置。テキストに重なるようにやや上部にする */
-  text-decoration-skip-ink: none; /* 下線と文字列が重なる部分でも下線が省略されない（線が途切れない） */
+// code block title style
+.rehype-code-title {
+  margin-top: 1.3rem;
+  padding: 0.1em 1em;
+
+  background-color: black;
+  color: white;
+
+  border-top-left-radius: 0.3em;
+  border-top-right-radius: 0.3em;
+
+  display: inline-block;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
-.deco-underline-element:hover {
-  .deco-underline-text {
-    text-decoration: underline; /* 下線 */
-    text-decoration-thickness: 0.5em; /* 線の太さ */
-    // text-decoration-color: rgba(255, 228, 0, 0.4); /* 線の色 */
-    text-decoration-color: rgba(182, 227, 136, 0.5);
-    text-underline-offset: -0.2em; /* 線の位置。テキストに重なるようにやや上部にする */
-    text-decoration-skip-ink: none; /* 下線と文字列が重なる部分でも下線が省略されない（線が途切れない） */
+// override zenn css style!
+.markdown-body-style-from-zenn pre {
+  border-top-left-radius: 0 !important;
+  margin-top: 0 !important;
+}
+
+.rlc-container {
+  display: flex;
+  border-color: lightgray;
+  border-width: 1px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  margin-top: 16px;
+  max-height: 150px;
+
+  // override zenn style!
+  &:hover {
+    text-decoration: none !important;
+    background-color: whitesmoke;
+  }
+
+  .rlc-info {
+    margin: auto 16px;
+    padding: 16px 0;
+    flex: 3;
+    overflow: hidden;
+    color: black;
+
+    .rlc-title {
+      font-weight: bold;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .rlc-description {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      color: gray;
+      font-size: 0.8rem;
+    }
+
+    .rlc-url-container {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8rem;
+
+      .rlc-favicon {
+        margin: 0;
+        height: 16px;
+        width: 16px;
+      }
+    }
+  }
+
+  .rlc-image-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding-right: 16px;
+
+    .rlc-image {
+      margin: 0;
+      max-width: 100%;
+      max-height: 100%;
+    }
   }
 }

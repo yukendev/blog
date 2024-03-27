@@ -16,6 +16,15 @@ export const generateMetadata = async ({
       url: `https://www.yukendev.com/${blog?.slug}`,
       title: blog?.title,
       description: blog?.description,
+      images: [
+        {
+          url: 'https://www.yukendev.com//ogp.png',
+          width: 800,
+          height: 600,
+          alt: 'Og Image Alt',
+          type: 'image/jpeg',
+        },
+      ],
     },
   };
 };
