@@ -5,10 +5,12 @@ import rehypeStringify from 'rehype-stringify';
 import rehypeShiki from 'rehype-shiki';
 import rehypeCodeTitles from 'rehype-code-titles';
 import rehypeExternalLinks from 'rehype-external-links';
+import remarkGfm from 'remark-gfm';
 
 export const converMarkdownToHtml = async (markdown: string, date: string) => {
   const result = await unified()
     .use(remarkParse) // markdown から mdast(markdown の AST)に変換
+    .use(remarkGfm)
     .use(remarkRehype, { allowDangerousHtml: true }) // mdast から hast(html の AST)に変換
     .use(rehypeExternalLinks, { target: '_blank' }) // すべてのリンクを外部リンクに変換
     .use(rehypeCodeTitles)
